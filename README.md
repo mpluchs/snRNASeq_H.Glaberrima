@@ -15,7 +15,7 @@ Contact: [jegarcia@hpcf.upr.edu](mailto:jegarcia@hpcf.upr.edu)
 ---
 
 ## Usage
-Use to recreate Joshua's 35 clusters and mapping - as of 250707
+1.0_scRNASeq_Visualizations: Recreate Joshua's 35 clusters and mapping - 250707
 
 ## Requirements
 Must have access to IDGENE R Studio Server
