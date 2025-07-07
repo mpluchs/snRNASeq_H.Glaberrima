@@ -6,6 +6,7 @@ Single-cell RNA sequencing (scRNASeq) and single-nucleus RNA sequencing (snRNA-S
 ## Authors
 - **Matthew Luchs** - [mluchs2@gmail.com](mailto:mluchs2@gmail.com)
 - **Manuel J Rivera Rios** - [manuel.rivera57@upr.edu](mailto:manuel.rivera57@upr.edu)
+- **Amanda M Hernandez Perez** - [amanda.hernandez10@upr](mailto:amanda.hernandez10@upr.)
 
 ## Laboratory
 **Dr. Jose E Garcia-Arraras Lab**  
