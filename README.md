@@ -13,20 +13,9 @@ Contact: [jegarcia@hpcf.upr.edu](mailto:jegarcia@hpcf.upr.edu)
 
 ---
 
-## Installation
-<!-- Add installation instructions here -->
-
 ## Usage
-<!-- Add usage instructions here -->
+Use to recreate Joshua's 35 clusters and mapping - as of 250707
 
 ## Requirements
-<!-- Add requirements/dependencies here -->
+Must have access to IDGENE R Studio Server
 
-## Documentation
-<!-- Add links to detailed documentation -->
-
-## License
-<!-- Add license information -->
-
-## Citation
-<!-- Add citation information if applicable -->
