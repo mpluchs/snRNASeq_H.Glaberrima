@@ -1,0 +1,763 @@
+---
+title: "1.1_scRNASeq_Visualizations"
+author: "Matthew Luchs"
+date: "2025-07-08"
+output: html_document
+---
+
+***============ scRNASeq Analysis =============***
+
+**STEP 1: Load Packages, Data, Clean Data**
+
+```{r}
+#Install packages
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+if (!require("tidyverse", quietly = TRUE))
+  install.packages("tidyverse")
+if (!require("colorspace", quietly = TRUE))
+  install.packages("colorspace")
+
+BiocManager::install("SoupX")
+
+# Install annotation packages for RefSeq mapping
+tryCatch({
+  BiocManager::install("biomaRt")
+  message("biomaRt installed successfully")
+}, error = function(e) {
+  message("Failed to install biomaRt: ", e$message)
+})
+
+tryCatch({
+  BiocManager::install("org.Hs.eg.db")
+  message("org.Hs.eg.db installed successfully")
+}, error = function(e) {
+  message("Failed to install org.Hs.eg.db: ", e$message)
+})
+
+# Load required libraries
+library(Seurat)
+library(tidyverse)
+library(RColorBrewer)
+library(colorspace)
+library(ggplot2)
+
+# 1. Load 10X data and perform SoupX background correction
+c1_auto_out <- Read10X("/data/pepino/snRNA/C1/outs/filtered_feature_bc_matrix/")
+c2_auto_out <- Read10X("/data/pepino/snRNA/C2/outs/filtered_feature_bc_matrix/")
+
+r1_auto_out <- Read10X("/data/pepino/snRNA/R1/outs/filtered_feature_bc_matrix/")
+r2_auto_out <- Read10X("/data/pepino/snRNA/R2/outs/filtered_feature_bc_matrix/")
+
+# 2. Create Seurat objects
+c1_seurat.obj <- CreateSeuratObject(c1_auto_out, project = 'C1')
+c2_seurat.obj <- CreateSeuratObject(c2_auto_out, project = 'C2')
+r1_seurat.obj <- CreateSeuratObject(r1_auto_out, project = 'R1')
+r2_seurat.obj <- CreateSeuratObject(r2_auto_out, project = 'R2')
+
+# 3. Merge all datasets
+all.combined <- merge(c1_seurat.obj, y = c(c2_seurat.obj, r1_seurat.obj, r2_seurat.obj),
+          add.cell.ids = c("C1", "C2", "R1", "R2"), project = "ALL")
+
+# 4. Add sample metadata
+all.combined$log10GenesPerUMI <- log10(all.combined$nFeature_RNA) / log10(all.combined$nCount_RNA)
+
+all.combined_metadata <- all.combined@meta.data
+all.combined_metadata$cells <- rownames(all.combined_metadata)
+all.combined_metadata$sample <- NA
+all.combined_metadata$sample[grep("^C1_", rownames(all.combined_metadata))] <- "C1"
+all.combined_metadata$sample[grep("^C2_", rownames(all.combined_metadata))] <- "C2"
+all.combined_metadata$sample[grep("^R1_", rownames(all.combined_metadata))] <- "R1"
+all.combined_metadata$sample[grep("^R2_", rownames(all.combined_metadata))] <- "R2"
+
+all.combined@meta.data <- all.combined_metadata
+
+# 5. Filter, normalize, and find variable features
+all.combined <- subset(all.combined, subset = nFeature_RNA > 50 & nFeature_RNA < 7500 & nCount_RNA < 40000)
+all.combined <- NormalizeData(all.combined)
+all.combined <- FindVariableFeatures(all.combined, selection.method = "vst", nfeatures = 2000)
+```
+
+**Step 2: PCA/UMAP**
+
+```{r}
+# 6. Scaling, PCA, neighbors, clustering, UMAP
+all.combined <- ScaleData(all.combined)
+all.combined <- RunPCA(all.combined)
+ElbowPlot(all.combined)
+all.combined <- FindNeighbors(all.combined, dims = 1:20)
+all.combined <- FindClusters(all.combined, resolution = 1.84)
+all.combined <- RunUMAP(all.combined, dims = 1:20)
+```
+
+**Step 3: Visualizaiton**
+
+```{r}
+# 8a. UMAP for all clusters from all samples in the same plot
+DimPlot(all.combined, reduction = "umap", group.by = "seurat_clusters", label = TRUE, label.size = 4) +
+  ggtitle("UMAP: All Clusters from All Samples") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 8b. Create subsets for C1/C2 and R1/R2
+c1_c2_subset <- subset(all.combined, subset = sample %in% c("C1", "C2"))
+r1_r2_subset <- subset(all.combined, subset = sample %in% c("R1", "R2"))
+
+# Determine which sample has fewer cells in each subset
+c1_cells <- sum(c1_c2_subset$sample == "C1")
+c2_cells <- sum(c1_c2_subset$sample == "C2")
+r1_cells <- sum(r1_r2_subset$sample == "R1")
+r2_cells <- sum(r1_r2_subset$sample == "R2")
+
+print(paste("C1 cells:", c1_cells, "C2 cells:", c2_cells))
+print(paste("R1 cells:", r1_cells, "R2 cells:", r2_cells))
+
+# Create the smaller sample objects
+c1_c2_smaller <- ifelse(c1_cells < c2_cells, "C1", "C2")
+r1_r2_smaller <- ifelse(r1_cells < r2_cells, "R1", "R2")
+
+
+#UMAP Plots by Group (C or R)
+
+# Your original plots with labels added
+p1 <- DimPlot(c1_c2_subset, reduction = "umap", group.by = "sample",
+              order = c1_c2_smaller) +  # This puts the smaller sample on top
+  ggtitle("UMAP: C1/C2 Samples") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Add cluster labels
+embeddings <- Embeddings(c1_c2_subset, reduction = "umap")
+clusters <- c1_c2_subset$seurat_clusters
+centroids <- do.call(rbind, lapply(split(as.data.frame(embeddings), clusters), function(x) apply(x, 2, mean)))
+p1 <- p1 + annotate("text", x = centroids[,1], y = centroids[,2], 
+                    label = rownames(centroids), size = 4, color = "black")
+print(p1)
+
+# Just Regenerating
+p2 <- DimPlot(r1_r2_subset, reduction = "umap", group.by = "sample",
+              order = r1_r2_smaller) +  # This puts the smaller sample on top
+  ggtitle("UMAP: R1/R2 Samples") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Add cluster labels
+embeddings2 <- Embeddings(r1_r2_subset, reduction = "umap")
+clusters2 <- r1_r2_subset$seurat_clusters
+centroids2 <- do.call(rbind, lapply(split(as.data.frame(embeddings2), clusters2), function(x) apply(x, 2, mean)))
+p2 <- p2 + annotate("text", x = centroids2[,1], y = centroids2[,2], 
+                    label = rownames(centroids2), size = 4, color = "black")
+print(p2)
+
+# 8c. Representative cluster distribution plots
+# Create table of cluster vs sample
+table_data <- table(all.combined@meta.data$seurat_clusters, all.combined@meta.data$sample)
+
+# PLOT 1: Proportion of each SAMPLE found in each cluster (more representative)
+# Convert to proportions within each sample (columns sum to 1)
+prop_by_sample <- prop.table(table_data, margin = 2) * 100
+
+# Convert to dataframe for ggplot
+df_by_sample <- as.data.frame(as.table(prop_by_sample))
+colnames(df_by_sample) <- c("Cluster", "Sample", "Percentage")
+
+# Define custom colors: C1=green, C2=blue, R1=red, R2=purple
+sample_colors <- c("C1" = "#2E8B57", "C2" = "#4169E1", "R1" = "#DC143C", "R2" = "#9932CC")
+
+# Create representative barplot showing what % of each sample is in each cluster
+ggplot(df_by_sample, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Sample in Each Cluster", 
+       x = "Cluster", 
+       y = "% of Sample's Total Cells",
+       fill = "Sample",
+       subtitle = "Shows what proportion of each sample's cells are found in each cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+
+# Convert to proportions within each cluster (rows sum to 1)
+prop_by_cluster <- prop.table(table_data, margin = 1) * 100
+
+# Convert to dataframe for ggplot
+df_stacked <- as.data.frame(as.table(prop_by_cluster))
+colnames(df_stacked) <- c("Cluster", "Sample", "Percentage")
+
+# Create stacked barplot
+ggplot(df_stacked, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition by Cluster (Raw Proportions)", 
+       x = "Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Sample",
+       subtitle = "Shows what % of each cluster is made up of each sample (may be biased by sample size)") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1)) +
+  coord_cartesian(ylim = c(0, 100))
+```
+
+**Step 4: Subcluster Visuals - Muscle Group (Clusters 3,10,21)**
+
+```{r}
+# Extract cells from clusters 3, 10, and 21
+target_clusters <- c("3", "10", "21")
+clusters_subset <- subset(all.combined, subset = seurat_clusters %in% target_clusters)
+print(paste("Total cells in clusters 3, 10, 21:", ncol(clusters_subset)))
+
+# Save the original cluster information before it gets overwritten
+clusters_subset$original_cluster <- clusters_subset$seurat_clusters
+
+# Re-scale, run PCA, and find new clusters/UMAP
+clusters_subset <- ScaleData(clusters_subset)
+clusters_subset <- RunPCA(clusters_subset, features = VariableFeatures(all.combined))
+clusters_subset <- FindNeighbors(clusters_subset, dims = 1:15)
+clusters_subset <- FindClusters(clusters_subset, resolution = 0.8)
+clusters_subset <- RunUMAP(clusters_subset, dims = 1:15)
+```
+
+**Step 4B - Muscle UMAP**
+
+```{r}
+# 1. UMAP colored by new subclusters
+DimPlot(clusters_subset, reduction = "umap", label = TRUE, label.size = 4) +
+  ggtitle("Muscle UMAP: Colored by New Subclusters") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 2. UMAP colored by sample (C1, C2, R1, R2)
+DimPlot(clusters_subset, reduction = "umap", group.by = "sample") +
+  ggtitle("Muscle UMAP: Colored by Sample") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 3. UMAP colored by original cluster (3, 10, or 21)
+DimPlot(clusters_subset, reduction = "umap", group.by = "original_cluster") +
+  ggtitle("Muscle UMAP: Colored by Original Cluster (3, 10, 21)") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+**Step 4C - Muscle Propotional Visuals**
+
+```{r}
+# Create data for sample composition bar plot
+# Calculate percentage of each sample in each new cluster
+sample_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$sample)
+sample_totals <- colSums(sample_cluster_counts)
+
+# Convert to percentages (what % of each sample is in each cluster)
+df_by_sample <- data.frame()
+for(sample in names(sample_totals)) {
+  for(cluster in rownames(sample_cluster_counts)) {
+    count <- sample_cluster_counts[cluster, sample]
+    percentage <- (count / sample_totals[sample]) * 100
+    df_by_sample <- rbind(df_by_sample, data.frame(
+      Cluster = cluster,
+      Sample = sample,
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Create data for original cluster composition bar plot
+# Calculate percentage of each original cluster in each new cluster
+original_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$original_cluster)
+original_totals <- colSums(original_cluster_counts)
+
+# Convert to percentages (what % of each original cluster is in each new cluster)
+df_by_original <- data.frame()
+for(orig_cluster in names(original_totals)) {
+  for(new_cluster in rownames(original_cluster_counts)) {
+    count <- original_cluster_counts[new_cluster, orig_cluster]
+    percentage <- (count / original_totals[orig_cluster]) * 100
+    df_by_original <- rbind(df_by_original, data.frame(
+      New_Cluster = new_cluster,
+      Original_Cluster = paste("Cluster", orig_cluster),
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Define colors for samples (adjust as needed)
+sample_colors <- c("C1" = "#FF6B6B", "C2" = "#4ECDC4", "R1" = "#45B7D1", "R2" = "#96CEB4")
+
+# Define colors for original clusters
+original_colors <- c("Cluster 3" = "#FF9999", "Cluster 10" = "#66B2FF", "Cluster 21" = "#99FF99")
+
+# 4. Bar plot showing what % of each sample is in each new cluster
+ggplot(df_by_sample, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Sample in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Sample's Total Cells",
+       fill = "Sample   ",
+       subtitle = "Shows what proportion of each sample's cells are found in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+
+# 5. Bar plot showing what % of each original cluster is in each new cluster
+ggplot(df_by_original, aes(x = New_Cluster, y = Percentage, fill = Original_Cluster)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = original_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Original Cluster in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Original Cluster's Total Cells",
+       fill = "Original Cluster   ",
+       subtitle = "Shows what proportion of each original cluster's cells are found in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_original$Percentage) * 1.1))
+
+# Create comprehensive data frame with all combinations
+cluster_composition <- data.frame(
+  new_cluster = clusters_subset$seurat_clusters,
+  original_cluster = clusters_subset$original_cluster,
+  sample = clusters_subset$sample
+)
+
+# Calculate counts for each combination
+composition_counts <- cluster_composition %>%
+  group_by(new_cluster, original_cluster, sample) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Define colors
+sample_colors <- c("C1" = "firebrick", "C2" = "orange", "R1" = "deepskyblue", "R2" = "purple")
+original_colors <- c("3" = "firebrick", "10" = "blue", "21" = "purple")
+
+# Option 1: Stacked by sample (shows sample composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_sample <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_sample, aes(x = new_cluster, y = percentage, fill = sample)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition Within Each New Cluster", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Sample",
+       subtitle = "Shows what samples make up each new cluster (stacked to 100%)") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+
+# Option 2: Stacked by original cluster (shows original cluster composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_original <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_original, aes(x = new_cluster, y = percentage, fill = original_cluster)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  scale_fill_manual(values = original_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Original Cluster Composition Within Each New Cluster", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Original Cluster",
+       subtitle = "Shows what original clusters make up each new cluster (stacked to 100%)") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+```
+
+
+
+**Step 5: Subcluster Visuals - Nervous System**
+
+```{r}
+# Extract cells from clusters 0,5,19,22,23,26,27,32,33
+target_clusters <- c("0","5","19","22","23","26","27","32","33")
+clusters_subset <- subset(all.combined, subset = seurat_clusters %in% target_clusters)
+print(paste("Total cells in clusters 0,5,19,22,23,26,27,32,33:", ncol(clusters_subset)))
+
+# Save the original cluster information before it gets overwritten
+clusters_subset$original_cluster <- clusters_subset$seurat_clusters
+
+# Re-scale, run PCA, and find new clusters/UMAP
+clusters_subset <- ScaleData(clusters_subset)
+clusters_subset <- RunPCA(clusters_subset, features = VariableFeatures(all.combined))
+clusters_subset <- FindNeighbors(clusters_subset, dims = 1:15)
+clusters_subset <- FindClusters(clusters_subset, resolution = 0.8)
+clusters_subset <- RunUMAP(clusters_subset, dims = 1:15)
+```
+
+**Step 5B - Nervous System UMAP**
+
+```{r}
+# 1. UMAP colored by new subclusters
+DimPlot(clusters_subset, reduction = "umap", label = TRUE, label.size = 4) +
+  ggtitle("NS UMAP: Colored by New Subclusters") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 2. UMAP colored by sample (C1, C2, R1, R2)
+DimPlot(clusters_subset, reduction = "umap", group.by = "sample") +
+  ggtitle("NS UMAP: Colored by Sample") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 3. UMAP colored by original cluster (0,5,19,22,23,26,27,32,33)
+DimPlot(clusters_subset, reduction = "umap", group.by = "original_cluster") +
+  ggtitle("NS UMAP: Colored by Original Cluster") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+**Step 5C - Nervous System Proportional Visuals**
+
+```{r}
+# Create data for sample composition bar plot
+# Calculate percentage of each sample in each new cluster
+sample_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$sample)
+sample_totals <- colSums(sample_cluster_counts)
+
+# Convert to percentages (what % of each sample is in each cluster)
+df_by_sample <- data.frame()
+for(sample in names(sample_totals)) {
+  for(cluster in rownames(sample_cluster_counts)) {
+    count <- sample_cluster_counts[cluster, sample]
+    percentage <- (count / sample_totals[sample]) * 100
+    df_by_sample <- rbind(df_by_sample, data.frame(
+      Cluster = cluster,
+      Sample = sample,
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Create data for original cluster composition bar plot
+# Calculate percentage of each original cluster in each new cluster
+original_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$original_cluster)
+original_totals <- colSums(original_cluster_counts)
+
+# Convert to percentages (what % of each original cluster is in each new cluster)
+df_by_original <- data.frame()
+for(orig_cluster in names(original_totals)) {
+  for(new_cluster in rownames(original_cluster_counts)) {
+    count <- original_cluster_counts[new_cluster, orig_cluster]
+    percentage <- (count / original_totals[orig_cluster]) * 100
+    df_by_original <- rbind(df_by_original, data.frame(
+      New_Cluster = new_cluster,
+      Original_Cluster = paste("Cluster", orig_cluster),
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Define colors for samples (adjust as needed)
+sample_colors <- c("C1" = "#FF6B6B", "C2" = "#4ECDC4", "R1" = "#45B7D1", "R2" = "#96CEB4")
+
+# Define colors for original clusters
+original_colors <- c("Cluster 0" = "red","Cluster 5" = "blue","Cluster 19" = "green","Cluster 22" = "purple","Cluster 23" = "orange","Cluster 26" = "yellow","Cluster 27" = "brown","Cluster 32" = "pink","Cluster 33" = "darkgray")
+
+# 4. Bar plot showing what % of each sample is in each new cluster
+ggplot(df_by_sample, aes(x = reorder(Cluster, as.numeric(Cluster)), y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Sample in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Sample's Total Cells",
+       fill = "Sample   ",
+       subtitle = "Shows what proportion of each sample's cells are found in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+
+# 5. Bar plot showing what % of each original cluster is in each new cluster
+ggplot(df_by_original, aes(x = reorder(New_Cluster, as.numeric(New_Cluster)), y = Percentage, fill = Original_Cluster)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = original_colors) +
+  theme_minimal(base_size = 9) +
+  labs(title = "Percent of Each Original Cluster in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Original Cluster Total Cells",
+       fill = "Original Cluster   ",
+       subtitle = "Proportion of each original cluster's cells in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_original$Percentage) * 1.1))
+
+# Create comprehensive data frame with all combinations
+cluster_composition <- data.frame(
+  new_cluster = clusters_subset$seurat_clusters,
+  original_cluster = clusters_subset$original_cluster,
+  sample = clusters_subset$sample
+)
+
+# Calculate counts for each combination
+composition_counts <- cluster_composition %>%
+  group_by(new_cluster, original_cluster, sample) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Option 1: Stacked by sample (shows sample composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_sample <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_sample, aes(x = new_cluster, y = percentage, fill = sample)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition Within Each New Cluster", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Sample",
+       subtitle = "Shows what samples make up each new cluster (stacked to 100%)") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+
+# Option 2: Stacked by original cluster (shows original cluster composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_original <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_original, aes(x = new_cluster, y = percentage, fill = original_cluster)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  #scale_fill_manual(values = original_colors) + ##Colors not wokring, letting R choose 
+  scale_fill_brewer(palette = "Set1") +
+  theme_minimal(base_size = 12) +
+  labs(title = "Original Cluster Composition Within New Clusters", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Original Cluster",
+       subtitle = "Shows what original clusters make up each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+```
+
+**Step 6: Subcluster Visuals - Connective Tissue**
+
+```{r}
+# Extract cells from clusters 7,11,15,25,29
+target_clusters <- c("7","11","15","25","29")
+clusters_subset <- subset(all.combined, subset = seurat_clusters %in% target_clusters)
+print(paste("Total cells in clusters 7,11,15,25,29:", ncol(clusters_subset)))
+
+# Save the original cluster information before it gets overwritten
+clusters_subset$original_cluster <- clusters_subset$seurat_clusters
+
+# Re-scale, run PCA, and find new clusters/UMAP
+clusters_subset <- ScaleData(clusters_subset)
+clusters_subset <- RunPCA(clusters_subset, features = VariableFeatures(all.combined))
+clusters_subset <- FindNeighbors(clusters_subset, dims = 1:15)
+clusters_subset <- FindClusters(clusters_subset, resolution = 0.8)
+clusters_subset <- RunUMAP(clusters_subset, dims = 1:15)
+```
+
+**Step 6B - Connective Tissue UMAP**
+
+```{r}
+# 1. UMAP colored by new subclusters
+DimPlot(clusters_subset, reduction = "umap", label = TRUE, label.size = 4) +
+  ggtitle("ConTis UMAP: Colored by New Subclusters") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 2. UMAP colored by sample (C1, C2, R1, R2)
+DimPlot(clusters_subset, reduction = "umap", group.by = "sample") +
+  ggtitle("ConTis UMAP: Colored by Sample") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# 3. UMAP colored by original cluster (7,11,15,25,29)
+DimPlot(clusters_subset, reduction = "umap", group.by = "original_cluster") +
+  ggtitle("ConTis UMAP: Colored by Original Cluster") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+**Step 6C - Connective Proportional Visuals**
+
+```{r}
+# Create data for sample composition bar plot
+# Calculate percentage of each sample in each new cluster
+sample_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$sample)
+sample_totals <- colSums(sample_cluster_counts)
+
+# Convert to percentages (what % of each sample is in each cluster)
+df_by_sample <- data.frame()
+for(sample in names(sample_totals)) {
+  for(cluster in rownames(sample_cluster_counts)) {
+    count <- sample_cluster_counts[cluster, sample]
+    percentage <- (count / sample_totals[sample]) * 100
+    df_by_sample <- rbind(df_by_sample, data.frame(
+      Cluster = cluster,
+      Sample = sample,
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Create data for original cluster composition bar plot
+# Calculate percentage of each original cluster in each new cluster
+original_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$original_cluster)
+original_totals <- colSums(original_cluster_counts)
+
+# Convert to percentages (what % of each original cluster is in each new cluster)
+df_by_original <- data.frame()
+for(orig_cluster in names(original_totals)) {
+  for(new_cluster in rownames(original_cluster_counts)) {
+    count <- original_cluster_counts[new_cluster, orig_cluster]
+    percentage <- (count / original_totals[orig_cluster]) * 100
+    df_by_original <- rbind(df_by_original, data.frame(
+      New_Cluster = new_cluster,
+      Original_Cluster = paste("Cluster", orig_cluster),
+      Count = count,
+      Percentage = percentage
+    ))
+  }
+}
+
+# Define colors for samples (adjust as needed)
+sample_colors <- c("C1" = "#FF6B6B", "C2" = "#4ECDC4", "R1" = "#45B7D1", "R2" = "#96CEB4")
+
+# Define colors for original clusters
+original_colors <- c("Cluster 0" = "red","Cluster 5" = "blue","Cluster 19" = "green","Cluster 22" = "purple","Cluster 23" = "orange","Cluster 26" = "yellow","Cluster 27" = "brown","Cluster 32" = "pink","Cluster 33" = "darkgray")
+
+# 4. Bar plot showing what % of each sample is in each new cluster
+ggplot(df_by_sample, aes(x = reorder(Cluster, as.numeric(Cluster)), y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Sample in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Sample's Total Cells",
+       fill = "Sample   ",
+       subtitle = "Shows what proportion of each sample's cells are found in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+
+# 5. Bar plot showing what % of each original cluster is in each new cluster
+ggplot(df_by_original, aes(x = reorder(New_Cluster, as.numeric(New_Cluster)), y = Percentage, fill = Original_Cluster)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = original_colors) +
+  theme_minimal(base_size = 9) +
+  labs(title = "Percent of Each Original Cluster in Each New Cluster", 
+       x = "New Cluster", 
+       y = "% of Original Cluster Total Cells",
+       fill = "Original Cluster   ",
+       subtitle = "Proportion of each original cluster's cells in each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_original$Percentage) * 1.1))
+
+# Create comprehensive data frame with all combinations
+cluster_composition <- data.frame(
+  new_cluster = clusters_subset$seurat_clusters,
+  original_cluster = clusters_subset$original_cluster,
+  sample = clusters_subset$sample
+)
+
+# Calculate counts for each combination
+composition_counts <- cluster_composition %>%
+  group_by(new_cluster, original_cluster, sample) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Option 1: Stacked by sample (shows sample composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_sample <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_sample, aes(x = new_cluster, y = percentage, fill = sample)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition Within Each New Cluster", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Sample",
+       subtitle = "Shows what samples make up each new cluster (stacked to 100%)") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+
+# Option 2: Stacked by original cluster (shows original cluster composition within each new cluster)
+# Calculate percentages within each new cluster
+composition_by_original <- composition_counts %>%
+  group_by(new_cluster) %>%
+  mutate(total_in_cluster = sum(count),
+         percentage = (count / total_in_cluster) * 100)
+
+ggplot(composition_by_original, aes(x = new_cluster, y = percentage, fill = original_cluster)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.8) +
+  #scale_fill_manual(values = original_colors) + ##Colors not wokring, letting R choose 
+  scale_fill_brewer(palette = "Set1") +
+  theme_minimal(base_size = 12) +
+  labs(title = "Original Cluster Composition Within New Clusters", 
+       x = "New Cluster", 
+       y = "Percentage of Cells in Cluster",
+       fill = "Original Cluster",
+       subtitle = "Shows what original clusters make up each new cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 0, hjust = 0.5),
+        panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+```
