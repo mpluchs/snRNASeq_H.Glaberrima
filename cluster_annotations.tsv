@@ -1,0 +1,1066 @@
+g10045.t1	sp|P19615|MYP_STRPU	35.1	2.89e-257	776	sp|P19615|MYP_STRPU Major yolk protein OS=Strongylocentrotus purpuratus OX=7668 PE=1 SV=2
+g10046.t1	sp|P19615|MYP_STRPU	34.6	8.99e-238	725	sp|P19615|MYP_STRPU Major yolk protein OS=Strongylocentrotus purpuratus OX=7668 PE=1 SV=2
+g1011.t1	sp|Q96PH1|NOX5_HUMAN	41.1	3.17e-190	563	sp|Q96PH1|NOX5_HUMAN NADPH oxidase 5 OS=Homo sapiens OX=9606 GN=NOX5 PE=1 SV=1
+g10243.t1	sp|P12106|CO9A1_CHICK	37.3	7.97e-06	50.1	sp|P12106|CO9A1_CHICK Collagen alpha-1(IX) chain OS=Gallus gallus OX=9031 GN=COL9A1 PE=1 SV=4
+g10244.t1	sp|P12107|COBA1_HUMAN	31.8	1.11e-28	129	sp|P12107|COBA1_HUMAN Collagen alpha-1(XI) chain OS=Homo sapiens OX=9606 GN=COL11A1 PE=1 SV=4
+g10262.t1	sp|P32429|RL7A_CHICK	75.0	9.14e-137	389	sp|P32429|RL7A_CHICK Large ribosomal subunit protein eL8 OS=Gallus gallus OX=9031 GN=RPL7A PE=1 SV=2
+g10309.t1	sp|C9D7C2|CAC1A_APIME	60.6	0.0	1482	sp|C9D7C2|CAC1A_APIME Voltage-dependent calcium channel type A subunit alpha-1 OS=Apis mellifera OX=7460 GN=CAC PE=2 SV=1
+g10309.t2	sp|C9D7C2|CAC1A_APIME	60.5	0.0	1479	sp|C9D7C2|CAC1A_APIME Voltage-dependent calcium channel type A subunit alpha-1 OS=Apis mellifera OX=7460 GN=CAC PE=2 SV=1
+g10309.t3	sp|C9D7C2|CAC1A_APIME	59.4	0.0	1470	sp|C9D7C2|CAC1A_APIME Voltage-dependent calcium channel type A subunit alpha-1 OS=Apis mellifera OX=7460 GN=CAC PE=2 SV=1
+g10311.t1	sp|Q96RW7|HMCN1_HUMAN	35.6	0.0	1247	sp|Q96RW7|HMCN1_HUMAN Hemicentin-1 OS=Homo sapiens OX=9606 GN=HMCN1 PE=1 SV=2
+g10312.t1	sp|Q96RW7|HMCN1_HUMAN	35.2	0.0	1024	sp|Q96RW7|HMCN1_HUMAN Hemicentin-1 OS=Homo sapiens OX=9606 GN=HMCN1 PE=1 SV=2
+g10313.t1	sp|Q8NDA2|HMCN2_HUMAN	38.8	1.31e-17	85.9	sp|Q8NDA2|HMCN2_HUMAN Hemicentin-2 OS=Homo sapiens OX=9606 GN=HMCN2 PE=1 SV=4
+g10313.t2	sp|Q8NDA2|HMCN2_HUMAN	38.6	2.78e-17	83.6	sp|Q8NDA2|HMCN2_HUMAN Hemicentin-2 OS=Homo sapiens OX=9606 GN=HMCN2 PE=1 SV=4
+g10314.t1	sp|D3YXG0|HMCN1_MOUSE	40.5	2.40e-34	134	sp|D3YXG0|HMCN1_MOUSE Hemicentin-1 OS=Mus musculus OX=10090 GN=Hmcn1 PE=1 SV=1
+g10314.t2	sp|D3YXG0|HMCN1_MOUSE	39.6	2.41e-33	131	sp|D3YXG0|HMCN1_MOUSE Hemicentin-1 OS=Mus musculus OX=10090 GN=Hmcn1 PE=1 SV=1
+g10324.t1	sp|Q3MHM7|RL35_BOVIN	62.6	1.37e-39	131	sp|Q3MHM7|RL35_BOVIN Large ribosomal subunit protein uL29 OS=Bos taurus OX=9913 GN=RPL35 PE=2 SV=3
+g10365.t1	sp|Q26481|RL5_STYCL	72.4	4.62e-159	447	sp|Q26481|RL5_STYCL Large ribosomal subunit protein uL18 OS=Styela clava OX=7725 GN=RPL5 PE=3 SV=3
+g10405.t1	sp|Q8NFJ6|PKR2_HUMAN	39.3	2.08e-61	205	sp|Q8NFJ6|PKR2_HUMAN Prokineticin receptor 2 OS=Homo sapiens OX=9606 GN=PROKR2 PE=1 SV=1
+g10413.t1	sp|Q9VBW3|CAD96_DROME	37.3	9.63e-60	219	sp|Q9VBW3|CAD96_DROME Tyrosine kinase receptor Cad96Ca OS=Drosophila melanogaster OX=7227 GN=Cad96Ca PE=2 SV=2
+g10414.t1	sp|Q5XGZ9|MF6LB_XENLA	21.4	3.01e-19	95.9	sp|Q5XGZ9|MF6LB_XENLA Major facilitator superfamily domain-containing protein 6-like protein B OS=Xenopus laevis OX=8355 GN=mfsd6l-b PE=2 SV=1
+g10419.t2	sp|Q22328|LEV9_CAEEL	31.0	8.60e-12	72.0	sp|Q22328|LEV9_CAEEL Protein lev-9 OS=Caenorhabditis elegans OX=6239 GN=lev-9 PE=1 SV=3
+g10431.t1	sp|Q8QFV0|KCNT1_CHICK	59.0	2.13e-202	599	sp|Q8QFV0|KCNT1_CHICK Potassium channel subfamily T member 1 OS=Gallus gallus OX=9031 GN=KCNT1 PE=1 SV=1
+g10431.t2	sp|Q8QFV0|KCNT1_CHICK	58.7	2.67e-201	597	sp|Q8QFV0|KCNT1_CHICK Potassium channel subfamily T member 1 OS=Gallus gallus OX=9031 GN=KCNT1 PE=1 SV=1
+g10447.t1	sp|P86179|CSL3_ONCKE	38.9	2.37e-34	124	sp|P86179|CSL3_ONCKE L-rhamnose-binding lectin CSL3 OS=Oncorhynchus keta OX=8018 PE=1 SV=1
+g10452.t1	sp|Q27433|MEC2_CAEEL	77.6	3.67e-127	373	sp|Q27433|MEC2_CAEEL Mechanosensory protein 2 OS=Caenorhabditis elegans OX=6239 GN=mec-2 PE=1 SV=1
+g10452.t2	sp|Q27433|MEC2_CAEEL	74.6	3.59e-128	376	sp|Q27433|MEC2_CAEEL Mechanosensory protein 2 OS=Caenorhabditis elegans OX=6239 GN=mec-2 PE=1 SV=1
+g10452.t3	sp|Q27433|MEC2_CAEEL	74.3	1.14e-127	375	sp|Q27433|MEC2_CAEEL Mechanosensory protein 2 OS=Caenorhabditis elegans OX=6239 GN=mec-2 PE=1 SV=1
+g10479.t1	sp|Q9UHF1|EGFL7_HUMAN	32.1	4.55e-38	139	sp|Q9UHF1|EGFL7_HUMAN Epidermal growth factor-like protein 7 OS=Homo sapiens OX=9606 GN=EGFL7 PE=1 SV=3
+g10496.t1	sp|Q9QX29|TRPC5_MOUSE	44.6	3.78e-18	83.6	sp|Q9QX29|TRPC5_MOUSE Short transient receptor potential channel 5 OS=Mus musculus OX=10090 GN=Trpc5 PE=1 SV=2
+g10496.t2	sp|Q9QX29|TRPC5_MOUSE	44.6	4.30e-18	83.6	sp|Q9QX29|TRPC5_MOUSE Short transient receptor potential channel 5 OS=Mus musculus OX=10090 GN=Trpc5 PE=1 SV=2
+g10497.t1	sp|Q9VJJ7|TRPG_DROME	35.8	1.17e-126	413	sp|Q9VJJ7|TRPG_DROME Transient receptor potential-gamma protein OS=Drosophila melanogaster OX=7227 GN=Trpgamma PE=1 SV=2
+g10559.t1	sp|Q5QNQ9|CORA1_MOUSE	43.4	1.39e-44	181	sp|Q5QNQ9|CORA1_MOUSE Collagen alpha-1(XXVII) chain OS=Mus musculus OX=10090 GN=Col27a1 PE=2 SV=1
+g10612.t1	sp|P17702|RL28_RAT	53.7	2.49e-35	124	sp|P17702|RL28_RAT Large ribosomal subunit protein eL28 OS=Rattus norvegicus OX=10116 GN=Rpl28 PE=1 SV=4
+g10612.t2	sp|P17702|RL28_RAT	45.9	3.19e-30	112	sp|P17702|RL28_RAT Large ribosomal subunit protein eL28 OS=Rattus norvegicus OX=10116 GN=Rpl28 PE=1 SV=4
+g10674.t1	sp|Q9JI03|CO5A1_RAT	48.1	1.63e-61	237	sp|Q9JI03|CO5A1_RAT Collagen alpha-1(V) chain OS=Rattus norvegicus OX=10116 GN=Col5a1 PE=1 SV=1
+g10699.t1	sp|Q9QZS8|SH2D3_MOUSE	31.9	9.44e-86	293	sp|Q9QZS8|SH2D3_MOUSE SH2 domain-containing protein 3C OS=Mus musculus OX=10090 GN=Sh2d3c PE=1 SV=1
+g10699.t2	sp|Q9QZS8|SH2D3_MOUSE	31.9	8.68e-86	293	sp|Q9QZS8|SH2D3_MOUSE SH2 domain-containing protein 3C OS=Mus musculus OX=10090 GN=Sh2d3c PE=1 SV=1
+g10701.t1	sp|Q9TTF0|NR2E3_BOVIN	41.3	2.78e-89	281	sp|Q9TTF0|NR2E3_BOVIN Photoreceptor-specific nuclear receptor OS=Bos taurus OX=9913 GN=NR2E3 PE=1 SV=2
+g10743.t1	sp|Q9UN76|S6A14_HUMAN	47.6	2.75e-199	580	sp|Q9UN76|S6A14_HUMAN Sodium- and chloride-dependent neutral and basic amino acid transporter B(0+) OS=Homo sapiens OX=9606 GN=SLC6A14 PE=1 SV=1
+g10743.t2	sp|Q9UN76|S6A14_HUMAN	47.6	8.93e-199	580	sp|Q9UN76|S6A14_HUMAN Sodium- and chloride-dependent neutral and basic amino acid transporter B(0+) OS=Homo sapiens OX=9606 GN=SLC6A14 PE=1 SV=1
+g10743.t3	sp|Q9UN76|S6A14_HUMAN	48.6	1.26e-198	578	sp|Q9UN76|S6A14_HUMAN Sodium- and chloride-dependent neutral and basic amino acid transporter B(0+) OS=Homo sapiens OX=9606 GN=SLC6A14 PE=1 SV=1
+g10761.t1	sp|Q95218|DMBT1_RABIT	35.2	2.16e-89	310	sp|Q95218|DMBT1_RABIT Scavenger receptor cysteine-rich domain-containing protein DMBT1 OS=Oryctolagus cuniculus OX=9986 GN=Dmbt1 PE=1 SV=2
+g10823.t1	sp|Q9Z0U4|GABR1_RAT	45.6	8.88e-233	684	sp|Q9Z0U4|GABR1_RAT Gamma-aminobutyric acid type B receptor subunit 1 OS=Rattus norvegicus OX=10116 GN=Gabbr1 PE=1 SV=2
+g11064.t1	sp|Q4LDE5|SVEP1_HUMAN	24.2	1.64e-77	290	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g11064.t2	sp|Q4LDE5|SVEP1_HUMAN	24.1	1.70e-75	284	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g11068.t1	sp|Q4LDE5|SVEP1_HUMAN	22.0	1.96e-58	226	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g11114.t1	sp|Q4LDE5|SVEP1_HUMAN	24.1	5.59e-77	285	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g11114.t2	sp|Q4LDE5|SVEP1_HUMAN	24.4	7.16e-83	305	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g1118.t1	sp|Q9H939|PPIP2_HUMAN	33.0	4.34e-46	165	sp|Q9H939|PPIP2_HUMAN Proline-serine-threonine phosphatase-interacting protein 2 OS=Homo sapiens OX=9606 GN=PSTPIP2 PE=1 SV=4
+g1118.t2	sp|Q9H939|PPIP2_HUMAN	33.0	1.29e-47	167	sp|Q9H939|PPIP2_HUMAN Proline-serine-threonine phosphatase-interacting protein 2 OS=Homo sapiens OX=9606 GN=PSTPIP2 PE=1 SV=4
+g11379.t1	sp|Q76I81|RS12_BOVIN	79.8	1.87e-68	207	sp|Q76I81|RS12_BOVIN Small ribosomal subunit protein eS12 OS=Bos taurus OX=9913 GN=RPS12 PE=2 SV=1
+g11381.t1	sp|P10936|YES_XENLA	65.7	1.70e-229	644	sp|P10936|YES_XENLA Tyrosine-protein kinase Yes OS=Xenopus laevis OX=8355 GN=yes1 PE=2 SV=3
+g11432.t1	sp|Q60675|LAMA2_MOUSE	33.5	0.0	1480	sp|Q60675|LAMA2_MOUSE Laminin subunit alpha-2 OS=Mus musculus OX=10090 GN=Lama2 PE=1 SV=2
+g11497.t1	sp|P00523|SRC_CHICK	47.1	5.38e-135	404	sp|P00523|SRC_CHICK Proto-oncogene tyrosine-protein kinase Src OS=Gallus gallus OX=9031 GN=SRC PE=1 SV=4
+g11511.t1	sp|P19477|FIBA_APOPA	44.2	5.06e-44	152	sp|P19477|FIBA_APOPA Fibrinogen-like protein A OS=Apostichopus parvimensis OX=1902835 PE=2 SV=1
+g1152.t1	sp|P0C1Q2|PDE11_MOUSE	45.3	2.18e-263	764	sp|P0C1Q2|PDE11_MOUSE Dual 3',5'-cyclic-AMP and -GMP phosphodiesterase 11A OS=Mus musculus OX=10090 GN=Pde11a PE=1 SV=1
+g11520.t1	sp|P56719|OX2R_RAT	36.4	4.58e-50	179	sp|P56719|OX2R_RAT Orexin receptor type 2 OS=Rattus norvegicus OX=10116 GN=Hcrtr2 PE=2 SV=1
+g11599.t1	sp|B3EWZ9|HEPHL_ACRMI	47.8	0.0	1021	sp|B3EWZ9|HEPHL_ACRMI Hephaestin-like protein OS=Acropora millepora OX=45264 PE=1 SV=1
+g1168.t1	sp|Q05917|HME2_CHICK	60.7	3.35e-15	74.3	sp|Q05917|HME2_CHICK Homeobox protein engrailed-2 OS=Gallus gallus OX=9031 GN=EN2 PE=1 SV=2
+g11715.t1	sp|Q99502|EYA1_HUMAN	48.0	1.48e-164	486	sp|Q99502|EYA1_HUMAN Protein phosphatase EYA1 OS=Homo sapiens OX=9606 GN=EYA1 PE=1 SV=2
+g11769.t1	sp|Q9Y490|TLN1_HUMAN	46.5	7.71e-164	528	sp|Q9Y490|TLN1_HUMAN Talin-1 OS=Homo sapiens OX=9606 GN=TLN1 PE=1 SV=3
+g1184.t1	sp|P39021|MEOX2_XENLA	57.1	2.48e-33	128	sp|P39021|MEOX2_XENLA Homeobox protein MOX-2 OS=Xenopus laevis OX=8355 GN=meox2 PE=2 SV=2
+g11863.t1	sp|Q9R283|TRPC2_RAT	26.4	1.69e-22	109	sp|Q9R283|TRPC2_RAT Short transient receptor potential channel 2 OS=Rattus norvegicus OX=10116 GN=Trpc2 PE=2 SV=2
+g11951.t1	sp|P23403|RS20_XENLA	86.3	8.37e-67	200	sp|P23403|RS20_XENLA Small ribosomal subunit protein uS10 OS=Xenopus laevis OX=8355 GN=rps20 PE=1 SV=1
+g11988.t1	sp|A6H8H5|KCNB2_MOUSE	61.1	1.56e-66	224	sp|A6H8H5|KCNB2_MOUSE Potassium voltage-gated channel subfamily B member 2 OS=Mus musculus OX=10090 GN=Kcnb2 PE=1 SV=2
+g11988.t2	sp|A6H8H5|KCNB2_MOUSE	62.4	4.15e-78	254	sp|A6H8H5|KCNB2_MOUSE Potassium voltage-gated channel subfamily B member 2 OS=Mus musculus OX=10090 GN=Kcnb2 PE=1 SV=2
+g12050.t1	sp|P30427|PLEC_RAT	37.1	9.60e-150	527	sp|P30427|PLEC_RAT Plectin OS=Rattus norvegicus OX=10116 GN=Plec PE=1 SV=2
+g12050.t2	sp|P30427|PLEC_RAT	34.1	2.26e-109	396	sp|P30427|PLEC_RAT Plectin OS=Rattus norvegicus OX=10116 GN=Plec PE=1 SV=2
+g12051.t1	sp|Q03001|DYST_HUMAN	19.9	1.03e-58	231	sp|Q03001|DYST_HUMAN Dystonin OS=Homo sapiens OX=9606 GN=DST PE=1 SV=4
+g12053.t1	sp|Q03001|DYST_HUMAN	22.1	8.80e-43	179	sp|Q03001|DYST_HUMAN Dystonin OS=Homo sapiens OX=9606 GN=DST PE=1 SV=4
+g12053.t2	sp|Q03001|DYST_HUMAN	22.1	8.77e-43	179	sp|Q03001|DYST_HUMAN Dystonin OS=Homo sapiens OX=9606 GN=DST PE=1 SV=4
+g12055.t1	sp|Q9UPN3|MACF1_HUMAN	32.1	0.0	1575	sp|Q9UPN3|MACF1_HUMAN Microtubule-actin cross-linking factor 1, isoforms 1/2/3/4/5 OS=Homo sapiens OX=9606 GN=MACF1 PE=1 SV=4
+g12055.t2	sp|Q9QXZ0|MACF1_MOUSE	34.6	0.0	1426	sp|Q9QXZ0|MACF1_MOUSE Microtubule-actin cross-linking factor 1, isoforms 1/2/3/4 OS=Mus musculus OX=10090 GN=Macf1 PE=1 SV=2
+g12059.t1	sp|A1A4R9|AP2A_BOVIN	59.8	4.83e-133	400	sp|A1A4R9|AP2A_BOVIN Transcription factor AP-2-alpha OS=Bos taurus OX=9913 GN=TFAP2A PE=2 SV=1
+g12059.t2	sp|A1A4R9|AP2A_BOVIN	59.8	4.83e-133	400	sp|A1A4R9|AP2A_BOVIN Transcription factor AP-2-alpha OS=Bos taurus OX=9913 GN=TFAP2A PE=2 SV=1
+g12059.t3	sp|A1A4R9|AP2A_BOVIN	60.3	1.26e-133	401	sp|A1A4R9|AP2A_BOVIN Transcription factor AP-2-alpha OS=Bos taurus OX=9913 GN=TFAP2A PE=2 SV=1
+g1208.t1	sp|Q7SYH5|SC5A8_XENLA	40.8	2.30e-110	347	sp|Q7SYH5|SC5A8_XENLA Sodium-coupled monocarboxylate transporter 1 OS=Xenopus laevis OX=8355 GN=slc5a8 PE=2 SV=1
+g12148.t1	sp|O15230|LAMA5_HUMAN	34.0	0.0	1214	sp|O15230|LAMA5_HUMAN Laminin subunit alpha-5 OS=Homo sapiens OX=9606 GN=LAMA5 PE=1 SV=8
+g12148.t2	sp|O15230|LAMA5_HUMAN	33.8	0.0	1204	sp|O15230|LAMA5_HUMAN Laminin subunit alpha-5 OS=Homo sapiens OX=9606 GN=LAMA5 PE=1 SV=8
+g12264.t1	sp|A6H769|RS7_BOVIN	59.3	5.22e-62	198	sp|A6H769|RS7_BOVIN Small ribosomal subunit protein eS7 OS=Bos taurus OX=9913 GN=RPS7 PE=1 SV=1
+g12269.t1	sp|Q21313|EPI1_CAEEL	28.4	1.21e-159	554	sp|Q21313|EPI1_CAEEL Laminin-like protein epi-1 OS=Caenorhabditis elegans OX=6239 GN=epi-1 PE=1 SV=1
+g1227.t1	sp|P30975|TLR2_DROME	24.9	6.55e-23	103	sp|P30975|TLR2_DROME Tachykinin-like peptides receptor 99D OS=Drosophila melanogaster OX=7227 GN=TkR99D PE=2 SV=2
+g12270.t1	sp|Q61001|LAMA5_MOUSE	47.4	6.06e-272	863	sp|Q61001|LAMA5_MOUSE Laminin subunit alpha-5 OS=Mus musculus OX=10090 GN=Lama5 PE=1 SV=4
+g12271.t1	sp|O95989|NUDT3_HUMAN	57.0	7.47e-46	150	sp|O95989|NUDT3_HUMAN Diphosphoinositol polyphosphate phosphohydrolase 1 OS=Homo sapiens OX=9606 GN=NUDT3 PE=1 SV=1
+g12284.t1	sp|F7J220|SRCR1_PATPE	52.2	0.0	1120	sp|F7J220|SRCR1_PATPE Scavenger receptor cysteine-rich domain superfamily protein OS=Patiria pectinifera OX=7594 GN=SRCR1 PE=1 SV=1
+g1230.t1	sp|Q01617|CPO_DROME	61.7	9.32e-54	189	sp|Q01617|CPO_DROME Protein couch potato OS=Drosophila melanogaster OX=7227 GN=cpo PE=2 SV=4
+g12339.t1	sp|Q99J45|NRBP_MOUSE	72.3	2.14e-145	424	sp|Q99J45|NRBP_MOUSE Nuclear receptor-binding protein OS=Mus musculus OX=10090 GN=Nrbp1 PE=1 SV=1
+g12358.t1	sp|Q7Z020|TRPA1_DROME	37.8	1.78e-165	524	sp|Q7Z020|TRPA1_DROME Transient receptor potential cation channel subfamily A member 1 OS=Drosophila melanogaster OX=7227 GN=TrpA1 PE=1 SV=4
+g12358.t2	sp|Q7Z020|TRPA1_DROME	38.5	1.07e-168	532	sp|Q7Z020|TRPA1_DROME Transient receptor potential cation channel subfamily A member 1 OS=Drosophila melanogaster OX=7227 GN=TrpA1 PE=1 SV=4
+g12438.t1	sp|P20849|CO9A1_HUMAN	33.5	2.96e-37	155	sp|P20849|CO9A1_HUMAN Collagen alpha-1(IX) chain OS=Homo sapiens OX=9606 GN=COL9A1 PE=1 SV=3
+g12438.t2	sp|P20849|CO9A1_HUMAN	33.5	3.03e-37	155	sp|P20849|CO9A1_HUMAN Collagen alpha-1(IX) chain OS=Homo sapiens OX=9606 GN=COL9A1 PE=1 SV=3
+g12447.t1	sp|Q90655|AKR_CHICK	64.4	1.24e-30	121	sp|Q90655|AKR_CHICK Homeobox protein AKR OS=Gallus gallus OX=9031 PE=2 SV=1
+g12471.t1	sp|O97490|TRFM_RABIT	43.6	8.22e-171	512	sp|O97490|TRFM_RABIT Melanotransferrin OS=Oryctolagus cuniculus OX=9986 GN=MELTF PE=2 SV=1
+g12472.t1	sp|O97490|TRFM_RABIT	41.6	1.01e-175	524	sp|O97490|TRFM_RABIT Melanotransferrin OS=Oryctolagus cuniculus OX=9986 GN=MELTF PE=2 SV=1
+g12553.t1	sp|Q4A3R3|DMBT1_PIG	22.7	1.20e-13	75.1	sp|Q4A3R3|DMBT1_PIG Scavenger receptor cysteine-rich domain-containing protein DMBT1 OS=Sus scrofa OX=9823 GN=DMBT1 PE=2 SV=1
+g12555.t1	sp|Q8R0I0|ACE2_MOUSE	37.8	6.97e-52	186	sp|Q8R0I0|ACE2_MOUSE Angiotensin-converting enzyme 2 OS=Mus musculus OX=10090 GN=Ace2 PE=1 SV=1
+g12681.t1	sp|Q63046|RUNX1_RAT	42.6	6.50e-67	227	sp|Q63046|RUNX1_RAT Runt-related transcription factor 1 OS=Rattus norvegicus OX=10116 GN=Runx1 PE=1 SV=1
+g12681.t2	sp|Q63046|RUNX1_RAT	45.9	1.09e-72	241	sp|Q63046|RUNX1_RAT Runt-related transcription factor 1 OS=Rattus norvegicus OX=10116 GN=Runx1 PE=1 SV=1
+g12761.t1	sp|P79098|AMPN_BOVIN	32.8	1.37e-97	321	sp|P79098|AMPN_BOVIN Aminopeptidase N OS=Bos taurus OX=9913 GN=ANPEP PE=2 SV=4
+g12808.t1	sp|Q6T4R5|NHS_HUMAN	25.9	7.85e-12	74.3	sp|Q6T4R5|NHS_HUMAN Actin remodeling regulator NHS OS=Homo sapiens OX=9606 GN=NHS PE=1 SV=2
+g12820.t1	sp|Q24799|MYPH_ECHGR	44.7	4.38e-49	160	sp|Q24799|MYPH_ECHGR Myophilin OS=Echinococcus granulosus OX=6210 PE=2 SV=1
+g12835.t1	sp|P39098|MA1A2_MOUSE	58.7	2.75e-210	604	sp|P39098|MA1A2_MOUSE Mannosyl-oligosaccharide 1,2-alpha-mannosidase IB OS=Mus musculus OX=10090 GN=Man1a2 PE=1 SV=1
+g12847.t1	sp|Q6IFT4|RHG20_MOUSE	35.9	3.31e-98	345	sp|Q6IFT4|RHG20_MOUSE Rho GTPase-activating protein 20 OS=Mus musculus OX=10090 GN=Arhgap20 PE=1 SV=1
+g12847.t2	sp|Q6IFT4|RHG20_MOUSE	36.3	7.43e-100	348	sp|Q6IFT4|RHG20_MOUSE Rho GTPase-activating protein 20 OS=Mus musculus OX=10090 GN=Arhgap20 PE=1 SV=1
+g12847.t3	sp|Q6PAJ1|BCR_MOUSE	23.7	4.49e-08	59.7	sp|Q6PAJ1|BCR_MOUSE Breakpoint cluster region protein OS=Mus musculus OX=10090 GN=Bcr PE=1 SV=3
+g12891.t1	sp|Q9BG96|NR0B1_PONPY	31.1	3.49e-22	100	sp|Q9BG96|NR0B1_PONPY Nuclear receptor subfamily 0 group B member 1 OS=Pongo pygmaeus OX=9600 GN=NR0B1 PE=2 SV=1
+g12906.t1	sp|Q961J5|BALAT_DROME	31.2	5.24e-73	246	sp|Q961J5|BALAT_DROME Beta-alanine transporter OS=Drosophila melanogaster OX=7227 GN=Balat PE=2 SV=1
+g12990.t1	sp|P02826|HSP7A_DROSI	78.6	6.97e-58	180	sp|P02826|HSP7A_DROSI Heat shock 70 kDa protein cognate 1 (Fragments) OS=Drosophila simulans OX=7240 GN=Hsc70-1 PE=2 SV=1
+g12990.t2	sp|P08106|HSP70_CHICK	84.8	2.42e-32	120	sp|P08106|HSP70_CHICK Heat shock 70 kDa protein OS=Gallus gallus OX=9031 PE=1 SV=1
+g13069.t1	sp|Q3SZZ7|FGL1_BOVIN	40.8	2.24e-35	135	sp|Q3SZZ7|FGL1_BOVIN Fibrinogen-like protein 1 OS=Bos taurus OX=9913 GN=FGL1 PE=2 SV=1
+g13156.t1	sp|Q9Y226|S22AD_HUMAN	33.6	1.15e-81	268	sp|Q9Y226|S22AD_HUMAN Solute carrier family 22 member 13 OS=Homo sapiens OX=9606 GN=SLC22A13 PE=1 SV=2
+g13161.t1	sp|P58658|EVA1C_HUMAN	35.7	5.95e-43	162	sp|P58658|EVA1C_HUMAN Protein eva-1 homolog C OS=Homo sapiens OX=9606 GN=EVA1C PE=1 SV=1
+g13167.t1	sp|P10758|LITH_RAT	28.0	1.98e-09	62.0	sp|P10758|LITH_RAT Lithostathine OS=Rattus norvegicus OX=10116 GN=Reg1 PE=1 SV=1
+g13236.t1	sp|Q862I1|RL24_BOVIN	63.1	5.41e-57	178	sp|Q862I1|RL24_BOVIN Large ribosomal subunit protein eL24 OS=Bos taurus OX=9913 GN=RPL24 PE=2 SV=2
+g13240.t1	sp|P15882|CHIN_HUMAN	49.8	4.72e-93	288	sp|P15882|CHIN_HUMAN N-chimaerin OS=Homo sapiens OX=9606 GN=CHN1 PE=1 SV=3
+g13245.t1	sp|Q804E1|IOD1_FUNHE	30.8	6.30e-14	73.9	sp|Q804E1|IOD1_FUNHE Type I iodothyronine deiodinase OS=Fundulus heteroclitus OX=8078 GN=dio1 PE=2 SV=2
+g13277.t1	sp|P91620|SIF2_DROME	41.8	5.57e-219	704	sp|P91620|SIF2_DROME Protein still life, isoforms C/SIF type 2 OS=Drosophila melanogaster OX=7227 GN=sif PE=2 SV=2
+g13277.t2	sp|P91620|SIF2_DROME	41.9	6.95e-220	707	sp|P91620|SIF2_DROME Protein still life, isoforms C/SIF type 2 OS=Drosophila melanogaster OX=7227 GN=sif PE=2 SV=2
+g13353.t1	sp|Q9NPF2|CHSTB_HUMAN	35.7	8.45e-26	106	sp|Q9NPF2|CHSTB_HUMAN Carbohydrate sulfotransferase 11 OS=Homo sapiens OX=9606 GN=CHST11 PE=1 SV=1
+g13441.t1	sp|P48442|CASR_RAT	24.7	1.23e-52	203	sp|P48442|CASR_RAT Extracellular calcium-sensing receptor OS=Rattus norvegicus OX=10116 GN=Casr PE=1 SV=1
+g13467.t1	sp|P30550|GRPR_HUMAN	38.6	1.14e-55	190	sp|P30550|GRPR_HUMAN Gastrin-releasing peptide receptor OS=Homo sapiens OX=9606 GN=GRPR PE=1 SV=1
+g13482.t1	sp|Q9I8C7|ACH10_CHICK	40.1	1.31e-71	243	sp|Q9I8C7|ACH10_CHICK Neuronal acetylcholine receptor subunit alpha-10 OS=Gallus gallus OX=9031 GN=CHRNA10 PE=3 SV=1
+g13546.t1	sp|P49401|RS4_XENLA	76.7	8.84e-146	411	sp|P49401|RS4_XENLA Small ribosomal subunit protein eS4 OS=Xenopus laevis OX=8355 GN=rps4 PE=1 SV=4
+g13553.t1	sp|Q80YA9|CNKR2_MOUSE	29.1	5.19e-71	259	sp|Q80YA9|CNKR2_MOUSE Connector enhancer of kinase suppressor of ras 2 OS=Mus musculus OX=10090 GN=Cnksr2 PE=1 SV=1
+g13570.t1	sp|Q9VCA2|ORCT_DROME	39.2	1.56e-113	351	sp|Q9VCA2|ORCT_DROME Organic cation transporter protein OS=Drosophila melanogaster OX=7227 GN=Orct PE=1 SV=1
+g13582.t1	sp|P81133|SIM1_HUMAN	71.2	3.92e-161	479	sp|P81133|SIM1_HUMAN Single-minded homolog 1 OS=Homo sapiens OX=9606 GN=SIM1 PE=1 SV=2
+g1359.t1	sp|P48159|RL23_DROME	90.8	4.24e-81	237	sp|P48159|RL23_DROME Large ribosomal subunit protein uL14 OS=Drosophila melanogaster OX=7227 GN=RpL23 PE=1 SV=2
+g13596.t1	sp|Q95LD9|AHR_DELLE	46.7	4.10e-109	362	sp|Q95LD9|AHR_DELLE Aryl hydrocarbon receptor OS=Delphinapterus leucas OX=9749 GN=AHR PE=2 SV=1
+g13616.t1	sp|Q96C24|SYTL4_HUMAN	41.3	2.48e-73	255	sp|Q96C24|SYTL4_HUMAN Synaptotagmin-like protein 4 OS=Homo sapiens OX=9606 GN=SYTL4 PE=1 SV=2
+g13641.t1	sp|Q01N44|FAAH_ORYSI	38.4	6.94e-70	232	sp|Q01N44|FAAH_ORYSI Fatty acid amide hydrolase OS=Oryza sativa subsp. indica OX=39946 GN=FAAH PE=3 SV=1
+g13646.t1	sp|Q29S00|OSCP1_BOVIN	59.3	1.76e-141	410	sp|Q29S00|OSCP1_BOVIN Protein OSCP1 OS=Bos taurus OX=9913 GN=OSCP1 PE=2 SV=1
+g13650.t1	sp|Q14192|FHL2_HUMAN	44.4	4.99e-84	264	sp|Q14192|FHL2_HUMAN Four and a half LIM domains protein 2 OS=Homo sapiens OX=9606 GN=FHL2 PE=1 SV=3
+g13650.t2	sp|Q14192|FHL2_HUMAN	44.4	5.91e-84	264	sp|Q14192|FHL2_HUMAN Four and a half LIM domains protein 2 OS=Homo sapiens OX=9606 GN=FHL2 PE=1 SV=3
+g13778.t1	sp|P46023|GR101_LYMST	47.4	1.38e-38	162	sp|P46023|GR101_LYMST G-protein coupled receptor GRL101 OS=Lymnaea stagnalis OX=6523 PE=2 SV=1
+g13778.t2	sp|P46023|GR101_LYMST	47.4	1.36e-38	162	sp|P46023|GR101_LYMST G-protein coupled receptor GRL101 OS=Lymnaea stagnalis OX=6523 PE=2 SV=1
+g13794.t1	sp|Q8BLG2|LPAR4_MOUSE	28.7	3.49e-06	55.5	sp|Q8BLG2|LPAR4_MOUSE Lysophosphatidic acid receptor 4 OS=Mus musculus OX=10090 GN=Lpar4 PE=2 SV=2
+g13909.t1	sp|A0A2R8QF68|GRIK2_DANRE	42.7	8.32e-229	672	sp|A0A2R8QF68|GRIK2_DANRE Glutamate receptor ionotropic, kainate 2 OS=Danio rerio OX=7955 GN=grik2 PE=3 SV=1
+g13976.t1	sp|Q5U4T7|BIC1B_XENLA	72.4	9.85e-74	246	sp|Q5U4T7|BIC1B_XENLA Protein bicaudal C homolog 1-B OS=Xenopus laevis OX=8355 GN=bicc1-b PE=2 SV=1
+g14049.t1	sp|A0A1D8PDZ1|RL34B_CANAL	60.5	6.19e-39	130	sp|A0A1D8PDZ1|RL34B_CANAL Large ribosomal subunit protein eL34 OS=Candida albicans (strain SC5314 / ATCC MYA-2876) OX=237561 GN=RPL34B PE=1 SV=1
+g14067.t1	sp|P25931|RYAR_DROME	32.4	4.81e-27	112	sp|P25931|RYAR_DROME RYamide receptor OS=Drosophila melanogaster OX=7227 GN=RYa-R PE=2 SV=2
+g14104.t1	sp|Q9VJ79|PDE11_DROME	48.7	1.54e-283	832	sp|Q9VJ79|PDE11_DROME Dual 3',5'-cyclic-AMP and -GMP phosphodiesterase 11 OS=Drosophila melanogaster OX=7227 GN=Pde11 PE=1 SV=4
+g14104.t2	sp|Q9VJ79|PDE11_DROME	49.4	1.03e-286	840	sp|Q9VJ79|PDE11_DROME Dual 3',5'-cyclic-AMP and -GMP phosphodiesterase 11 OS=Drosophila melanogaster OX=7227 GN=Pde11 PE=1 SV=4
+g1414.t1	sp|P12105|CO3A1_CHICK	39.3	4.57e-48	194	sp|P12105|CO3A1_CHICK Collagen alpha-1(III) chain (Fragments) OS=Gallus gallus OX=9031 GN=COL3A1 PE=2 SV=2
+g14140.t1	sp|Q62920|PDLI5_RAT	27.6	3.36e-60	213	sp|Q62920|PDLI5_RAT PDZ and LIM domain protein 5 OS=Rattus norvegicus OX=10116 GN=Pdlim5 PE=1 SV=2
+g14140.t2	sp|O75112|LDB3_HUMAN	28.4	9.80e-59	213	sp|O75112|LDB3_HUMAN LIM domain-binding protein 3 OS=Homo sapiens OX=9606 GN=LDB3 PE=1 SV=2
+g14140.t3	sp|Q62920|PDLI5_RAT	27.3	2.41e-60	213	sp|Q62920|PDLI5_RAT PDZ and LIM domain protein 5 OS=Rattus norvegicus OX=10116 GN=Pdlim5 PE=1 SV=2
+g14140.t4	sp|Q6INU3|PDLI7_XENLA	29.0	4.74e-67	225	sp|Q6INU3|PDLI7_XENLA PDZ and LIM domain protein 7 OS=Xenopus laevis OX=8355 GN=pdlim7 PE=2 SV=1
+g1415.t1	sp|P02460|CO2A1_CHICK	38.0	7.47e-38	157	sp|P02460|CO2A1_CHICK Collagen alpha-1(II) chain (Fragment) OS=Gallus gallus OX=9031 GN=COL2A1 PE=2 SV=2
+g1417.t1	sp|Q5PQS4|GULP1_RAT	45.7	1.61e-42	154	sp|Q5PQS4|GULP1_RAT PTB domain-containing engulfment adapter protein 1 OS=Rattus norvegicus OX=10116 GN=Gulp1 PE=1 SV=1
+g14216.t1	sp|Q58DN3|TSN17_BOVIN	36.8	1.51e-51	173	sp|Q58DN3|TSN17_BOVIN Tetraspanin-17 OS=Bos taurus OX=9913 GN=TSPAN17 PE=1 SV=1
+g1423.t1	sp|P02605|MLE3_CHICK	42.7	9.03e-37	127	sp|P02605|MLE3_CHICK Myosin light chain 3, skeletal muscle isoform OS=Gallus gallus OX=9031 PE=1 SV=3
+g1423.t2	sp|P02605|MLE3_CHICK	43.3	3.18e-37	128	sp|P02605|MLE3_CHICK Myosin light chain 3, skeletal muscle isoform OS=Gallus gallus OX=9031 PE=1 SV=3
+g14235.t1	sp|O57685|PAX2A_XENLA	70.0	1.91e-87	270	sp|O57685|PAX2A_XENLA Paired box protein Pax-2-A OS=Xenopus laevis OX=8355 GN=pax2-a PE=2 SV=2
+g14255.t1	sp|Q03042|KGP1_DROME	54.7	2.30e-90	293	sp|Q03042|KGP1_DROME cGMP-dependent protein kinase, isozyme 1 OS=Drosophila melanogaster OX=7227 GN=Pkg21D PE=1 SV=2
+g14255.t2	sp|Q03042|KGP1_DROME	54.7	8.79e-91	294	sp|Q03042|KGP1_DROME cGMP-dependent protein kinase, isozyme 1 OS=Drosophila melanogaster OX=7227 GN=Pkg21D PE=1 SV=2
+g14255.t3	sp|Q03042|KGP1_DROME	54.7	6.38e-91	294	sp|Q03042|KGP1_DROME cGMP-dependent protein kinase, isozyme 1 OS=Drosophila melanogaster OX=7227 GN=Pkg21D PE=1 SV=2
+g14255.t4	sp|Q03042|KGP1_DROME	54.7	3.15e-90	293	sp|Q03042|KGP1_DROME cGMP-dependent protein kinase, isozyme 1 OS=Drosophila melanogaster OX=7227 GN=Pkg21D PE=1 SV=2
+g14261.t1	sp|Q07954|LRP1_HUMAN	26.5	2.25e-31	131	sp|Q07954|LRP1_HUMAN Prolow-density lipoprotein receptor-related protein 1 OS=Homo sapiens OX=9606 GN=LRP1 PE=1 SV=2
+g14289.t1	sp|P07602|SAP_HUMAN	29.5	3.47e-50	191	sp|P07602|SAP_HUMAN Prosaposin OS=Homo sapiens OX=9606 GN=PSAP PE=1 SV=2
+g14289.t2	sp|P07602|SAP_HUMAN	29.5	3.45e-50	191	sp|P07602|SAP_HUMAN Prosaposin OS=Homo sapiens OX=9606 GN=PSAP PE=1 SV=2
+g14368.t1	sp|Q86XX4|FRAS1_HUMAN	41.3	2.43e-265	856	sp|Q86XX4|FRAS1_HUMAN Extracellular matrix organizing protein FRAS1 OS=Homo sapiens OX=9606 GN=FRAS1 PE=1 SV=2
+g14388.t1	sp|Q803E0|PALD_DANRE	40.5	9.76e-197	592	sp|Q803E0|PALD_DANRE Paladin OS=Danio rerio OX=7955 GN=pald1 PE=2 SV=1
+g14490.t1	sp|P30884|BMP2B_XENLA	26.0	6.62e-32	128	sp|P30884|BMP2B_XENLA Bone morphogenetic protein 2-B OS=Xenopus laevis OX=8355 GN=bmp2-b PE=2 SV=1
+g14526.t1	sp|O43897|TLL1_HUMAN	56.2	0.0	1046	sp|O43897|TLL1_HUMAN Tolloid-like protein 1 OS=Homo sapiens OX=9606 GN=TLL1 PE=1 SV=1
+g14535.t1	sp|O15973|OPSD1_MIZYE	35.9	2.16e-55	196	sp|O15973|OPSD1_MIZYE Rhodopsin, GQ-coupled OS=Mizuhopecten yessoensis OX=6573 GN=SCOP1 PE=1 SV=1
+g14556.t1	sp|A1L0T3|SRB4D_MOUSE	43.6	1.11e-121	389	sp|A1L0T3|SRB4D_MOUSE Scavenger receptor cysteine-rich domain-containing group B protein OS=Mus musculus OX=10090 GN=Ssc4d PE=2 SV=2
+g14556.t2	sp|A1L0T3|SRB4D_MOUSE	43.6	7.67e-122	389	sp|A1L0T3|SRB4D_MOUSE Scavenger receptor cysteine-rich domain-containing group B protein OS=Mus musculus OX=10090 GN=Ssc4d PE=2 SV=2
+g14560.t1	sp|B3EWZ5|MLRP1_ACRMI	41.4	7.79e-68	250	sp|B3EWZ5|MLRP1_ACRMI MAM and LDL-receptor class A domain-containing protein 1 (Fragment) OS=Acropora millepora OX=45264 PE=1 SV=1
+g14577.t1	sp|P9WIT2|GULDH_MYCTO	26.6	4.32e-13	75.5	sp|P9WIT2|GULDH_MYCTO L-gulono-1,4-lactone dehydrogenase OS=Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh) OX=83331 GN=MT1821 PE=3 SV=1
+g14580.t1	sp|P00516|KGP1_BOVIN	69.8	1.54e-261	731	sp|P00516|KGP1_BOVIN cGMP-dependent protein kinase 1 OS=Bos taurus OX=9913 GN=PRKG1 PE=1 SV=2
+g14587.t1	sp|Q3SX40|PDLI7_BOVIN	45.2	1.31e-10	64.7	sp|Q3SX40|PDLI7_BOVIN PDZ and LIM domain protein 7 OS=Bos taurus OX=9913 GN=PDLIM7 PE=2 SV=1
+g14587.t2	sp|Q3SX40|PDLI7_BOVIN	45.2	3.54e-11	64.7	sp|Q3SX40|PDLI7_BOVIN PDZ and LIM domain protein 7 OS=Bos taurus OX=9913 GN=PDLIM7 PE=2 SV=1
+g14587.t3	sp|Q3SX40|PDLI7_BOVIN	45.2	7.74e-11	64.7	sp|Q3SX40|PDLI7_BOVIN PDZ and LIM domain protein 7 OS=Bos taurus OX=9913 GN=PDLIM7 PE=2 SV=1
+g14587.t4	sp|Q3SX40|PDLI7_BOVIN	41.3	5.23e-08	57.0	sp|Q3SX40|PDLI7_BOVIN PDZ and LIM domain protein 7 OS=Bos taurus OX=9913 GN=PDLIM7 PE=2 SV=1
+g14606.t1	sp|Q56JU9|RS24_BOVIN	81.7	1.65e-67	202	sp|Q56JU9|RS24_BOVIN Small ribosomal subunit protein eS24 OS=Bos taurus OX=9913 GN=RPS24 PE=2 SV=2
+g14728.t1	sp|Q8WXS8|ATS14_HUMAN	30.4	1.37e-56	209	sp|Q8WXS8|ATS14_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 14 OS=Homo sapiens OX=9606 GN=ADAMTS14 PE=1 SV=2
+g14736.t1	sp|O15072|ATS3_HUMAN	34.3	1.61e-210	644	sp|O15072|ATS3_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 3 OS=Homo sapiens OX=9606 GN=ADAMTS3 PE=1 SV=4
+g14736.t2	sp|O15072|ATS3_HUMAN	34.7	1.33e-212	649	sp|O15072|ATS3_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 3 OS=Homo sapiens OX=9606 GN=ADAMTS3 PE=1 SV=4
+g14737.t1	sp|Q68F72|S15A4_XENLA	37.2	1.79e-99	314	sp|Q68F72|S15A4_XENLA Solute carrier family 15 member 4 OS=Xenopus laevis OX=8355 GN=slc15a4 PE=2 SV=1
+g14778.t1	sp|P55795|HNRH2_HUMAN	45.3	1.40e-91	287	sp|P55795|HNRH2_HUMAN Heterogeneous nuclear ribonucleoprotein H2 OS=Homo sapiens OX=9606 GN=HNRNPH2 PE=1 SV=1
+g14778.t2	sp|P55795|HNRH2_HUMAN	44.9	6.88e-91	285	sp|P55795|HNRH2_HUMAN Heterogeneous nuclear ribonucleoprotein H2 OS=Homo sapiens OX=9606 GN=HNRNPH2 PE=1 SV=1
+g14781.t1	sp|Q9BQS2|SYT15_HUMAN	52.3	6.06e-99	307	sp|Q9BQS2|SYT15_HUMAN Synaptotagmin-15 OS=Homo sapiens OX=9606 GN=SYT15 PE=1 SV=3
+g14787.t1	sp|Q8IV01|SYT12_HUMAN	26.8	2.65e-18	90.5	sp|Q8IV01|SYT12_HUMAN Synaptotagmin-12 OS=Homo sapiens OX=9606 GN=SYT12 PE=1 SV=1
+g1485.t1	sp|Q9TU53|CUBN_CANLF	36.3	2.67e-227	727	sp|Q9TU53|CUBN_CANLF Cubilin OS=Canis lupus familiaris OX=9615 GN=CUBN PE=1 SV=1
+g1487.t1	sp|F1RWC3|CUBN_PIG	40.2	0.0	1159	sp|F1RWC3|CUBN_PIG Cubilin OS=Sus scrofa OX=9823 GN=CUBN PE=1 SV=3
+g1487.t2	sp|F1RWC3|CUBN_PIG	40.2	0.0	1159	sp|F1RWC3|CUBN_PIG Cubilin OS=Sus scrofa OX=9823 GN=CUBN PE=1 SV=3
+g1508.t1	sp|Q64536|PDK2_RAT	58.5	9.55e-157	451	sp|Q64536|PDK2_RAT [Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial OS=Rattus norvegicus OX=10116 GN=Pdk2 PE=1 SV=1
+g15176.t1	sp|Q8INF0|GCY8E_DROME	45.6	2.60e-100	332	sp|Q8INF0|GCY8E_DROME Soluble guanylate cyclase 88E OS=Drosophila melanogaster OX=7227 GN=Gyc88E PE=1 SV=4
+g15176.t2	sp|Q8INF0|GCY8E_DROME	46.5	1.44e-101	335	sp|Q8INF0|GCY8E_DROME Soluble guanylate cyclase 88E OS=Drosophila melanogaster OX=7227 GN=Gyc88E PE=1 SV=4
+g15303.t1	sp|B6RSP1|PKHA7_DANRE	48.7	5.38e-41	169	sp|B6RSP1|PKHA7_DANRE Pleckstrin homology domain-containing family A member 7 OS=Danio rerio OX=7955 GN=plekha7 PE=2 SV=2
+g15303.t2	sp|B6RSP1|PKHA7_DANRE	48.7	5.20e-41	169	sp|B6RSP1|PKHA7_DANRE Pleckstrin homology domain-containing family A member 7 OS=Danio rerio OX=7955 GN=plekha7 PE=2 SV=2
+g15303.t3	sp|B6RSP1|PKHA7_DANRE	48.7	5.30e-41	169	sp|B6RSP1|PKHA7_DANRE Pleckstrin homology domain-containing family A member 7 OS=Danio rerio OX=7955 GN=plekha7 PE=2 SV=2
+g15303.t4	sp|B6RSP1|PKHA7_DANRE	31.3	6.79e-38	159	sp|B6RSP1|PKHA7_DANRE Pleckstrin homology domain-containing family A member 7 OS=Danio rerio OX=7955 GN=plekha7 PE=2 SV=2
+g15325.t1	sp|Q5RC46|ADA2_PONAB	40.5	2.35e-90	290	sp|Q5RC46|ADA2_PONAB Adenosine deaminase 2 OS=Pongo abelii OX=9601 GN=ADA2 PE=2 SV=1
+g15338.t1	sp|Q2T9S4|PGP_BOVIN	35.6	5.10e-58	194	sp|Q2T9S4|PGP_BOVIN Glycerol-3-phosphate phosphatase OS=Bos taurus OX=9913 GN=PGP PE=2 SV=1
+g15426.t1	sp|P36188|TNNI_DROME	41.4	1.95e-07	55.5	sp|P36188|TNNI_DROME Troponin I OS=Drosophila melanogaster OX=7227 GN=wupA PE=2 SV=3
+g15426.t2	sp|P36188|TNNI_DROME	41.4	2.11e-07	55.5	sp|P36188|TNNI_DROME Troponin I OS=Drosophila melanogaster OX=7227 GN=wupA PE=2 SV=3
+g15426.t3	sp|P36188|TNNI_DROME	41.4	1.87e-07	55.5	sp|P36188|TNNI_DROME Troponin I OS=Drosophila melanogaster OX=7227 GN=wupA PE=2 SV=3
+g15481.t1	sp|Q9P2U8|VGLU2_HUMAN	60.5	3.88e-208	593	sp|Q9P2U8|VGLU2_HUMAN Vesicular glutamate transporter 2 OS=Homo sapiens OX=9606 GN=SLC17A6 PE=1 SV=1
+g15520.t1	sp|Q7ZTV5|FSHR_CAIMO	38.5	6.25e-81	283	sp|Q7ZTV5|FSHR_CAIMO Follicle-stimulating hormone receptor OS=Cairina moschata OX=8855 GN=FSHR PE=2 SV=1
+g15562.t1	sp|A6QLU6|AGRD1_BOVIN	39.3	8.45e-65	238	sp|A6QLU6|AGRD1_BOVIN Adhesion G-protein coupled receptor D1 OS=Bos taurus OX=9913 GN=ADGRD1 PE=2 SV=1
+g15620.t1	sp|O95238|SPDEF_HUMAN	34.9	4.92e-38	148	sp|O95238|SPDEF_HUMAN SAM pointed domain-containing Ets transcription factor OS=Homo sapiens OX=9606 GN=SPDEF PE=1 SV=1
+g15627.t1	sp|Q3T0X6|RS16_BOVIN	83.6	3.90e-65	211	sp|Q3T0X6|RS16_BOVIN Small ribosomal subunit protein uS9 OS=Bos taurus OX=9913 GN=RPS16 PE=1 SV=3
+g15655.t1	sp|P48509|CD151_HUMAN	30.1	2.76e-32	122	sp|P48509|CD151_HUMAN CD151 antigen OS=Homo sapiens OX=9606 GN=CD151 PE=1 SV=3
+g15656.t1	sp|P40240|CD9_MOUSE	33.9	1.61e-32	121	sp|P40240|CD9_MOUSE CD9 antigen OS=Mus musculus OX=10090 GN=Cd9 PE=1 SV=2
+g15656.t2	sp|P40240|CD9_MOUSE	36.6	1.52e-42	147	sp|P40240|CD9_MOUSE CD9 antigen OS=Mus musculus OX=10090 GN=Cd9 PE=1 SV=2
+g15674.t1	sp|Q56JX8|RS13_BOVIN	94.7	4.05e-98	281	sp|Q56JX8|RS13_BOVIN Small ribosomal subunit protein uS15 OS=Bos taurus OX=9913 GN=RPS13 PE=2 SV=3
+g15731.t1	sp|O08764|ABTB2_RAT	47.3	1.22e-16	77.4	sp|O08764|ABTB2_RAT Ankyrin repeat and BTB/POZ domain-containing protein 2 OS=Rattus norvegicus OX=10116 GN=Abtb2 PE=2 SV=1
+g15732.t1	sp|A6QL63|ABTB3_HUMAN	47.0	4.53e-178	538	sp|A6QL63|ABTB3_HUMAN Ankyrin repeat- and BTB/POZ domain-containing protein 3 OS=Homo sapiens OX=9606 GN=ABTB3 PE=1 SV=3
+g15772.t1	sp|Q8WMQ3|CD9_PIG	33.6	1.42e-34	126	sp|Q8WMQ3|CD9_PIG CD9 antigen OS=Sus scrofa OX=9823 GN=CD9 PE=2 SV=3
+g15804.t1	sp|P47875|CSRP1_RAT	51.9	1.12e-65	204	sp|P47875|CSRP1_RAT Cysteine and glycine-rich protein 1 OS=Rattus norvegicus OX=10116 GN=Csrp1 PE=1 SV=2
+g15980.t1	sp|Q6NR09|EGRAP_DROME	38.2	3.65e-20	97.8	sp|Q6NR09|EGRAP_DROME EGFR adapter protein OS=Drosophila melanogaster OX=7227 GN=Egfrap PE=1 SV=1
+g16033.t1	sp|O94827|PKHG5_HUMAN	32.5	2.22e-87	305	sp|O94827|PKHG5_HUMAN Pleckstrin homology domain-containing family G member 5 OS=Homo sapiens OX=9606 GN=PLEKHG5 PE=1 SV=4
+g16033.t2	sp|O94827|PKHG5_HUMAN	32.2	1.30e-84	295	sp|O94827|PKHG5_HUMAN Pleckstrin homology domain-containing family G member 5 OS=Homo sapiens OX=9606 GN=PLEKHG5 PE=1 SV=4
+g16086.t1	sp|B2GV36|S22AD_RAT	31.0	3.34e-61	214	sp|B2GV36|S22AD_RAT Solute carrier family 22 member 13 OS=Rattus norvegicus OX=10116 GN=Slc22a13 PE=2 SV=1
+g16088.t1	sp|Q9VCA2|ORCT_DROME	37.3	8.60e-42	159	sp|Q9VCA2|ORCT_DROME Organic cation transporter protein OS=Drosophila melanogaster OX=7227 GN=Orct PE=1 SV=1
+g16089.t1	sp|Q9TSY7|S22A6_RABIT	32.2	3.67e-66	224	sp|Q9TSY7|S22A6_RABIT Solute carrier family 22 member 6 OS=Oryctolagus cuniculus OX=9986 GN=SLC22A6 PE=2 SV=1
+g16145.t1	sp|A9Z1V5|VW5B1_MOUSE	39.2	7.43e-105	342	sp|A9Z1V5|VW5B1_MOUSE von Willebrand factor A domain-containing protein 5B1 OS=Mus musculus OX=10090 GN=Vwa5b1 PE=2 SV=1
+g16175.t1	sp|O94923|GLCE_HUMAN	56.4	1.35e-38	145	sp|O94923|GLCE_HUMAN D-glucuronyl C5-epimerase OS=Homo sapiens OX=9606 GN=GLCE PE=1 SV=3
+g16175.t2	sp|O94923|GLCE_HUMAN	56.4	1.43e-38	145	sp|O94923|GLCE_HUMAN D-glucuronyl C5-epimerase OS=Homo sapiens OX=9606 GN=GLCE PE=1 SV=3
+g16228.t1	sp|O75095|MEGF6_HUMAN	52.7	2.20e-48	194	sp|O75095|MEGF6_HUMAN Multiple epidermal growth factor-like domains protein 6 OS=Homo sapiens OX=9606 GN=MEGF6 PE=1 SV=4
+g16268.t1	sp|O00468|AGRIN_HUMAN	38.3	1.06e-204	646	sp|O00468|AGRIN_HUMAN Agrin OS=Homo sapiens OX=9606 GN=AGRN PE=1 SV=6
+g16268.t2	sp|O00468|AGRIN_HUMAN	38.4	2.10e-204	645	sp|O00468|AGRIN_HUMAN Agrin OS=Homo sapiens OX=9606 GN=AGRN PE=1 SV=6
+g16331.t1	sp|Q9QYS2|GRM3_MOUSE	38.8	3.70e-194	580	sp|Q9QYS2|GRM3_MOUSE Metabotropic glutamate receptor 3 OS=Mus musculus OX=10090 GN=Grm3 PE=1 SV=1
+g16362.t1	sp|Q95JN5|AT133_MACFA	42.3	4.54e-298	871	sp|Q95JN5|AT133_MACFA Polyamine-transporting ATPase 13A3 OS=Macaca fascicularis OX=9541 GN=ATP13A3 PE=2 SV=3
+g16404.t1	sp|Q9HAY6|BCDO1_HUMAN	40.4	3.32e-133	400	sp|Q9HAY6|BCDO1_HUMAN Beta,beta-carotene 15,15'-dioxygenase OS=Homo sapiens OX=9606 GN=BCO1 PE=1 SV=1
+g16420.t1	sp|P0C1T0|MMEL1_RAT	38.7	1.14e-169	511	sp|P0C1T0|MMEL1_RAT Membrane metallo-endopeptidase-like 1 OS=Rattus norvegicus OX=10116 GN=Mmel1 PE=1 SV=1
+g16420.t2	sp|P0C1T0|MMEL1_RAT	38.7	8.89e-171	512	sp|P0C1T0|MMEL1_RAT Membrane metallo-endopeptidase-like 1 OS=Rattus norvegicus OX=10116 GN=Mmel1 PE=1 SV=1
+g16459.t1	sp|Q9BY15|AGRE3_HUMAN	30.7	1.13e-33	142	sp|Q9BY15|AGRE3_HUMAN Adhesion G protein-coupled receptor E3 OS=Homo sapiens OX=9606 GN=ADGRE3 PE=1 SV=2
+g16493.t1	sp|P49337|WNT4_CHICK	66.7	9.82e-144	410	sp|P49337|WNT4_CHICK Protein Wnt-4 OS=Gallus gallus OX=9031 GN=WNT4 PE=1 SV=1
+g16520.t1	sp|Q03137|EPHA4_MOUSE	44.2	1.52e-261	762	sp|Q03137|EPHA4_MOUSE Ephrin type-A receptor 4 OS=Mus musculus OX=10090 GN=Epha4 PE=1 SV=2
+g16520.t2	sp|Q03137|EPHA4_MOUSE	44.8	2.39e-264	769	sp|Q03137|EPHA4_MOUSE Ephrin type-A receptor 4 OS=Mus musculus OX=10090 GN=Epha4 PE=1 SV=2
+g16563.t1	sp|Q9PTS8|ACHA9_CHICK	35.1	8.91e-53	187	sp|Q9PTS8|ACHA9_CHICK Neuronal acetylcholine receptor subunit alpha-9 OS=Gallus gallus OX=9031 GN=CHRNA9 PE=1 SV=1
+g16563.t2	sp|Q9PTS8|ACHA9_CHICK	35.4	1.75e-52	187	sp|Q9PTS8|ACHA9_CHICK Neuronal acetylcholine receptor subunit alpha-9 OS=Gallus gallus OX=9031 GN=CHRNA9 PE=1 SV=1
+g16567.t1	sp|Q8BXR1|S7A14_MOUSE	70.1	1.78e-164	483	sp|Q8BXR1|S7A14_MOUSE Solute carrier family 7 member 14 OS=Mus musculus OX=10090 GN=Slc7a14 PE=1 SV=1
+g16675.t1	sp|O75038|PLCH2_HUMAN	50.3	1.07e-218	668	sp|O75038|PLCH2_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase eta-2 OS=Homo sapiens OX=9606 GN=PLCH2 PE=1 SV=3
+g16675.t2	sp|O75038|PLCH2_HUMAN	49.9	4.05e-218	667	sp|O75038|PLCH2_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase eta-2 OS=Homo sapiens OX=9606 GN=PLCH2 PE=1 SV=3
+g1672.t1	sp|Q9TU53|CUBN_CANLF	23.0	1.16e-09	66.6	sp|Q9TU53|CUBN_CANLF Cubilin OS=Canis lupus familiaris OX=9615 GN=CUBN PE=1 SV=1
+g16725.t1	sp|Q9WTN6|S22AL_MOUSE	30.5	2.02e-42	161	sp|Q9WTN6|S22AL_MOUSE Solute carrier family 22 member 21 OS=Mus musculus OX=10090 GN=Slc22a21 PE=2 SV=1
+g16735.t1	sp|Q8BM89|ARSJ_MOUSE	45.5	3.15e-136	410	sp|Q8BM89|ARSJ_MOUSE Arylsulfatase J OS=Mus musculus OX=10090 GN=Arsj PE=2 SV=1
+g16769.t1	sp|Q05793|PGBM_MOUSE	34.2	0.0	1921	sp|Q05793|PGBM_MOUSE Basement membrane-specific heparan sulfate proteoglycan core protein OS=Mus musculus OX=10090 GN=Hspg2 PE=1 SV=1
+g16769.t2	sp|Q05793|PGBM_MOUSE	34.3	0.0	1907	sp|Q05793|PGBM_MOUSE Basement membrane-specific heparan sulfate proteoglycan core protein OS=Mus musculus OX=10090 GN=Hspg2 PE=1 SV=1
+g17122.t1	sp|Q8IY22|CMIP_HUMAN	43.4	3.99e-142	449	sp|Q8IY22|CMIP_HUMAN C-Maf-inducing protein OS=Homo sapiens OX=9606 GN=CMIP PE=1 SV=3
+g17149.t1	sp|F1R8P4|GLRA2_DANRE	39.3	1.60e-82	265	sp|F1R8P4|GLRA2_DANRE Glycine receptor subunit alpha-2 OS=Danio rerio OX=7955 GN=glra2 PE=3 SV=2
+g17162.t1	sp|Q8JG54|RGMA_CHICK	38.2	2.36e-77	250	sp|Q8JG54|RGMA_CHICK Repulsive guidance molecule A OS=Gallus gallus OX=9031 GN=RGMA PE=1 SV=1
+g17246.t1	sp|Q13951|PEBB_HUMAN	64.5	9.17e-70	213	sp|Q13951|PEBB_HUMAN Core-binding factor subunit beta OS=Homo sapiens OX=9606 GN=CBFB PE=1 SV=2
+g17251.t1	sp|Q9CR57|RL14_MOUSE	56.7	9.93e-43	143	sp|Q9CR57|RL14_MOUSE Large ribosomal subunit protein eL14 OS=Mus musculus OX=10090 GN=Rpl14 PE=1 SV=3
+g17251.t2	sp|Q9CR57|RL14_MOUSE	56.7	9.93e-43	143	sp|Q9CR57|RL14_MOUSE Large ribosomal subunit protein eL14 OS=Mus musculus OX=10090 GN=Rpl14 PE=1 SV=3
+g1736.t1	sp|Q8K0Q5|RHG18_MOUSE	36.6	3.68e-100	324	sp|Q8K0Q5|RHG18_MOUSE Rho GTPase-activating protein 18 OS=Mus musculus OX=10090 GN=Arhgap18 PE=1 SV=1
+g17448.t1	sp|Q8C0J6|SWAHC_MOUSE	28.4	3.49e-11	67.4	sp|Q8C0J6|SWAHC_MOUSE Ankyrin repeat domain-containing protein SOWAHC OS=Mus musculus OX=10090 GN=Sowahc PE=1 SV=2
+g17448.t2	sp|Q8C0J6|SWAHC_MOUSE	27.5	3.79e-10	63.9	sp|Q8C0J6|SWAHC_MOUSE Ankyrin repeat domain-containing protein SOWAHC OS=Mus musculus OX=10090 GN=Sowahc PE=1 SV=2
+g17448.t3	sp|Q8C0J6|SWAHC_MOUSE	27.5	3.20e-10	64.7	sp|Q8C0J6|SWAHC_MOUSE Ankyrin repeat domain-containing protein SOWAHC OS=Mus musculus OX=10090 GN=Sowahc PE=1 SV=2
+g17461.t1	sp|Q9D0R9|WDR89_MOUSE	41.0	1.56e-74	238	sp|Q9D0R9|WDR89_MOUSE WD repeat-containing protein 89 OS=Mus musculus OX=10090 GN=Wdr89 PE=2 SV=1
+g17461.t2	sp|Q9D0R9|WDR89_MOUSE	42.2	3.41e-77	244	sp|Q9D0R9|WDR89_MOUSE WD repeat-containing protein 89 OS=Mus musculus OX=10090 GN=Wdr89 PE=2 SV=1
+g1759.t1	sp|Q5ZMA3|RBM24_CHICK	51.9	1.35e-57	185	sp|Q5ZMA3|RBM24_CHICK RNA-binding protein 24 OS=Gallus gallus OX=9031 GN=RBM24 PE=1 SV=2
+g17599.t1	sp|P34981|TRFR_HUMAN	53.3	5.22e-25	101	sp|P34981|TRFR_HUMAN Thyrotropin-releasing hormone receptor OS=Homo sapiens OX=9606 GN=TRHR PE=1 SV=1
+g17642.t1	sp|Q9WVR6|LAT2_RAT	52.7	2.21e-75	240	sp|Q9WVR6|LAT2_RAT Large neutral amino acids transporter small subunit 2 OS=Rattus norvegicus OX=10116 GN=Slc7a8 PE=1 SV=1
+g17644.t1	sp|Q8BFW7|LPP_MOUSE	42.0	1.15e-06	50.1	sp|Q8BFW7|LPP_MOUSE Lipoma-preferred partner homolog OS=Mus musculus OX=10090 GN=Lpp PE=1 SV=1
+g17648.t1	sp|Q90871|IRF8_CHICK	60.7	1.75e-37	148	sp|Q90871|IRF8_CHICK Interferon regulatory factor 8 OS=Gallus gallus OX=9031 GN=IRF8 PE=2 SV=1
+g17648.t2	sp|Q90871|IRF8_CHICK	60.7	1.29e-37	148	sp|Q90871|IRF8_CHICK Interferon regulatory factor 8 OS=Gallus gallus OX=9031 GN=IRF8 PE=2 SV=1
+g17661.t1	sp|P14272|KLKB1_RAT	34.8	3.67e-36	150	sp|P14272|KLKB1_RAT Plasma kallikrein OS=Rattus norvegicus OX=10116 GN=Klkb1 PE=1 SV=1
+g17742.t1	sp|P41044|CAB32_DROME	48.4	5.36e-81	250	sp|P41044|CAB32_DROME Calbindin-32 OS=Drosophila melanogaster OX=7227 GN=Cbp53E PE=2 SV=1
+g17742.t2	sp|P41044|CAB32_DROME	49.5	2.02e-81	251	sp|P41044|CAB32_DROME Calbindin-32 OS=Drosophila melanogaster OX=7227 GN=Cbp53E PE=2 SV=1
+g17799.t1	sp|P0DTL6|ZTRF1_HUMAN	58.4	6.88e-136	395	sp|P0DTL6|ZTRF1_HUMAN Zinc finger TRAF-type-containing protein 1 OS=Homo sapiens OX=9606 GN=ZFTRAF1 PE=1 SV=1
+g17837.t1	sp|Q5XJX1|SEGN_DANRE	44.2	1.28e-68	217	sp|Q5XJX1|SEGN_DANRE Secretagogin OS=Danio rerio OX=7955 GN=scgn PE=1 SV=1
+g17841.t1	sp|Q9BWW7|SCRT1_HUMAN	56.4	1.11e-28	116	sp|Q9BWW7|SCRT1_HUMAN Transcriptional repressor scratch 1 OS=Homo sapiens OX=9606 GN=SCRT1 PE=1 SV=2
+g17842.t1	sp|P51875|GNAO_CAEEL	72.0	2.24e-186	521	sp|P51875|GNAO_CAEEL Guanine nucleotide-binding protein G(o) subunit alpha OS=Caenorhabditis elegans OX=6239 GN=goa-1 PE=1 SV=3
+g17851.t1	sp|Q8TE60|ATS18_HUMAN	45.3	0.0	1065	sp|Q8TE60|ATS18_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 18 OS=Homo sapiens OX=9606 GN=ADAMTS18 PE=1 SV=3
+g17915.t1	sp|Q9VKA4|Y1760_DROME	30.5	1.14e-67	243	sp|Q9VKA4|Y1760_DROME Probable G-protein coupled receptor CG31760 OS=Drosophila melanogaster OX=7227 GN=CG31760 PE=1 SV=3
+g17920.t1	sp|Q14028|CNGB1_HUMAN	49.2	1.37e-127	424	sp|Q14028|CNGB1_HUMAN Cyclic nucleotide-gated channel beta-1 OS=Homo sapiens OX=9606 GN=CNGB1 PE=1 SV=2
+g17939.t1	sp|Q13884|SNTB1_HUMAN	51.0	1.01e-169	492	sp|Q13884|SNTB1_HUMAN Beta-1-syntrophin OS=Homo sapiens OX=9606 GN=SNTB1 PE=1 SV=3
+g17976.t1	sp|Q3ZBD7|G6PI_BOVIN	71.1	2.00e-293	809	sp|Q3ZBD7|G6PI_BOVIN Glucose-6-phosphate isomerase OS=Bos taurus OX=9913 GN=GPI PE=2 SV=4
+g17988.t1	sp|Q11205|SIA4B_RAT	40.3	2.30e-66	216	sp|Q11205|SIA4B_RAT CMP-N-acetylneuraminate-beta-galactosamide-alpha-2,3-sialyltransferase 2 OS=Rattus norvegicus OX=10116 GN=St3gal2 PE=1 SV=1
+g18009.t1	sp|Q8BU11|TOX4_MOUSE	73.4	4.03e-31	132	sp|Q8BU11|TOX4_MOUSE TOX high mobility group box family member 4 OS=Mus musculus OX=10090 GN=Tox4 PE=1 SV=3
+g18009.t2	sp|Q0P5K4|TOX4_BOVIN	31.4	1.46e-31	134	sp|Q0P5K4|TOX4_BOVIN TOX high mobility group box family member 4 OS=Bos taurus OX=9913 GN=TOX4 PE=2 SV=1
+g18009.t3	sp|Q0P5K4|TOX4_BOVIN	31.4	1.61e-31	134	sp|Q0P5K4|TOX4_BOVIN TOX high mobility group box family member 4 OS=Bos taurus OX=9913 GN=TOX4 PE=2 SV=1
+g18019.t1	sp|Q9NY59|NSMA2_HUMAN	30.1	4.52e-57	205	sp|Q9NY59|NSMA2_HUMAN Sphingomyelin phosphodiesterase 3 OS=Homo sapiens OX=9606 GN=SMPD3 PE=1 SV=1
+g18031.t1	sp|P41044|CAB32_DROME	40.2	5.54e-57	187	sp|P41044|CAB32_DROME Calbindin-32 OS=Drosophila melanogaster OX=7227 GN=Cbp53E PE=2 SV=1
+g18113.t1	sp|P24721|ASGR2_MOUSE	28.7	8.13e-10	62.4	sp|P24721|ASGR2_MOUSE Asialoglycoprotein receptor 2 OS=Mus musculus OX=10090 GN=Asgr2 PE=1 SV=1
+g18114.t1	sp|Q719L8|SL_CRODU	25.4	3.79e-06	49.3	sp|Q719L8|SL_CRODU Snaclec crotocetin OS=Crotalus durissus terrificus OX=8732 PE=2 SV=1
+g18120.t1	sp|Q8QFX6|NRP1A_DANRE	31.7	2.53e-12	69.3	sp|Q8QFX6|NRP1A_DANRE Neuropilin-1a OS=Danio rerio OX=7955 GN=nrp1a PE=2 SV=1
+g18120.t2	sp|Q8QFX6|NRP1A_DANRE	31.7	2.58e-12	69.3	sp|Q8QFX6|NRP1A_DANRE Neuropilin-1a OS=Danio rerio OX=7955 GN=nrp1a PE=2 SV=1
+g18124.t1	sp|P55112|NAS4_CAEEL	37.4	3.21e-45	167	sp|P55112|NAS4_CAEEL Zinc metalloproteinase nas-4 OS=Caenorhabditis elegans OX=6239 GN=nas-4 PE=2 SV=4
+g18124.t2	sp|P55112|NAS4_CAEEL	37.4	1.11e-45	167	sp|P55112|NAS4_CAEEL Zinc metalloproteinase nas-4 OS=Caenorhabditis elegans OX=6239 GN=nas-4 PE=2 SV=4
+g18205.t1	sp|Q4V9Y5|CRLD2_XENTR	44.3	5.41e-38	149	sp|Q4V9Y5|CRLD2_XENTR Cysteine-rich secretory protein LCCL domain-containing 2 OS=Xenopus tropicalis OX=8364 GN=crispld2 PE=2 SV=1
+g1822.t1	sp|P46023|GR101_LYMST	47.2	1.12e-109	373	sp|P46023|GR101_LYMST G-protein coupled receptor GRL101 OS=Lymnaea stagnalis OX=6523 PE=2 SV=1
+g18222.t1	sp|Q76LL6|FHOD3_MOUSE	37.4	1.98e-68	245	sp|Q76LL6|FHOD3_MOUSE FH1/FH2 domain-containing protein 3 OS=Mus musculus OX=10090 GN=Fhod3 PE=1 SV=1
+g18222.t2	sp|Q2V2M9|FHOD3_HUMAN	38.8	5.20e-59	216	sp|Q2V2M9|FHOD3_HUMAN FH1/FH2 domain-containing protein 3 OS=Homo sapiens OX=9606 GN=FHOD3 PE=1 SV=2
+g18223.t1	sp|Q2V2M9|FHOD3_HUMAN	60.7	5.99e-107	381	sp|Q2V2M9|FHOD3_HUMAN FH1/FH2 domain-containing protein 3 OS=Homo sapiens OX=9606 GN=FHOD3 PE=1 SV=2
+g18223.t2	sp|Q2V2M9|FHOD3_HUMAN	60.7	6.06e-107	381	sp|Q2V2M9|FHOD3_HUMAN FH1/FH2 domain-containing protein 3 OS=Homo sapiens OX=9606 GN=FHOD3 PE=1 SV=2
+g18223.t3	sp|Q2V2M9|FHOD3_HUMAN	60.1	9.35e-85	312	sp|Q2V2M9|FHOD3_HUMAN FH1/FH2 domain-containing protein 3 OS=Homo sapiens OX=9606 GN=FHOD3 PE=1 SV=2
+g18223.t4	sp|Q2V2M9|FHOD3_HUMAN	60.7	5.93e-107	381	sp|Q2V2M9|FHOD3_HUMAN FH1/FH2 domain-containing protein 3 OS=Homo sapiens OX=9606 GN=FHOD3 PE=1 SV=2
+g18224.t1	sp|Q7LFX5|CHSTF_HUMAN	29.6	6.46e-49	178	sp|Q7LFX5|CHSTF_HUMAN Carbohydrate sulfotransferase 15 OS=Homo sapiens OX=9606 GN=CHST15 PE=1 SV=1
+g18275.t1	sp|P26769|ADCY2_RAT	43.3	2.38e-267	785	sp|P26769|ADCY2_RAT Adenylate cyclase type 2 OS=Rattus norvegicus OX=10116 GN=Adcy2 PE=1 SV=1
+g18357.t1	sp|P55088|AQP4_MOUSE	48.9	2.35e-69	222	sp|P55088|AQP4_MOUSE Aquaporin-4 OS=Mus musculus OX=10090 GN=Aqp4 PE=1 SV=2
+g18367.t1	sp|Q06455|MTG8_HUMAN	43.8	4.30e-115	361	sp|Q06455|MTG8_HUMAN Protein CBFA2T1 OS=Homo sapiens OX=9606 GN=RUNX1T1 PE=1 SV=2
+g18367.t2	sp|Q06455|MTG8_HUMAN	44.8	8.04e-116	363	sp|Q06455|MTG8_HUMAN Protein CBFA2T1 OS=Homo sapiens OX=9606 GN=RUNX1T1 PE=1 SV=2
+g1838.t1	sp|Q6INN8|SAMH1_XENLA	45.7	5.91e-108	358	sp|Q6INN8|SAMH1_XENLA Deoxynucleoside triphosphate triphosphohydrolase SAMHD1 OS=Xenopus laevis OX=8355 GN=samhd1 PE=1 SV=2
+g18426.t1	sp|Q09128|CP24A_RAT	38.8	1.65e-113	349	sp|Q09128|CP24A_RAT 1,25-dihydroxyvitamin D(3) 24-hydroxylase, mitochondrial OS=Rattus norvegicus OX=10116 GN=Cyp24a1 PE=1 SV=1
+g18452.t1	sp|Q90Z10|RL13_DANRE	67.5	6.78e-83	248	sp|Q90Z10|RL13_DANRE Large ribosomal subunit protein eL13 OS=Danio rerio OX=7955 GN=rpl13 PE=1 SV=3
+g18478.t1	sp|Q9QXA6|BAT1_MOUSE	54.7	2.33e-157	457	sp|Q9QXA6|BAT1_MOUSE b(0,+)-type amino acid transporter 1 OS=Mus musculus OX=10090 GN=Slc7a9 PE=1 SV=1
+g18484.t1	sp|P82251|BAT1_HUMAN	52.0	4.12e-137	418	sp|P82251|BAT1_HUMAN b(0,+)-type amino acid transporter 1 OS=Homo sapiens OX=9606 GN=SLC7A9 PE=1 SV=1
+g18595.t1	sp|P35556|FBN2_HUMAN	49.2	5.67e-171	597	sp|P35556|FBN2_HUMAN Fibrillin-2 OS=Homo sapiens OX=9606 GN=FBN2 PE=1 SV=3
+g18647.t1	sp|Q9NSY2|STAR5_HUMAN	39.3	3.25e-45	155	sp|Q9NSY2|STAR5_HUMAN StAR-related lipid transfer protein 5 OS=Homo sapiens OX=9606 GN=STARD5 PE=1 SV=2
+g18647.t2	sp|Q9NSY2|STAR5_HUMAN	40.8	7.78e-47	159	sp|Q9NSY2|STAR5_HUMAN StAR-related lipid transfer protein 5 OS=Homo sapiens OX=9606 GN=STARD5 PE=1 SV=2
+g18660.t1	sp|Q9NR48|ASH1L_HUMAN	46.4	3.71e-250	827	sp|Q9NR48|ASH1L_HUMAN Histone-lysine N-methyltransferase ASH1L OS=Homo sapiens OX=9606 GN=ASH1L PE=1 SV=2
+g18660.t2	sp|Q9NR48|ASH1L_HUMAN	46.1	3.23e-244	810	sp|Q9NR48|ASH1L_HUMAN Histone-lysine N-methyltransferase ASH1L OS=Homo sapiens OX=9606 GN=ASH1L PE=1 SV=2
+g18672.t1	sp|P62993|GRB2_HUMAN	45.7	7.92e-07	53.1	sp|P62993|GRB2_HUMAN Growth factor receptor-bound protein 2 OS=Homo sapiens OX=9606 GN=GRB2 PE=1 SV=1
+g18672.t2	sp|P62993|GRB2_HUMAN	45.7	7.14e-07	53.1	sp|P62993|GRB2_HUMAN Growth factor receptor-bound protein 2 OS=Homo sapiens OX=9606 GN=GRB2 PE=1 SV=1
+g1868.t1	sp|Q2PC93|SSPO_CHICK	30.4	1.73e-160	550	sp|Q2PC93|SSPO_CHICK SCO-spondin OS=Gallus gallus OX=9031 GN=SSPO PE=2 SV=1
+g18689.t1	sp|Q8BUN9|NCKX2_MOUSE	47.5	9.82e-167	495	sp|Q8BUN9|NCKX2_MOUSE Sodium/potassium/calcium exchanger 2 OS=Mus musculus OX=10090 GN=Slc24a2 PE=1 SV=1
+g1869.t1	sp|Q9Y6R7|FCGBP_HUMAN	25.6	6.13e-09	65.9	sp|Q9Y6R7|FCGBP_HUMAN IgGFc-binding protein OS=Homo sapiens OX=9606 GN=FCGBP PE=1 SV=3
+g18725.t1	sp|B3EWZ5|MLRP1_ACRMI	33.9	1.78e-146	489	sp|B3EWZ5|MLRP1_ACRMI MAM and LDL-receptor class A domain-containing protein 1 (Fragment) OS=Acropora millepora OX=45264 PE=1 SV=1
+g18769.t1	sp|Q8VE49|DOXA1_MOUSE	33.3	8.47e-34	132	sp|Q8VE49|DOXA1_MOUSE Dual oxidase maturation factor 1 OS=Mus musculus OX=10090 GN=Duoxa1 PE=1 SV=2
+g18770.t1	sp|Q9NRD9|DUOX1_HUMAN	39.6	0.0	1060	sp|Q9NRD9|DUOX1_HUMAN Dual oxidase 1 OS=Homo sapiens OX=9606 GN=DUOX1 PE=1 SV=1
+g18811.t1	sp|P53355|DAPK1_HUMAN	51.9	1.35e-135	433	sp|P53355|DAPK1_HUMAN Death-associated protein kinase 1 OS=Homo sapiens OX=9606 GN=DAPK1 PE=1 SV=6
+g18811.t2	sp|Q8VDF3|DAPK2_MOUSE	56.0	2.13e-126	370	sp|Q8VDF3|DAPK2_MOUSE Death-associated protein kinase 2 OS=Mus musculus OX=10090 GN=Dapk2 PE=1 SV=1
+g18814.t1	sp|Q9H2S1|KCNN2_HUMAN	68.2	3.43e-187	555	sp|Q9H2S1|KCNN2_HUMAN Small conductance calcium-activated potassium channel protein 2 OS=Homo sapiens OX=9606 GN=KCNN2 PE=1 SV=2
+g18833.t1	sp|Q9TYT3|SHCH1_CAEEL	39.5	5.01e-10	65.5	sp|Q9TYT3|SHCH1_CAEEL SHC-transforming protein homolog 1 OS=Caenorhabditis elegans OX=6239 GN=shc-1 PE=1 SV=2
+g1891.t1	sp|P98088|MUC5A_HUMAN	31.8	8.01e-18	95.5	sp|P98088|MUC5A_HUMAN Mucin-5AC OS=Homo sapiens OX=9606 GN=MUC5AC PE=1 SV=4
+g1891.t2	sp|P98088|MUC5A_HUMAN	31.8	7.78e-18	95.5	sp|P98088|MUC5A_HUMAN Mucin-5AC OS=Homo sapiens OX=9606 GN=MUC5AC PE=1 SV=4
+g18930.t1	sp|P58397|ATS12_HUMAN	39.5	1.97e-226	697	sp|P58397|ATS12_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 12 OS=Homo sapiens OX=9606 GN=ADAMTS12 PE=1 SV=2
+g18945.t1	sp|Q6BD04|GPR54_ORENI	36.9	4.08e-49	172	sp|Q6BD04|GPR54_ORENI G-protein coupled receptor 54 OS=Oreochromis niloticus OX=8128 GN=gpr54 PE=2 SV=1
+g18948.t1	sp|Q6BD04|GPR54_ORENI	35.4	1.36e-43	157	sp|Q6BD04|GPR54_ORENI G-protein coupled receptor 54 OS=Oreochromis niloticus OX=8128 GN=gpr54 PE=2 SV=1
+g18968.t1	sp|Q9VCA2|ORCT_DROME	31.5	1.06e-52	194	sp|Q9VCA2|ORCT_DROME Organic cation transporter protein OS=Drosophila melanogaster OX=7227 GN=Orct PE=1 SV=1
+g18980.t1	sp|P35546|RET_MOUSE	36.1	1.90e-49	192	sp|P35546|RET_MOUSE Proto-oncogene tyrosine-protein kinase receptor Ret OS=Mus musculus OX=10090 GN=Ret PE=1 SV=2
+g19017.t1	sp|Q63415|PCSK6_RAT	55.1	5.06e-229	665	sp|Q63415|PCSK6_RAT Proprotein convertase subtilisin/kexin type 6 OS=Rattus norvegicus OX=10116 GN=Pcsk6 PE=1 SV=1
+g19027.t1	sp|Q8JG64|PDIA3_CHICK	56.3	2.02e-172	499	sp|Q8JG64|PDIA3_CHICK Protein disulfide-isomerase A3 OS=Gallus gallus OX=9031 GN=PDIA3 PE=2 SV=1
+g19034.t1	sp|Q24322|SEM1A_DROME	40.3	9.68e-99	331	sp|Q24322|SEM1A_DROME Semaphorin-1A OS=Drosophila melanogaster OX=7227 GN=Sema1a PE=1 SV=3
+g19034.t2	sp|Q24322|SEM1A_DROME	40.3	1.53e-98	331	sp|Q24322|SEM1A_DROME Semaphorin-1A OS=Drosophila melanogaster OX=7227 GN=Sema1a PE=1 SV=3
+g19034.t3	sp|Q24322|SEM1A_DROME	40.3	1.10e-98	331	sp|Q24322|SEM1A_DROME Semaphorin-1A OS=Drosophila melanogaster OX=7227 GN=Sema1a PE=1 SV=3
+g19034.t4	sp|Q24322|SEM1A_DROME	40.3	6.04e-99	331	sp|Q24322|SEM1A_DROME Semaphorin-1A OS=Drosophila melanogaster OX=7227 GN=Sema1a PE=1 SV=3
+g19050.t1	sp|Q7Z401|MYCPP_HUMAN	50.6	1.62e-281	839	sp|Q7Z401|MYCPP_HUMAN C-myc promoter-binding protein OS=Homo sapiens OX=9606 GN=DENND4A PE=1 SV=2
+g19162.t1	sp|Q6P3J5|EF2_DANRE	79.5	0.0	1347	sp|Q6P3J5|EF2_DANRE Elongation factor 2b OS=Danio rerio OX=7955 GN=eef2b PE=1 SV=1
+g19297.t1	sp|S4R2P9|NAC3_MOUSE	29.8	5.65e-88	300	sp|S4R2P9|NAC3_MOUSE Sodium/calcium exchanger 3 OS=Mus musculus OX=10090 GN=Slc8a3 PE=1 SV=1
+g19297.t2	sp|S4R2P9|NAC3_MOUSE	30.3	1.11e-90	307	sp|S4R2P9|NAC3_MOUSE Sodium/calcium exchanger 3 OS=Mus musculus OX=10090 GN=Slc8a3 PE=1 SV=1
+g19297.t3	sp|S4R2P9|NAC3_MOUSE	30.6	6.98e-88	299	sp|S4R2P9|NAC3_MOUSE Sodium/calcium exchanger 3 OS=Mus musculus OX=10090 GN=Slc8a3 PE=1 SV=1
+g19341.t1	sp|Q95218|DMBT1_RABIT	28.5	5.08e-113	391	sp|Q95218|DMBT1_RABIT Scavenger receptor cysteine-rich domain-containing protein DMBT1 OS=Oryctolagus cuniculus OX=9986 GN=Dmbt1 PE=1 SV=2
+g19341.t2	sp|Q95218|DMBT1_RABIT	28.7	6.37e-114	394	sp|Q95218|DMBT1_RABIT Scavenger receptor cysteine-rich domain-containing protein DMBT1 OS=Oryctolagus cuniculus OX=9986 GN=Dmbt1 PE=1 SV=2
+g19401.t1	sp|O13168|TLE3B_DANRE	65.8	0.0	892	sp|O13168|TLE3B_DANRE Transducin-like enhancer protein 3-B OS=Danio rerio OX=7955 GN=tle3b PE=1 SV=2
+g19401.t2	sp|O13168|TLE3B_DANRE	66.0	0.0	894	sp|O13168|TLE3B_DANRE Transducin-like enhancer protein 3-B OS=Danio rerio OX=7955 GN=tle3b PE=1 SV=2
+g19401.t3	sp|O13168|TLE3B_DANRE	65.3	0.0	894	sp|O13168|TLE3B_DANRE Transducin-like enhancer protein 3-B OS=Danio rerio OX=7955 GN=tle3b PE=1 SV=2
+g19402.t1	sp|P08708|RS17_HUMAN	79.1	2.22e-69	207	sp|P08708|RS17_HUMAN Small ribosomal subunit protein eS17 OS=Homo sapiens OX=9606 GN=RPS17 PE=1 SV=2
+g19405.t1	sp|O08856|ELL_MOUSE	26.7	3.17e-42	163	sp|O08856|ELL_MOUSE RNA polymerase II elongation factor ELL OS=Mus musculus OX=10090 GN=Ell PE=2 SV=2
+g19479.t1	sp|P53405|ISL1_DANRE	66.7	5.34e-150	431	sp|P53405|ISL1_DANRE Insulin gene enhancer protein isl-1 OS=Danio rerio OX=7955 GN=isl1 PE=2 SV=1
+g19479.t2	sp|P53405|ISL1_DANRE	70.5	2.60e-153	438	sp|P53405|ISL1_DANRE Insulin gene enhancer protein isl-1 OS=Danio rerio OX=7955 GN=isl1 PE=2 SV=1
+g19484.t1	sp|O01404|PHM_DROME	46.6	2.08e-92	285	sp|O01404|PHM_DROME Peptidylglycine alpha-hydroxylating monooxygenase OS=Drosophila melanogaster OX=7227 GN=Phm PE=1 SV=2
+g19492.t1	sp|Q91987|NTRK2_CHICK	39.2	1.97e-149	460	sp|Q91987|NTRK2_CHICK BDNF/NT-3 growth factors receptor OS=Gallus gallus OX=9031 GN=NTRK2 PE=1 SV=1
+g19492.t2	sp|Q91987|NTRK2_CHICK	39.9	1.50e-154	473	sp|Q91987|NTRK2_CHICK BDNF/NT-3 growth factors receptor OS=Gallus gallus OX=9031 GN=NTRK2 PE=1 SV=1
+g19492.t3	sp|Q91987|NTRK2_CHICK	39.1	6.00e-149	459	sp|Q91987|NTRK2_CHICK BDNF/NT-3 growth factors receptor OS=Gallus gallus OX=9031 GN=NTRK2 PE=1 SV=1
+g19492.t4	sp|Q91987|NTRK2_CHICK	39.0	2.69e-150	462	sp|Q91987|NTRK2_CHICK BDNF/NT-3 growth factors receptor OS=Gallus gallus OX=9031 GN=NTRK2 PE=1 SV=1
+g19492.t5	sp|Q91987|NTRK2_CHICK	39.4	7.43e-152	468	sp|Q91987|NTRK2_CHICK BDNF/NT-3 growth factors receptor OS=Gallus gallus OX=9031 GN=NTRK2 PE=1 SV=1
+g19514.t1	sp|Q8N6G6|ATL1_HUMAN	30.6	2.93e-158	521	sp|Q8N6G6|ATL1_HUMAN ADAMTS-like protein 1 OS=Homo sapiens OX=9606 GN=ADAMTSL1 PE=1 SV=4
+g19514.t2	sp|Q8N6G6|ATL1_HUMAN	30.2	3.62e-155	512	sp|Q8N6G6|ATL1_HUMAN ADAMTS-like protein 1 OS=Homo sapiens OX=9606 GN=ADAMTSL1 PE=1 SV=4
+g19525.t1	sp|O01727|RS6_BRAFL	63.8	1.44e-87	261	sp|O01727|RS6_BRAFL Small ribosomal subunit protein eS6 OS=Branchiostoma floridae OX=7739 GN=RPS6 PE=3 SV=1
+g19541.t1	sp|Q7SZ59|RASLC_DANRE	46.9	2.41e-59	191	sp|Q7SZ59|RASLC_DANRE Ras-like protein family member 12 OS=Danio rerio OX=7955 GN=RASL12 PE=2 SV=1
+g19633.t1	sp|Q92482|AQP3_HUMAN	53.4	8.34e-93	280	sp|Q92482|AQP3_HUMAN Aquaporin-3 OS=Homo sapiens OX=9606 GN=AQP3 PE=1 SV=2
+g19651.t1	sp|P08478|AMDA_XENLA	47.1	7.62e-92	308	sp|P08478|AMDA_XENLA Peptidyl-glycine alpha-amidating monooxygenase A OS=Xenopus laevis OX=8355 GN=pam-a PE=1 SV=3
+g19659.t1	sp|Q6PD21|SHB_MOUSE	45.2	2.13e-42	161	sp|Q6PD21|SHB_MOUSE SH2 domain-containing adapter protein B OS=Mus musculus OX=10090 GN=Shb PE=1 SV=2
+g19659.t2	sp|Q6PD21|SHB_MOUSE	45.2	4.52e-42	161	sp|Q6PD21|SHB_MOUSE SH2 domain-containing adapter protein B OS=Mus musculus OX=10090 GN=Shb PE=1 SV=2
+g19671.t1	sp|Q10656|EGL15_CAEEL	39.9	9.42e-60	223	sp|Q10656|EGL15_CAEEL Myoblast growth factor receptor egl-15 OS=Caenorhabditis elegans OX=6239 GN=egl-15 PE=1 SV=1
+g19703.t1	sp|Q6BD04|GPR54_ORENI	36.8	7.75e-48	168	sp|Q6BD04|GPR54_ORENI G-protein coupled receptor 54 OS=Oreochromis niloticus OX=8128 GN=gpr54 PE=2 SV=1
+g19703.t2	sp|Q969F8|KISSR_HUMAN	47.5	1.26e-17	80.1	sp|Q969F8|KISSR_HUMAN KiSS-1 receptor OS=Homo sapiens OX=9606 GN=KISS1R PE=1 SV=2
+g19713.t1	sp|Q40784|AAPC_CENCI	38.7	2.09e-55	184	sp|Q40784|AAPC_CENCI Putative glucose-6-phosphate 1-epimerase OS=Cenchrus ciliaris OX=35872 PE=2 SV=1
+g19752.t1	sp|Q7SIH1|A2MG_BOVIN	39.1	2.40e-26	114	sp|Q7SIH1|A2MG_BOVIN Alpha-2-macroglobulin OS=Bos taurus OX=9913 GN=A2M PE=1 SV=2
+g19753.t1	sp|P01023|A2MG_HUMAN	31.5	1.00e-182	581	sp|P01023|A2MG_HUMAN Alpha-2-macroglobulin OS=Homo sapiens OX=9606 GN=A2M PE=1 SV=3
+g19783.t1	sp|Q8NFF2|NCKX4_HUMAN	36.0	5.34e-91	291	sp|Q8NFF2|NCKX4_HUMAN Sodium/potassium/calcium exchanger 4 OS=Homo sapiens OX=9606 GN=SLC24A4 PE=1 SV=2
+g19815.t1	sp|Q15822|ACHA2_HUMAN	53.9	6.03e-158	465	sp|Q15822|ACHA2_HUMAN Neuronal acetylcholine receptor subunit alpha-2 OS=Homo sapiens OX=9606 GN=CHRNA2 PE=1 SV=2
+g19824.t1	sp|Q9HCF6|TRPM3_HUMAN	33.2	6.34e-95	325	sp|Q9HCF6|TRPM3_HUMAN Transient receptor potential cation channel subfamily M member 3 OS=Homo sapiens OX=9606 GN=TRPM3 PE=1 SV=4
+g19826.t1	sp|Q9HCF6|TRPM3_HUMAN	37.7	5.69e-108	359	sp|Q9HCF6|TRPM3_HUMAN Transient receptor potential cation channel subfamily M member 3 OS=Homo sapiens OX=9606 GN=TRPM3 PE=1 SV=4
+g19828.t1	sp|Q6BD04|GPR54_ORENI	33.6	2.16e-37	141	sp|Q6BD04|GPR54_ORENI G-protein coupled receptor 54 OS=Oreochromis niloticus OX=8128 GN=gpr54 PE=2 SV=1
+g19833.t1	sp|P22770|ACHA7_CHICK	40.2	5.74e-119	362	sp|P22770|ACHA7_CHICK Neuronal acetylcholine receptor subunit alpha-7 OS=Gallus gallus OX=9031 GN=CHRNA7 PE=1 SV=1
+g19833.t2	sp|P48180|ACH1_CAEEL	39.9	4.91e-116	355	sp|P48180|ACH1_CAEEL Acetylcholine receptor subunit alpha-type acr-16 OS=Caenorhabditis elegans OX=6239 GN=acr-16 PE=2 SV=1
+g19868.t1	sp|P49746|TSP3_HUMAN	49.4	4.70e-194	587	sp|P49746|TSP3_HUMAN Thrombospondin-3 OS=Homo sapiens OX=9606 GN=THBS3 PE=1 SV=1
+g19872.t1	sp|Q3T025|RL17_BOVIN	76.1	1.13e-97	283	sp|Q3T025|RL17_BOVIN Large ribosomal subunit protein uL22 OS=Bos taurus OX=9913 GN=RPL17 PE=2 SV=3
+g19882.t1	sp|P20342|RS15_XENLA	83.6	1.66e-83	244	sp|P20342|RS15_XENLA Small ribosomal subunit protein uS19 OS=Xenopus laevis OX=8355 GN=rps15 PE=1 SV=3
+g19896.t1	sp|Q9P2N4|ATS9_HUMAN	31.7	4.65e-19	90.1	sp|Q9P2N4|ATS9_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 9 OS=Homo sapiens OX=9606 GN=ADAMTS9 PE=1 SV=4
+g19905.t1	sp|Q9Z1N9|UN13B_MOUSE	52.3	0.0	1733	sp|Q9Z1N9|UN13B_MOUSE Protein unc-13 homolog B OS=Mus musculus OX=10090 GN=Unc13b PE=1 SV=2
+g19905.t2	sp|Q9Z1N9|UN13B_MOUSE	53.8	0.0	1754	sp|Q9Z1N9|UN13B_MOUSE Protein unc-13 homolog B OS=Mus musculus OX=10090 GN=Unc13b PE=1 SV=2
+g19905.t3	sp|Q9Z1N9|UN13B_MOUSE	53.8	0.0	1755	sp|Q9Z1N9|UN13B_MOUSE Protein unc-13 homolog B OS=Mus musculus OX=10090 GN=Unc13b PE=1 SV=2
+g19905.t4	sp|Q9Z1N9|UN13B_MOUSE	53.7	0.0	1744	sp|Q9Z1N9|UN13B_MOUSE Protein unc-13 homolog B OS=Mus musculus OX=10090 GN=Unc13b PE=1 SV=2
+g19905.t5	sp|Q9Z1N9|UN13B_MOUSE	54.7	0.0	1764	sp|Q9Z1N9|UN13B_MOUSE Protein unc-13 homolog B OS=Mus musculus OX=10090 GN=Unc13b PE=1 SV=2
+g19915.t1	sp|Q9DCA2|RT11_MOUSE	64.6	2.36e-51	167	sp|Q9DCA2|RT11_MOUSE Small ribosomal subunit protein uS11m OS=Mus musculus OX=10090 GN=Mrps11 PE=1 SV=2
+g20230.t1	sp|O14522|PTPRT_HUMAN	31.9	3.60e-137	471	sp|O14522|PTPRT_HUMAN Receptor-type tyrosine-protein phosphatase T OS=Homo sapiens OX=9606 GN=PTPRT PE=1 SV=6
+g20233.t1	sp|Q13635|PTC1_HUMAN	49.8	3.26e-185	565	sp|Q13635|PTC1_HUMAN Protein patched homolog 1 OS=Homo sapiens OX=9606 GN=PTCH1 PE=1 SV=2
+g20282.t1	sp|Q14114|LRP8_HUMAN	33.7	9.80e-11	66.2	sp|Q14114|LRP8_HUMAN Low-density lipoprotein receptor-related protein 8 OS=Homo sapiens OX=9606 GN=LRP8 PE=1 SV=4
+g20392.t1	sp|Q8NEA6|GLIS3_HUMAN	50.3	1.54e-58	208	sp|Q8NEA6|GLIS3_HUMAN Zinc finger protein GLIS3 OS=Homo sapiens OX=9606 GN=GLIS3 PE=1 SV=5
+g20513.t1	sp|Q5I3Q2|GDF8_EPICO	28.2	4.05e-32	130	sp|Q5I3Q2|GDF8_EPICO Growth/differentiation factor 8 OS=Epinephelus coioides OX=94232 GN=gdf-8 PE=1 SV=1
+g20517.t1	sp|F6PTN1|TIKI1_XENTR	46.4	2.91e-91	287	sp|F6PTN1|TIKI1_XENTR Metalloprotease TIKI1 OS=Xenopus tropicalis OX=8364 GN=trabd2a PE=2 SV=2
+g20523.t1	sp|Q9U943|APLP_LOCMI	28.1	1.87e-36	154	sp|Q9U943|APLP_LOCMI Apolipophorins OS=Locusta migratoria OX=7004 PE=1 SV=2
+g20523.t2	sp|Q9U943|APLP_LOCMI	28.0	2.97e-38	160	sp|Q9U943|APLP_LOCMI Apolipophorins OS=Locusta migratoria OX=7004 PE=1 SV=2
+g20524.t1	sp|Q9V496|APLP_DROME	24.2	3.35e-14	82.4	sp|Q9V496|APLP_DROME Apolipophorins OS=Drosophila melanogaster OX=7227 GN=apolpp PE=1 SV=2
+g20535.t1	sp|Q6VVW5|ANPRB_MOUSE	44.5	9.02e-146	462	sp|Q6VVW5|ANPRB_MOUSE Atrial natriuretic peptide receptor 2 OS=Mus musculus OX=10090 GN=Npr2 PE=1 SV=2
+g20580.t1	sp|O14522|PTPRT_HUMAN	34.2	2.83e-65	238	sp|O14522|PTPRT_HUMAN Receptor-type tyrosine-protein phosphatase T OS=Homo sapiens OX=9606 GN=PTPRT PE=1 SV=6
+g20583.t1	sp|O73791|TIE2_DANRE	23.7	8.82e-23	108	sp|O73791|TIE2_DANRE Angiopoietin-1 receptor OS=Danio rerio OX=7955 GN=tek PE=1 SV=1
+g20662.t1	sp|Q9VXX8|RL371_DROME	80.7	3.65e-48	151	sp|Q9VXX8|RL371_DROME Large ribosomal subunit protein eL37A OS=Drosophila melanogaster OX=7227 GN=RpL37-1 PE=1 SV=1
+g20745.t1	sp|Q3SZZ7|FGL1_BOVIN	39.7	2.34e-65	211	sp|Q3SZZ7|FGL1_BOVIN Fibrinogen-like protein 1 OS=Bos taurus OX=9913 GN=FGL1 PE=2 SV=1
+g20746.t1	sp|Q15485|FCN2_HUMAN	49.7	2.26e-58	200	sp|Q15485|FCN2_HUMAN Ficolin-2 OS=Homo sapiens OX=9606 GN=FCN2 PE=1 SV=2
+g20746.t2	sp|Q15485|FCN2_HUMAN	49.7	3.09e-58	200	sp|Q15485|FCN2_HUMAN Ficolin-2 OS=Homo sapiens OX=9606 GN=FCN2 PE=1 SV=2
+g2078.t1	sp|Q54SR7|FKBP2_DICDI	33.7	6.94e-09	53.9	sp|Q54SR7|FKBP2_DICDI FK506-binding protein 2 OS=Dictyostelium discoideum OX=44689 GN=fkbp2 PE=3 SV=1
+g20783.t1	sp|A2AJN7|S4A11_MOUSE	48.5	7.77e-235	685	sp|A2AJN7|S4A11_MOUSE Solute carrier family 4 member 11 OS=Mus musculus OX=10090 GN=Slc4a11 PE=2 SV=1
+g20792.t1	sp|Q24133|DNAJ1_DROME	67.8	7.14e-35	127	sp|Q24133|DNAJ1_DROME DnaJ protein homolog 1 OS=Drosophila melanogaster OX=7227 GN=DnaJ-1 PE=1 SV=3
+g20793.t1	sp|Q5BIP8|DNJB5_BOVIN	63.6	1.31e-59	190	sp|Q5BIP8|DNJB5_BOVIN DnaJ homolog subfamily B member 5 OS=Bos taurus OX=9913 GN=DNAJB5 PE=2 SV=1
+g2085.t1	sp|Q99N01|SO4A1_RAT	42.9	2.06e-69	233	sp|Q99N01|SO4A1_RAT Solute carrier organic anion transporter family member 4A1 OS=Rattus norvegicus OX=10116 GN=Slco4a1 PE=2 SV=1
+g2087.t1	sp|Q8K078|SO4A1_MOUSE	38.6	1.78e-78	261	sp|Q8K078|SO4A1_MOUSE Solute carrier organic anion transporter family member 4A1 OS=Mus musculus OX=10090 GN=Slco4a1 PE=1 SV=2
+g20884.t1	sp|Q90384|TDX_CYNPY	73.8	3.79e-106	306	sp|Q90384|TDX_CYNPY Peroxiredoxin OS=Cynops pyrrhogaster OX=8330 PE=2 SV=1
+g20896.t1	sp|Q5XHH9|TT39B_XENLA	44.1	6.87e-160	473	sp|Q5XHH9|TT39B_XENLA Tetratricopeptide repeat protein 39B OS=Xenopus laevis OX=8355 GN=ttc39b PE=2 SV=1
+g20901.t1	sp|Q98SV1|SELPA_DANRE	38.7	1.17e-20	93.2	sp|Q98SV1|SELPA_DANRE Selenoprotein Pa OS=Danio rerio OX=7955 GN=sepp1a PE=1 SV=3
+g20911.t1	sp|Q12926|ELAV2_HUMAN	56.7	2.36e-122	360	sp|Q12926|ELAV2_HUMAN ELAV-like protein 2 OS=Homo sapiens OX=9606 GN=ELAVL2 PE=1 SV=2
+g20911.t2	sp|Q12926|ELAV2_HUMAN	56.5	3.73e-122	360	sp|Q12926|ELAV2_HUMAN ELAV-like protein 2 OS=Homo sapiens OX=9606 GN=ELAVL2 PE=1 SV=2
+g20911.t3	sp|Q12926|ELAV2_HUMAN	55.2	1.00e-121	359	sp|Q12926|ELAV2_HUMAN ELAV-like protein 2 OS=Homo sapiens OX=9606 GN=ELAVL2 PE=1 SV=2
+g20911.t4	sp|P26378|ELAV4_HUMAN	54.7	4.91e-122	359	sp|P26378|ELAV4_HUMAN ELAV-like protein 4 OS=Homo sapiens OX=9606 GN=ELAVL4 PE=1 SV=3
+g20926.t1	sp|Q9I8C7|ACH10_CHICK	45.5	7.87e-90	285	sp|Q9I8C7|ACH10_CHICK Neuronal acetylcholine receptor subunit alpha-10 OS=Gallus gallus OX=9031 GN=CHRNA10 PE=3 SV=1
+g20965.t1	sp|Q8K0E3|SC5AB_MOUSE	46.4	6.82e-195	567	sp|Q8K0E3|SC5AB_MOUSE Sodium/myo-inositol cotransporter 2 OS=Mus musculus OX=10090 GN=Slc5a11 PE=1 SV=1
+g2098.t1	sp|Q8WZ42|TITIN_HUMAN	26.8	4.92e-39	163	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g2098.t2	sp|Q8WZ42|TITIN_HUMAN	26.8	4.76e-39	163	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g2099.t1	sp|Q23551|UNC22_CAEEL	33.6	0.0	1331	sp|Q23551|UNC22_CAEEL Twitchin OS=Caenorhabditis elegans OX=6239 GN=unc-22 PE=1 SV=3
+g2099.t2	sp|Q23551|UNC22_CAEEL	33.6	0.0	1331	sp|Q23551|UNC22_CAEEL Twitchin OS=Caenorhabditis elegans OX=6239 GN=unc-22 PE=1 SV=3
+g21069.t1	sp|Q05004|NXPE1_RABIT	29.6	1.06e-49	182	sp|Q05004|NXPE1_RABIT NXPE family member 1 OS=Oryctolagus cuniculus OX=9986 GN=NXPE1 PE=2 SV=1
+g21079.t1	sp|Q01973|ROR1_HUMAN	45.3	1.33e-217	650	sp|Q01973|ROR1_HUMAN Inactive tyrosine-protein kinase transmembrane receptor ROR1 OS=Homo sapiens OX=9606 GN=ROR1 PE=1 SV=2
+g21079.t2	sp|Q01973|ROR1_HUMAN	44.7	1.68e-213	640	sp|Q01973|ROR1_HUMAN Inactive tyrosine-protein kinase transmembrane receptor ROR1 OS=Homo sapiens OX=9606 GN=ROR1 PE=1 SV=2
+g21090.t1	sp|P28828|PTPRM_MOUSE	32.2	1.74e-88	319	sp|P28828|PTPRM_MOUSE Receptor-type tyrosine-protein phosphatase mu OS=Mus musculus OX=10090 GN=Ptprm PE=1 SV=2
+g21093.t1	sp|O14522|PTPRT_HUMAN	38.3	3.38e-54	210	sp|O14522|PTPRT_HUMAN Receptor-type tyrosine-protein phosphatase T OS=Homo sapiens OX=9606 GN=PTPRT PE=1 SV=6
+g21094.t1	sp|Q64605|PTPRS_RAT	30.3	4.21e-12	66.6	sp|Q64605|PTPRS_RAT Receptor-type tyrosine-protein phosphatase S OS=Rattus norvegicus OX=10116 GN=Ptprs PE=1 SV=2
+g21193.t1	sp|Q9Z1P7|KANK3_MOUSE	42.1	1.98e-44	175	sp|Q9Z1P7|KANK3_MOUSE KN motif and ankyrin repeat domain-containing protein 3 OS=Mus musculus OX=10090 GN=Kank3 PE=1 SV=1
+g21193.t2	sp|Q9Z1P7|KANK3_MOUSE	42.1	1.49e-44	175	sp|Q9Z1P7|KANK3_MOUSE KN motif and ankyrin repeat domain-containing protein 3 OS=Mus musculus OX=10090 GN=Kank3 PE=1 SV=1
+g21195.t1	sp|O73791|TIE2_DANRE	36.8	1.86e-24	111	sp|O73791|TIE2_DANRE Angiopoietin-1 receptor OS=Danio rerio OX=7955 GN=tek PE=1 SV=1
+g21196.t1	sp|Q96HU8|DIRA2_HUMAN	96.7	1.13e-11	61.6	sp|Q96HU8|DIRA2_HUMAN GTP-binding protein Di-Ras2 OS=Homo sapiens OX=9606 GN=DIRAS2 PE=1 SV=1
+g21196.t2	sp|Q96HU8|DIRA2_HUMAN	96.7	8.38e-12	61.6	sp|Q96HU8|DIRA2_HUMAN GTP-binding protein Di-Ras2 OS=Homo sapiens OX=9606 GN=DIRAS2 PE=1 SV=1
+g21250.t1	sp|Q00438|PTBP1_RAT	50.3	9.09e-180	524	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21250.t2	sp|Q00438|PTBP1_RAT	49.9	5.22e-176	514	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21250.t3	sp|Q00438|PTBP1_RAT	50.7	2.04e-178	519	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21250.t4	sp|Q00438|PTBP1_RAT	51.6	3.20e-178	518	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21250.t5	sp|Q00438|PTBP1_RAT	53.1	5.24e-186	538	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21250.t6	sp|Q00438|PTBP1_RAT	50.8	7.42e-179	520	sp|Q00438|PTBP1_RAT Polypyrimidine tract-binding protein 1 OS=Rattus norvegicus OX=10116 GN=Ptbp1 PE=1 SV=2
+g21278.t1	sp|Q9UGM3|DMBT1_HUMAN	45.0	0.0	1313	sp|Q9UGM3|DMBT1_HUMAN Scavenger receptor cysteine-rich domain-containing protein DMBT1 OS=Homo sapiens OX=9606 GN=DMBT1 PE=1 SV=2
+g21282.t1	sp|Q02763|TIE2_HUMAN	34.2	1.10e-23	110	sp|Q02763|TIE2_HUMAN Angiopoietin-1 receptor OS=Homo sapiens OX=9606 GN=TEK PE=1 SV=2
+g21294.t1	sp|O14522|PTPRT_HUMAN	50.0	1.49e-23	111	sp|O14522|PTPRT_HUMAN Receptor-type tyrosine-protein phosphatase T OS=Homo sapiens OX=9606 GN=PTPRT PE=1 SV=6
+g21307.t1	sp|Q90478|L1CA1_DANRE	22.5	9.63e-09	62.4	sp|Q90478|L1CA1_DANRE Neural cell adhesion molecule L1.1 (Fragment) OS=Danio rerio OX=7955 GN=nadl1.1 PE=2 SV=1
+g21307.t2	sp|Q90478|L1CA1_DANRE	22.5	1.27e-08	62.0	sp|Q90478|L1CA1_DANRE Neural cell adhesion molecule L1.1 (Fragment) OS=Danio rerio OX=7955 GN=nadl1.1 PE=2 SV=1
+g21396.t1	sp|Q15417|CNN3_HUMAN	48.9	9.75e-50	166	sp|Q15417|CNN3_HUMAN Calponin-3 OS=Homo sapiens OX=9606 GN=CNN3 PE=1 SV=1
+g2145.t1	sp|Q90YV7|RL11_ICTPU	84.0	7.40e-110	313	sp|Q90YV7|RL11_ICTPU Large ribosomal subunit protein uL5 OS=Ictalurus punctatus OX=7998 GN=rpl11 PE=2 SV=3
+g21457.t1	sp|Q63HQ2|EGFLA_HUMAN	42.4	5.49e-116	375	sp|Q63HQ2|EGFLA_HUMAN Pikachurin OS=Homo sapiens OX=9606 GN=EGFLAM PE=1 SV=2
+g21470.t1	sp|Q9BVH7|SIA7E_HUMAN	38.1	2.11e-49	175	sp|Q9BVH7|SIA7E_HUMAN Alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase 5 OS=Homo sapiens OX=9606 GN=ST6GALNAC5 PE=1 SV=1
+g21487.t1	sp|Q91W43|GCSP_MOUSE	65.7	0.0	1245	sp|Q91W43|GCSP_MOUSE Glycine dehydrogenase (decarboxylating), mitochondrial OS=Mus musculus OX=10090 GN=Gldc PE=1 SV=1
+g21488.t1	sp|O57321|EAA1_AMBTI	52.6	4.17e-149	441	sp|O57321|EAA1_AMBTI Excitatory amino acid transporter 1 OS=Ambystoma tigrinum OX=8305 GN=SLC1A3 PE=1 SV=1
+g21706.t1	sp|Q9UGM1|ACHA9_HUMAN	36.2	7.20e-92	291	sp|Q9UGM1|ACHA9_HUMAN Neuronal acetylcholine receptor subunit alpha-9 OS=Homo sapiens OX=9606 GN=CHRNA9 PE=1 SV=2
+g21866.t1	sp|Q90YT3|RL35A_ICTPU	62.3	1.22e-40	133	sp|Q90YT3|RL35A_ICTPU Large ribosomal subunit protein eL33 OS=Ictalurus punctatus OX=7998 GN=rpl35a PE=3 SV=1
+g21879.t1	sp|Q5RE54|GPC6_PONAB	34.0	1.30e-32	130	sp|Q5RE54|GPC6_PONAB Glypican-6 OS=Pongo abelii OX=9601 GN=GPC6 PE=2 SV=1
+g21913.t1	sp|P13280|GLYG_RABIT	51.8	5.64e-115	339	sp|P13280|GLYG_RABIT Glycogenin-1 OS=Oryctolagus cuniculus OX=9986 GN=GYG1 PE=1 SV=3
+g21999.t1	sp|Q9JKP5|MBNL1_MOUSE	45.2	4.65e-79	253	sp|Q9JKP5|MBNL1_MOUSE Muscleblind-like protein 1 OS=Mus musculus OX=10090 GN=Mbnl1 PE=1 SV=1
+g21999.t2	sp|Q56V19|MBNL3_TAKRU	66.7	2.19e-40	149	sp|Q56V19|MBNL3_TAKRU Muscleblind-like protein 3 OS=Takifugu rubripes OX=31033 GN=mbnl3 PE=2 SV=1
+g21999.t3	sp|Q9JKP5|MBNL1_MOUSE	45.2	4.40e-79	253	sp|Q9JKP5|MBNL1_MOUSE Muscleblind-like protein 1 OS=Mus musculus OX=10090 GN=Mbnl1 PE=1 SV=1
+g21999.t4	sp|Q56V19|MBNL3_TAKRU	66.7	1.54e-40	149	sp|Q56V19|MBNL3_TAKRU Muscleblind-like protein 3 OS=Takifugu rubripes OX=31033 GN=mbnl3 PE=2 SV=1
+g21999.t5	sp|Q9JKP5|MBNL1_MOUSE	48.4	1.36e-82	261	sp|Q9JKP5|MBNL1_MOUSE Muscleblind-like protein 1 OS=Mus musculus OX=10090 GN=Mbnl1 PE=1 SV=1
+g22143.t1	sp|Q7SIB3|CO4A2_BOVIN	55.7	1.15e-81	271	sp|Q7SIB3|CO4A2_BOVIN Collagen alpha-2(IV) chain (Fragment) OS=Bos taurus OX=9913 GN=COL4A2 PE=1 SV=1
+g22230.t1	sp|Q9HBW9|AGRL4_HUMAN	36.5	1.91e-13	77.0	sp|Q9HBW9|AGRL4_HUMAN Adhesion G protein-coupled receptor L4 OS=Homo sapiens OX=9606 GN=ADGRL4 PE=1 SV=3
+g22232.t1	sp|Q6P0V6|RL8_DANRE	80.9	4.25e-154	432	sp|Q6P0V6|RL8_DANRE Large ribosomal subunit protein uL2 OS=Danio rerio OX=7955 GN=rpl8 PE=1 SV=3
+g22445.t1	sp|Q14644|RASA3_HUMAN	51.0	1.08e-64	219	sp|Q14644|RASA3_HUMAN Ras GTPase-activating protein 3 OS=Homo sapiens OX=9606 GN=RASA3 PE=1 SV=3
+g22445.t2	sp|Q14644|RASA3_HUMAN	47.4	2.09e-60	208	sp|Q14644|RASA3_HUMAN Ras GTPase-activating protein 3 OS=Homo sapiens OX=9606 GN=RASA3 PE=1 SV=3
+g22542.t1	sp|O93235|CIRBA_XENLA	42.7	1.00e-21	89.0	sp|O93235|CIRBA_XENLA Cold-inducible RNA-binding protein A OS=Xenopus laevis OX=8355 GN=cirbp-a PE=1 SV=2
+g22542.t2	sp|O93235|CIRBA_XENLA	41.9	1.81e-21	89.0	sp|O93235|CIRBA_XENLA Cold-inducible RNA-binding protein A OS=Xenopus laevis OX=8355 GN=cirbp-a PE=1 SV=2
+g22559.t1	sp|O46043|PARG_DROME	41.0	1.75e-50	195	sp|O46043|PARG_DROME Poly(ADP-ribose) glycohydrolase OS=Drosophila melanogaster OX=7227 GN=Parg PE=1 SV=3
+g22567.t1	sp|Q80X90|FLNB_MOUSE	26.8	4.74e-98	346	sp|Q80X90|FLNB_MOUSE Filamin-B OS=Mus musculus OX=10090 GN=Flnb PE=1 SV=3
+g22567.t2	sp|Q80X90|FLNB_MOUSE	26.7	8.69e-56	212	sp|Q80X90|FLNB_MOUSE Filamin-B OS=Mus musculus OX=10090 GN=Flnb PE=1 SV=3
+g22569.t1	sp|P22717|GCYB2_RAT	54.7	1.21e-224	649	sp|P22717|GCYB2_RAT Guanylate cyclase soluble subunit beta-2 OS=Rattus norvegicus OX=10116 GN=Gucy1b2 PE=2 SV=1
+g22569.t2	sp|P22717|GCYB2_RAT	56.0	1.06e-223	646	sp|P22717|GCYB2_RAT Guanylate cyclase soluble subunit beta-2 OS=Rattus norvegicus OX=10116 GN=Gucy1b2 PE=2 SV=1
+g22579.t1	sp|Q95R48|OCTL_DROME	35.3	2.94e-77	256	sp|Q95R48|OCTL_DROME Organic cation transporter-like protein OS=Drosophila melanogaster OX=7227 GN=Orct2 PE=2 SV=2
+g22579.t2	sp|O76082|S22A5_HUMAN	31.9	1.09e-39	149	sp|O76082|S22A5_HUMAN Organic cation/carnitine transporter 2 OS=Homo sapiens OX=9606 GN=SLC22A5 PE=1 SV=1
+g22579.t3	sp|Q95R48|OCTL_DROME	32.3	7.37e-34	131	sp|Q95R48|OCTL_DROME Organic cation transporter-like protein OS=Drosophila melanogaster OX=7227 GN=Orct2 PE=2 SV=2
+g22614.t1	sp|Q16760|DGKD_HUMAN	54.3	0.0	1212	sp|Q16760|DGKD_HUMAN Diacylglycerol kinase delta OS=Homo sapiens OX=9606 GN=DGKD PE=1 SV=4
+g22614.t2	sp|Q16760|DGKD_HUMAN	55.2	0.0	1207	sp|Q16760|DGKD_HUMAN Diacylglycerol kinase delta OS=Homo sapiens OX=9606 GN=DGKD PE=1 SV=4
+g22675.t1	sp|P51655|GPC4_MOUSE	39.8	1.48e-130	395	sp|P51655|GPC4_MOUSE Glypican-4 OS=Mus musculus OX=10090 GN=Gpc4 PE=1 SV=2
+g22775.t1	sp|Q8BLN6|UNC80_MOUSE	35.5	0.0	1372	sp|Q8BLN6|UNC80_MOUSE Protein unc-80 homolog OS=Mus musculus OX=10090 GN=Unc80 PE=1 SV=3
+g22775.t2	sp|Q8BLN6|UNC80_MOUSE	35.6	0.0	1378	sp|Q8BLN6|UNC80_MOUSE Protein unc-80 homolog OS=Mus musculus OX=10090 GN=Unc80 PE=1 SV=3
+g22775.t3	sp|Q8BLN6|UNC80_MOUSE	35.6	0.0	1381	sp|Q8BLN6|UNC80_MOUSE Protein unc-80 homolog OS=Mus musculus OX=10090 GN=Unc80 PE=1 SV=3
+g22775.t4	sp|Q8BLN6|UNC80_MOUSE	35.7	0.0	1379	sp|Q8BLN6|UNC80_MOUSE Protein unc-80 homolog OS=Mus musculus OX=10090 GN=Unc80 PE=1 SV=3
+g22775.t5	sp|Q8BLN6|UNC80_MOUSE	35.2	0.0	1355	sp|Q8BLN6|UNC80_MOUSE Protein unc-80 homolog OS=Mus musculus OX=10090 GN=Unc80 PE=1 SV=3
+g22778.t1	sp|P51817|PRKX_HUMAN	64.6	1.22e-161	459	sp|P51817|PRKX_HUMAN cAMP-dependent protein kinase catalytic subunit PRKX OS=Homo sapiens OX=9606 GN=PRKX PE=1 SV=1
+g22789.t1	sp|Q8K349|GIMA6_MOUSE	27.3	1.03e-06	54.3	sp|Q8K349|GIMA6_MOUSE GTPase IMAP family member 6 OS=Mus musculus OX=10090 GN=Gimap6 PE=2 SV=1
+g22830.t1	sp|E1BBQ2|MGLYR_BOVIN	31.2	2.33e-80	284	sp|E1BBQ2|MGLYR_BOVIN Metabotropic glycine receptor OS=Bos taurus OX=9913 GN=GPR158 PE=3 SV=2
+g22854.t1	sp|P04412|EGFR_DROME	35.3	2.61e-120	402	sp|P04412|EGFR_DROME Epidermal growth factor receptor OS=Drosophila melanogaster OX=7227 GN=Egfr PE=1 SV=3
+g22854.t2	sp|P04412|EGFR_DROME	35.3	1.60e-119	401	sp|P04412|EGFR_DROME Epidermal growth factor receptor OS=Drosophila melanogaster OX=7227 GN=Egfr PE=1 SV=3
+g22854.t3	sp|P04412|EGFR_DROME	35.3	2.95e-120	402	sp|P04412|EGFR_DROME Epidermal growth factor receptor OS=Drosophila melanogaster OX=7227 GN=Egfr PE=1 SV=3
+g22854.t4	sp|P04412|EGFR_DROME	34.7	1.30e-117	394	sp|P04412|EGFR_DROME Epidermal growth factor receptor OS=Drosophila melanogaster OX=7227 GN=Egfr PE=1 SV=3
+g22877.t1	sp|P98157|LRP1_CHICK	39.3	0.0	1374	sp|P98157|LRP1_CHICK Low-density lipoprotein receptor-related protein 1 OS=Gallus gallus OX=9031 GN=LRP1 PE=2 SV=1
+g22909.t1	sp|A0A096X8J7|B3A3_DANRE	35.9	1.13e-111	370	sp|A0A096X8J7|B3A3_DANRE Anion exchange protein 3 OS=Danio rerio OX=7955 GN=Slc4a3 PE=2 SV=1
+g22935.t1	sp|P11799|MYLK_CHICK	30.1	3.89e-219	726	sp|P11799|MYLK_CHICK Myosin light chain kinase, smooth muscle OS=Gallus gallus OX=9031 GN=Mylk PE=1 SV=2
+g22969.t1	sp|Q5RB22|ERBB3_PONAB	34.7	2.72e-87	308	sp|Q5RB22|ERBB3_PONAB Receptor tyrosine-protein kinase erbB-3 OS=Pongo abelii OX=9601 GN=ERBB3 PE=2 SV=1
+g2298.t1	sp|O75899|GABR2_HUMAN	34.9	3.66e-119	381	sp|O75899|GABR2_HUMAN Gamma-aminobutyric acid type B receptor subunit 2 OS=Homo sapiens OX=9606 GN=GABBR2 PE=1 SV=1
+g23021.t1	sp|Q63421|PDE1C_RAT	55.4	1.52e-162	488	sp|Q63421|PDE1C_RAT Dual specificity calcium/calmodulin-dependent 3',5'-cyclic nucleotide phosphodiesterase 1C OS=Rattus norvegicus OX=10116 GN=Pde1c PE=1 SV=1
+g23057.t1	sp|Q9WU06|AVIL_RAT	47.2	4.90e-242	699	sp|Q9WU06|AVIL_RAT Advillin OS=Rattus norvegicus OX=10116 GN=Avil PE=2 SV=2
+g23057.t2	sp|Q9WU06|AVIL_RAT	47.3	2.21e-242	700	sp|Q9WU06|AVIL_RAT Advillin OS=Rattus norvegicus OX=10116 GN=Avil PE=2 SV=2
+g23070.t1	sp|A2BG43|GLTP_DANRE	31.0	7.14e-15	75.9	sp|A2BG43|GLTP_DANRE Glycolipid transfer protein OS=Danio rerio OX=7955 GN=gltp PE=3 SV=1
+g23072.t1	sp|O14513|NCKP5_HUMAN	39.7	4.09e-22	107	sp|O14513|NCKP5_HUMAN Nck-associated protein 5 OS=Homo sapiens OX=9606 GN=NCKAP5 PE=1 SV=2
+g23101.t1	sp|Q19791|GON1_CAEEL	28.1	7.17e-111	394	sp|Q19791|GON1_CAEEL A disintegrin and metalloproteinase with thrombospondin motifs gon-1 OS=Caenorhabditis elegans OX=6239 GN=gon-1 PE=1 SV=3
+g23101.t2	sp|Q19791|GON1_CAEEL	27.7	9.15e-103	368	sp|Q19791|GON1_CAEEL A disintegrin and metalloproteinase with thrombospondin motifs gon-1 OS=Caenorhabditis elegans OX=6239 GN=gon-1 PE=1 SV=3
+g23103.t1	sp|Q56JV1|RS26_BOVIN	88.3	6.91e-62	191	sp|Q56JV1|RS26_BOVIN Small ribosomal subunit protein eS26 OS=Bos taurus OX=9913 GN=RPS26 PE=1 SV=3
+g23138.t1	sp|Q8R3B1|PLCD1_MOUSE	43.9	4.00e-111	348	sp|Q8R3B1|PLCD1_MOUSE 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase delta-1 OS=Mus musculus OX=10090 GN=Plcd1 PE=1 SV=2
+g23143.t1	sp|A2ARV4|LRP2_MOUSE	41.2	1.89e-170	575	sp|A2ARV4|LRP2_MOUSE Low-density lipoprotein receptor-related protein 2 OS=Mus musculus OX=10090 GN=Lrp2 PE=1 SV=1
+g23144.t1	sp|P98158|LRP2_RAT	40.6	1.71e-37	141	sp|P98158|LRP2_RAT Low-density lipoprotein receptor-related protein 2 OS=Rattus norvegicus OX=10116 GN=Lrp2 PE=1 SV=1
+g23145.t1	sp|P98158|LRP2_RAT	45.1	1.13e-220	749	sp|P98158|LRP2_RAT Low-density lipoprotein receptor-related protein 2 OS=Rattus norvegicus OX=10116 GN=Lrp2 PE=1 SV=1
+g23181.t1	sp|Q28278|PROC_CANLF	36.5	1.38e-44	171	sp|Q28278|PROC_CANLF Vitamin K-dependent protein C OS=Canis lupus familiaris OX=9615 GN=PROC PE=2 SV=2
+g23201.t1	sp|Q90966|RARA_CHICK	50.1	8.15e-118	359	sp|Q90966|RARA_CHICK Retinoic acid receptor alpha OS=Gallus gallus OX=9031 GN=RARA PE=2 SV=1
+g23201.t2	sp|Q90966|RARA_CHICK	55.6	1.22e-124	375	sp|Q90966|RARA_CHICK Retinoic acid receptor alpha OS=Gallus gallus OX=9031 GN=RARA PE=2 SV=1
+g23215.t1	sp|Q6VV64|KCNKI_MOUSE	34.4	2.93e-14	79.0	sp|Q6VV64|KCNKI_MOUSE Potassium channel subfamily K member 18 OS=Mus musculus OX=10090 GN=Kcnk18 PE=1 SV=1
+g23268.t1	sp|Q23551|UNC22_CAEEL	26.6	4.20e-42	171	sp|Q23551|UNC22_CAEEL Twitchin OS=Caenorhabditis elegans OX=6239 GN=unc-22 PE=1 SV=3
+g23269.t1	sp|Q15772|SPEG_HUMAN	26.6	2.39e-100	359	sp|Q15772|SPEG_HUMAN Striated muscle preferentially expressed protein kinase OS=Homo sapiens OX=9606 GN=SPEG PE=1 SV=4
+g23269.t2	sp|Q15772|SPEG_HUMAN	26.4	6.27e-98	352	sp|Q15772|SPEG_HUMAN Striated muscle preferentially expressed protein kinase OS=Homo sapiens OX=9606 GN=SPEG PE=1 SV=4
+g23270.t1	sp|P29294|MYLK_RABIT	49.8	2.38e-124	393	sp|P29294|MYLK_RABIT Myosin light chain kinase, smooth muscle OS=Oryctolagus cuniculus OX=9986 GN=MYLK PE=1 SV=2
+g23302.t1	sp|Q8N608|DPP10_HUMAN	32.0	9.03e-49	180	sp|Q8N608|DPP10_HUMAN Inactive dipeptidyl peptidase 10 OS=Homo sapiens OX=9606 GN=DPP10 PE=1 SV=2
+g23302.t2	sp|Q8N608|DPP10_HUMAN	31.9	1.47e-50	183	sp|Q8N608|DPP10_HUMAN Inactive dipeptidyl peptidase 10 OS=Homo sapiens OX=9606 GN=DPP10 PE=1 SV=2
+g23302.t3	sp|Q8N608|DPP10_HUMAN	31.9	9.37e-50	181	sp|Q8N608|DPP10_HUMAN Inactive dipeptidyl peptidase 10 OS=Homo sapiens OX=9606 GN=DPP10 PE=1 SV=2
+g23305.t1	sp|P37288|V1AR_HUMAN	41.7	3.84e-17	81.6	sp|P37288|V1AR_HUMAN Vasopressin V1a receptor OS=Homo sapiens OX=9606 GN=AVPR1A PE=1 SV=1
+g23347.t1	sp|Q9Y2I7|FYV1_HUMAN	35.6	1.13e-63	229	sp|Q9Y2I7|FYV1_HUMAN 1-phosphatidylinositol 3-phosphate 5-kinase OS=Homo sapiens OX=9606 GN=PIKFYVE PE=1 SV=3
+g23353.t1	sp|Q8NFW9|MYRIP_HUMAN	42.8	1.24e-29	125	sp|Q8NFW9|MYRIP_HUMAN Rab effector MyRIP OS=Homo sapiens OX=9606 GN=MYRIP PE=1 SV=2
+g23353.t2	sp|Q8NFW9|MYRIP_HUMAN	42.8	9.07e-30	125	sp|Q8NFW9|MYRIP_HUMAN Rab effector MyRIP OS=Homo sapiens OX=9606 GN=MYRIP PE=1 SV=2
+g23354.t1	sp|Q08E53|NR4A2_BOVIN	59.2	1.08e-131	405	sp|Q08E53|NR4A2_BOVIN Nuclear receptor subfamily 4 group A member 2 OS=Bos taurus OX=9913 GN=NR4A2 PE=2 SV=1
+g23354.t2	sp|Q08E53|NR4A2_BOVIN	59.2	4.63e-132	405	sp|Q08E53|NR4A2_BOVIN Nuclear receptor subfamily 4 group A member 2 OS=Bos taurus OX=9913 GN=NR4A2 PE=2 SV=1
+g23420.t1	sp|Q9QWS8|KCNH8_RAT	59.3	9.05e-252	743	sp|Q9QWS8|KCNH8_RAT Voltage-gated delayed rectifier potassium channel KCNH8 OS=Rattus norvegicus OX=10116 GN=Kcnh8 PE=2 SV=2
+g2344.t1	sp|Q5ZJ56|RL7_CHICK	60.8	1.38e-98	290	sp|Q5ZJ56|RL7_CHICK Large ribosomal subunit protein uL30 OS=Gallus gallus OX=9031 GN=RPL7 PE=1 SV=1
+g23446.t1	sp|Q6NW96|SP9_DANRE	82.4	8.23e-37	143	sp|Q6NW96|SP9_DANRE Transcription factor Sp9 OS=Danio rerio OX=7955 GN=sp9 PE=2 SV=1
+g23489.t1	sp|A2RRT9|CP4V2_RAT	41.4	3.15e-118	360	sp|A2RRT9|CP4V2_RAT Cytochrome P450 4V2 OS=Rattus norvegicus OX=10116 GN=Cyp4v2 PE=2 SV=1
+g23506.t1	sp|Q7T3Q2|CRIM1_DANRE	43.6	2.22e-06	52.8	sp|Q7T3Q2|CRIM1_DANRE Cysteine-rich motor neuron 1 protein OS=Danio rerio OX=7955 GN=crim1 PE=2 SV=1
+g23549.t1	sp|Q8WZ42|TITIN_HUMAN	23.8	2.36e-192	667	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g23550.t1	sp|O01761|UNC89_CAEEL	23.5	2.55e-58	231	sp|O01761|UNC89_CAEEL Muscle M-line assembly protein unc-89 OS=Caenorhabditis elegans OX=6239 GN=unc-89 PE=1 SV=3
+g23551.t1	sp|V6CLP5|KETN1_CAEEL	36.6	6.68e-08	61.6	sp|V6CLP5|KETN1_CAEEL Kettin homolog OS=Caenorhabditis elegans OX=6239 GN=ketn-1 PE=1 SV=1
+g23552.t1	sp|Q8QHL3|VGFR1_CHICK	38.9	1.67e-07	58.2	sp|Q8QHL3|VGFR1_CHICK Vascular endothelial growth factor receptor 1 OS=Gallus gallus OX=9031 GN=FLT1 PE=2 SV=1
+g23552.t2	sp|Q8QHL3|VGFR1_CHICK	38.9	2.97e-07	57.8	sp|Q8QHL3|VGFR1_CHICK Vascular endothelial growth factor receptor 1 OS=Gallus gallus OX=9031 GN=FLT1 PE=2 SV=1
+g23553.t1	sp|Q8QHL3|VGFR1_CHICK	38.9	9.84e-07	57.4	sp|Q8QHL3|VGFR1_CHICK Vascular endothelial growth factor receptor 1 OS=Gallus gallus OX=9031 GN=FLT1 PE=2 SV=1
+g23554.t1	sp|Q8WZ42|TITIN_HUMAN	23.4	1.63e-34	152	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g23554.t2	sp|Q8WZ42|TITIN_HUMAN	23.2	2.33e-28	132	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g23555.t1	sp|A2ASS6|TITIN_MOUSE	28.0	3.40e-134	468	sp|A2ASS6|TITIN_MOUSE Titin OS=Mus musculus OX=10090 GN=Ttn PE=1 SV=1
+g23557.t1	sp|Q23551|UNC22_CAEEL	31.4	0.0	2458	sp|Q23551|UNC22_CAEEL Twitchin OS=Caenorhabditis elegans OX=6239 GN=unc-22 PE=1 SV=3
+g2367.t1	sp|P48969|DVR1_STRPU	40.2	3.05e-106	328	sp|P48969|DVR1_STRPU Protein DVR-1 homolog OS=Strongylocentrotus purpuratus OX=7668 GN=DVR1 PE=2 SV=1
+g2367.t2	sp|P48969|DVR1_STRPU	40.2	3.15e-106	328	sp|P48969|DVR1_STRPU Protein DVR-1 homolog OS=Strongylocentrotus purpuratus OX=7668 GN=DVR1 PE=2 SV=1
+g23735.t1	sp|Q90YP9|RS25_ICTPU	85.7	1.65e-45	146	sp|Q90YP9|RS25_ICTPU Small ribosomal subunit protein eS25 OS=Ictalurus punctatus OX=7998 GN=rps25 PE=2 SV=1
+g23795.t1	sp|Q86UU1|PHLB1_HUMAN	50.0	1.24e-33	132	sp|Q86UU1|PHLB1_HUMAN Pleckstrin homology-like domain family B member 1 OS=Homo sapiens OX=9606 GN=PHLDB1 PE=1 SV=1
+g23795.t2	sp|Q86UU1|PHLB1_HUMAN	50.0	2.98e-33	132	sp|Q86UU1|PHLB1_HUMAN Pleckstrin homology-like domain family B member 1 OS=Homo sapiens OX=9606 GN=PHLDB1 PE=1 SV=1
+g23796.t1	sp|Q8K1N2|PHLB2_MOUSE	35.6	7.93e-71	262	sp|Q8K1N2|PHLB2_MOUSE Pleckstrin homology-like domain family B member 2 OS=Mus musculus OX=10090 GN=Phldb2 PE=1 SV=2
+g23796.t2	sp|Q6PDH0|PHLB1_MOUSE	49.1	1.39e-62	236	sp|Q6PDH0|PHLB1_MOUSE Pleckstrin homology-like domain family B member 1 OS=Mus musculus OX=10090 GN=Phldb1 PE=1 SV=1
+g23811.t1	sp|G5ECX0|LPLT2_CAEEL	25.8	1.88e-09	65.1	sp|G5ECX0|LPLT2_CAEEL Latrophilin-like protein LAT-2 OS=Caenorhabditis elegans OX=6239 GN=lat-2 PE=2 SV=1
+g23857.t1	sp|Q9UHF1|EGFL7_HUMAN	42.0	6.43e-16	83.2	sp|Q9UHF1|EGFL7_HUMAN Epidermal growth factor-like protein 7 OS=Homo sapiens OX=9606 GN=EGFL7 PE=1 SV=3
+g23857.t2	sp|Q9UHF1|EGFL7_HUMAN	42.0	6.21e-16	83.2	sp|Q9UHF1|EGFL7_HUMAN Epidermal growth factor-like protein 7 OS=Homo sapiens OX=9606 GN=EGFL7 PE=1 SV=3
+g23857.t3	sp|Q9UHF1|EGFL7_HUMAN	42.0	6.28e-16	83.2	sp|Q9UHF1|EGFL7_HUMAN Epidermal growth factor-like protein 7 OS=Homo sapiens OX=9606 GN=EGFL7 PE=1 SV=3
+g23864.t1	sp|O54852|KCNH7_RAT	57.3	1.06e-186	574	sp|O54852|KCNH7_RAT Voltage-gated inwardly rectifying potassium channel KCNH7 OS=Rattus norvegicus OX=10116 GN=Kcnh7 PE=1 SV=1
+g23864.t2	sp|O54852|KCNH7_RAT	56.9	1.51e-186	574	sp|O54852|KCNH7_RAT Voltage-gated inwardly rectifying potassium channel KCNH7 OS=Rattus norvegicus OX=10116 GN=Kcnh7 PE=1 SV=1
+g23864.t3	sp|O54852|KCNH7_RAT	56.8	7.74e-187	574	sp|O54852|KCNH7_RAT Voltage-gated inwardly rectifying potassium channel KCNH7 OS=Rattus norvegicus OX=10116 GN=Kcnh7 PE=1 SV=1
+g23866.t1	sp|Q96MS0|ROBO3_HUMAN	32.7	3.12e-121	417	sp|Q96MS0|ROBO3_HUMAN Roundabout homolog 3 OS=Homo sapiens OX=9606 GN=ROBO3 PE=1 SV=2
+g23866.t2	sp|Q96MS0|ROBO3_HUMAN	32.7	3.12e-121	417	sp|Q96MS0|ROBO3_HUMAN Roundabout homolog 3 OS=Homo sapiens OX=9606 GN=ROBO3 PE=1 SV=2
+g23866.t3	sp|Q96MS0|ROBO3_HUMAN	32.7	1.78e-121	417	sp|Q96MS0|ROBO3_HUMAN Roundabout homolog 3 OS=Homo sapiens OX=9606 GN=ROBO3 PE=1 SV=2
+g24083.t1	sp|G5ED65|VER1_CAEEL	26.0	1.98e-16	86.7	sp|G5ED65|VER1_CAEEL Protein ver-1 OS=Caenorhabditis elegans OX=6239 GN=ver-1 PE=2 SV=1
+g24091.t1	sp|Q5G267|NETR_MACMU	40.8	4.06e-23	103	sp|Q5G267|NETR_MACMU Neurotrypsin OS=Macaca mulatta OX=9544 GN=PRSS12 PE=3 SV=1
+g24186.t1	sp|Q05793|PGBM_MOUSE	26.1	2.55e-18	94.4	sp|Q05793|PGBM_MOUSE Basement membrane-specific heparan sulfate proteoglycan core protein OS=Mus musculus OX=10090 GN=Hspg2 PE=1 SV=1
+g24263.t1	sp|Q9QX29|TRPC5_MOUSE	30.4	1.46e-96	329	sp|Q9QX29|TRPC5_MOUSE Short transient receptor potential channel 5 OS=Mus musculus OX=10090 GN=Trpc5 PE=1 SV=2
+g24337.t1	sp|P35368|ADA1B_HUMAN	25.9	6.72e-19	92.0	sp|P35368|ADA1B_HUMAN Alpha-1B adrenergic receptor OS=Homo sapiens OX=9606 GN=ADRA1B PE=1 SV=3
+g24355.t1	sp|G5EBF1|SAX3_CAEEL	32.7	1.00e-21	94.4	sp|G5EBF1|SAX3_CAEEL Protein sax-3 OS=Caenorhabditis elegans OX=6239 GN=sax-3 PE=2 SV=1
+g2437.t1	sp|A5A4K9|GHSR_RABIT	34.4	1.10e-38	146	sp|A5A4K9|GHSR_RABIT Growth hormone secretagogue receptor type 1 OS=Oryctolagus cuniculus OX=9986 GN=GHSR PE=2 SV=1
+g24401.t1	sp|Q9Z0J8|NEGR1_RAT	26.1	4.60e-16	83.2	sp|Q9Z0J8|NEGR1_RAT Neuronal growth regulator 1 OS=Rattus norvegicus OX=10116 GN=Negr1 PE=1 SV=1
+g24401.t2	sp|Q9Z0J8|NEGR1_RAT	26.1	4.62e-16	83.2	sp|Q9Z0J8|NEGR1_RAT Neuronal growth regulator 1 OS=Rattus norvegicus OX=10116 GN=Negr1 PE=1 SV=1
+g24421.t1	sp|Q8VHZ8|DSCAM_RAT	38.4	6.89e-177	583	sp|Q8VHZ8|DSCAM_RAT Cell adhesion molecule DSCAM OS=Rattus norvegicus OX=10116 GN=Dscam PE=1 SV=1
+g24428.t1	sp|Q80X80|C2C2L_MOUSE	26.2	4.72e-33	140	sp|Q80X80|C2C2L_MOUSE Phospholipid transfer protein C2CD2L OS=Mus musculus OX=10090 GN=C2cd2l PE=1 SV=3
+g24428.t2	sp|Q80X80|C2C2L_MOUSE	27.0	6.10e-35	145	sp|Q80X80|C2C2L_MOUSE Phospholipid transfer protein C2CD2L OS=Mus musculus OX=10090 GN=C2cd2l PE=1 SV=3
+g2462.t1	sp|Q96K78|AGRG7_HUMAN	25.0	8.88e-38	156	sp|Q96K78|AGRG7_HUMAN Adhesion G-protein coupled receptor G7 OS=Homo sapiens OX=9606 GN=ADGRG7 PE=1 SV=2
+g24627.t1	sp|Q24488|ROR1_DROME	29.2	2.50e-27	121	sp|Q24488|ROR1_DROME Tyrosine-protein kinase transmembrane receptor Ror OS=Drosophila melanogaster OX=7227 GN=Ror PE=1 SV=1
+g24649.t1	sp|F2Z4H3|RPAB3_BOVIN	78.8	8.38e-84	245	sp|F2Z4H3|RPAB3_BOVIN DNA-directed RNA polymerases I, II, and III subunit RPABC3 OS=Bos taurus OX=9913 GN=POLR2H PE=1 SV=1
+g2465.t1	sp|Q9EQZ7|RIMS2_MOUSE	36.4	3.47e-220	696	sp|Q9EQZ7|RIMS2_MOUSE Regulating synaptic membrane exocytosis protein 2 OS=Mus musculus OX=10090 GN=Rims2 PE=1 SV=1
+g2465.t2	sp|Q9JIS1|RIMS2_RAT	37.2	2.03e-218	691	sp|Q9JIS1|RIMS2_RAT Regulating synaptic membrane exocytosis protein 2 OS=Rattus norvegicus OX=10116 GN=Rims2 PE=1 SV=1
+g2465.t3	sp|Q9JIS1|RIMS2_RAT	37.6	5.87e-223	702	sp|Q9JIS1|RIMS2_RAT Regulating synaptic membrane exocytosis protein 2 OS=Rattus norvegicus OX=10116 GN=Rims2 PE=1 SV=1
+g2465.t4	sp|Q9EQZ7|RIMS2_MOUSE	35.7	1.79e-213	680	sp|Q9EQZ7|RIMS2_MOUSE Regulating synaptic membrane exocytosis protein 2 OS=Mus musculus OX=10090 GN=Rims2 PE=1 SV=1
+g24651.t1	sp|Q9Y0H3|RS19_MYXGL	73.9	7.04e-68	205	sp|Q9Y0H3|RS19_MYXGL Small ribosomal subunit protein eS19 OS=Myxine glutinosa OX=7769 GN=rps19 PE=2 SV=1
+g24656.t1	sp|Q9R1C7|PR40A_MOUSE	64.7	3.55e-07	55.1	sp|Q9R1C7|PR40A_MOUSE Pre-mRNA-processing factor 40 homolog A OS=Mus musculus OX=10090 GN=Prpf40a PE=1 SV=1
+g24678.t1	sp|P81270|ERG_MOUSE	51.8	6.46e-133	400	sp|P81270|ERG_MOUSE Transcriptional regulator ERG OS=Mus musculus OX=10090 GN=Erg PE=1 SV=2
+g24678.t2	sp|P81270|ERG_MOUSE	53.8	4.78e-137	410	sp|P81270|ERG_MOUSE Transcriptional regulator ERG OS=Mus musculus OX=10090 GN=Erg PE=1 SV=2
+g24678.t3	sp|P81270|ERG_MOUSE	51.6	2.48e-125	379	sp|P81270|ERG_MOUSE Transcriptional regulator ERG OS=Mus musculus OX=10090 GN=Erg PE=1 SV=2
+g24678.t4	sp|Q01414|ERG_LYTVA	84.6	2.16e-103	300	sp|Q01414|ERG_LYTVA Transcriptional regulator ERG homolog (Fragment) OS=Lytechinus variegatus OX=7654 GN=ERG PE=3 SV=1
+g24687.t1	sp|Q9CYL5|GAPR1_MOUSE	33.6	1.23e-17	79.3	sp|Q9CYL5|GAPR1_MOUSE Golgi-associated plant pathogenesis-related protein 1 OS=Mus musculus OX=10090 GN=Glipr2 PE=1 SV=3
+g24688.t1	sp|O70628|PDE9A_MOUSE	60.3	1.37e-211	598	sp|O70628|PDE9A_MOUSE High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A OS=Mus musculus OX=10090 GN=Pde9a PE=1 SV=1
+g24725.t1	sp|P18101|RL40_DROME	95.3	4.82e-87	252	sp|P18101|RL40_DROME Ubiquitin-ribosomal protein eL40 fusion protein OS=Drosophila melanogaster OX=7227 GN=RpL40 PE=1 SV=2
+g24741.t1	sp|O57329|FZD7_CHICK	58.4	1.93e-37	153	sp|O57329|FZD7_CHICK Frizzled-7 OS=Gallus gallus OX=9031 GN=FZD7 PE=2 SV=1
+g24741.t2	sp|Q8AVJ9|FZD7B_XENLA	59.5	2.72e-34	143	sp|Q8AVJ9|FZD7B_XENLA Frizzled-7-B OS=Xenopus laevis OX=8355 GN=fzd7-b PE=1 SV=1
+g24741.t3	sp|Q9PUU6|FZD2_XENLA	40.0	4.56e-22	105	sp|Q9PUU6|FZD2_XENLA Frizzled-2 OS=Xenopus laevis OX=8355 GN=fzd2 PE=2 SV=1
+g2477.t1	sp|Q6NT16|S18B1_HUMAN	31.7	1.36e-56	196	sp|Q6NT16|S18B1_HUMAN MFS-type transporter SLC18B1 OS=Homo sapiens OX=9606 GN=SLC18B1 PE=1 SV=1
+g2494.t1	sp|O97902|ASAP1_BOVIN	30.8	3.56e-54	202	sp|O97902|ASAP1_BOVIN Arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 1 OS=Bos taurus OX=9913 GN=ASAP1 PE=1 SV=1
+g2494.t2	sp|Q9QWY8|ASAP1_MOUSE	31.3	1.48e-55	206	sp|Q9QWY8|ASAP1_MOUSE Arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 1 OS=Mus musculus OX=10090 GN=Asap1 PE=1 SV=2
+g2494.t3	sp|Q7SIG6|ASAP2_MOUSE	34.5	1.07e-57	209	sp|Q7SIG6|ASAP2_MOUSE Arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 2 OS=Mus musculus OX=10090 GN=Asap2 PE=1 SV=3
+g2505.t1	sp|Q9NR82|KCNQ5_HUMAN	46.0	3.11e-135	427	sp|Q9NR82|KCNQ5_HUMAN Potassium voltage-gated channel subfamily KQT member 5 OS=Homo sapiens OX=9606 GN=KCNQ5 PE=1 SV=3
+g25211.t1	sp|A6QLU6|AGRD1_BOVIN	33.5	1.10e-41	165	sp|A6QLU6|AGRD1_BOVIN Adhesion G-protein coupled receptor D1 OS=Bos taurus OX=9913 GN=ADGRD1 PE=2 SV=1
+g25217.t1	sp|Q8NFU1|BEST2_HUMAN	50.9	5.57e-126	381	sp|Q8NFU1|BEST2_HUMAN Bestrophin-2a OS=Homo sapiens OX=9606 GN=BEST2 PE=1 SV=1
+g25249.t1	sp|Q8IV61|GRP3_HUMAN	49.2	1.95e-97	306	sp|Q8IV61|GRP3_HUMAN Ras guanyl-releasing protein 3 OS=Homo sapiens OX=9606 GN=RASGRP3 PE=1 SV=1
+g25254.t1	sp|Q99814|EPAS1_HUMAN	35.3	7.98e-56	213	sp|Q99814|EPAS1_HUMAN Endothelial PAS domain-containing protein 1 OS=Homo sapiens OX=9606 GN=EPAS1 PE=1 SV=3
+g25254.t2	sp|Q99814|EPAS1_HUMAN	35.3	1.45e-55	212	sp|Q99814|EPAS1_HUMAN Endothelial PAS domain-containing protein 1 OS=Homo sapiens OX=9606 GN=EPAS1 PE=1 SV=3
+g25272.t1	sp|Q8HY69|OPSD_SMICR	35.1	2.34e-56	194	sp|Q8HY69|OPSD_SMICR Rhodopsin OS=Sminthopsis crassicaudata OX=9301 GN=RHO PE=2 SV=2
+g25280.t1	sp|P35546|RET_MOUSE	38.1	4.31e-68	251	sp|P35546|RET_MOUSE Proto-oncogene tyrosine-protein kinase receptor Ret OS=Mus musculus OX=10090 GN=Ret PE=1 SV=2
+g25385.t1	sp|Q0P6H9|TMM62_HUMAN	42.5	2.55e-138	418	sp|Q0P6H9|TMM62_HUMAN Transmembrane protein 62 OS=Homo sapiens OX=9606 GN=TMEM62 PE=1 SV=1
+g25515.t1	sp|Q29RQ5|TRIM9_BOVIN	57.0	1.78e-154	462	sp|Q29RQ5|TRIM9_BOVIN E3 ubiquitin-protein ligase TRIM9 OS=Bos taurus OX=9913 GN=TRIM9 PE=2 SV=1
+g25582.t1	sp|Q86TJ2|TAD2B_HUMAN	42.8	2.92e-103	331	sp|Q86TJ2|TAD2B_HUMAN Transcriptional adapter 2-beta OS=Homo sapiens OX=9606 GN=TADA2B PE=1 SV=2
+g25582.t2	sp|Q86TJ2|TAD2B_HUMAN	42.8	2.97e-103	331	sp|Q86TJ2|TAD2B_HUMAN Transcriptional adapter 2-beta OS=Homo sapiens OX=9606 GN=TADA2B PE=1 SV=2
+g2560.t1	sp|O70244|CUBN_RAT	24.4	3.47e-41	167	sp|O70244|CUBN_RAT Cubilin OS=Rattus norvegicus OX=10116 GN=Cubn PE=1 SV=2
+g25625.t1	sp|Q2PFW9|NOVA1_MACFA	58.1	4.31e-86	275	sp|Q2PFW9|NOVA1_MACFA RNA-binding protein Nova-1 OS=Macaca fascicularis OX=9541 GN=NOVA1 PE=2 SV=1
+g25633.t1	sp|Q68EK7|RAB4B_DANRE	86.4	1.42e-132	374	sp|Q68EK7|RAB4B_DANRE Ras-related protein Rab-4B OS=Danio rerio OX=7955 GN=rab4b PE=2 SV=1
+g25735.t1	sp|P30957|RYR2_RABIT	43.2	0.0	1476	sp|P30957|RYR2_RABIT Ryanodine receptor 2 OS=Oryctolagus cuniculus OX=9986 GN=RYR2 PE=1 SV=3
+g25735.t2	sp|Q92736|RYR2_HUMAN	44.0	0.0	1488	sp|Q92736|RYR2_HUMAN Ryanodine receptor 2 OS=Homo sapiens OX=9606 GN=RYR2 PE=1 SV=3
+g25751.t1	sp|P27987|IP3KB_HUMAN	61.2	1.45e-123	379	sp|P27987|IP3KB_HUMAN Inositol-trisphosphate 3-kinase B OS=Homo sapiens OX=9606 GN=ITPKB PE=1 SV=5
+g25751.t2	sp|P27987|IP3KB_HUMAN	58.2	3.69e-117	380	sp|P27987|IP3KB_HUMAN Inositol-trisphosphate 3-kinase B OS=Homo sapiens OX=9606 GN=ITPKB PE=1 SV=5
+g25751.t3	sp|P27987|IP3KB_HUMAN	62.1	5.05e-122	377	sp|P27987|IP3KB_HUMAN Inositol-trisphosphate 3-kinase B OS=Homo sapiens OX=9606 GN=ITPKB PE=1 SV=5
+g25788.t1	sp|P82198|BGH3_MOUSE	26.9	2.03e-37	151	sp|P82198|BGH3_MOUSE Transforming growth factor-beta-induced protein ig-h3 OS=Mus musculus OX=10090 GN=Tgfbi PE=1 SV=1
+g25791.t1	sp|G5ECN9|NEC2_CAEEL	48.2	9.57e-72	237	sp|G5ECN9|NEC2_CAEEL Neuroendocrine convertase 2 OS=Caenorhabditis elegans OX=6239 GN=egl-3 PE=1 SV=1
+g25791.t2	sp|Q5REC2|NEC2_PONAB	59.0	2.58e-252	714	sp|Q5REC2|NEC2_PONAB Neuroendocrine convertase 2 OS=Pongo abelii OX=9601 GN=PCSK2 PE=2 SV=1
+g25831.t1	sp|P62861|RS30_HUMAN	63.4	6.11e-48	153	sp|P62861|RS30_HUMAN Ubiquitin-like FUBI-ribosomal protein eS30 fusion protein OS=Homo sapiens OX=9606 GN=FAU PE=1 SV=2
+g25837.t1	sp|Q9ULB1|NRX1A_HUMAN	33.0	2.03e-260	795	sp|Q9ULB1|NRX1A_HUMAN Neurexin-1 OS=Homo sapiens OX=9606 GN=NRXN1 PE=1 SV=1
+g25837.t2	sp|Q9ULB1|NRX1A_HUMAN	33.1	3.59e-260	794	sp|Q9ULB1|NRX1A_HUMAN Neurexin-1 OS=Homo sapiens OX=9606 GN=NRXN1 PE=1 SV=1
+g25837.t3	sp|Q9ULB1|NRX1A_HUMAN	33.1	5.90e-261	796	sp|Q9ULB1|NRX1A_HUMAN Neurexin-1 OS=Homo sapiens OX=9606 GN=NRXN1 PE=1 SV=1
+g2586.t1	sp|Q5E958|RS8_BOVIN	74.6	1.38e-91	269	sp|Q5E958|RS8_BOVIN Small ribosomal subunit protein eS8 OS=Bos taurus OX=9913 GN=RPS8 PE=1 SV=3
+g25920.t1	sp|A3KN95|T151B_XENTR	44.6	8.79e-87	278	sp|A3KN95|T151B_XENTR Transmembrane protein 151B OS=Xenopus tropicalis OX=8364 GN=tmem151b PE=2 SV=1
+g25930.t1	sp|Q9JHS1|EPAS1_RAT	41.9	1.75e-117	377	sp|Q9JHS1|EPAS1_RAT Endothelial PAS domain-containing protein 1 OS=Rattus norvegicus OX=10116 GN=Epas1 PE=2 SV=1
+g25930.t2	sp|Q9JHS1|EPAS1_RAT	41.7	6.89e-117	376	sp|Q9JHS1|EPAS1_RAT Endothelial PAS domain-containing protein 1 OS=Rattus norvegicus OX=10116 GN=Epas1 PE=2 SV=1
+g26023.t1	sp|A0A1D5P556|DAAM2_CHICK	61.1	3.25e-23	100	sp|A0A1D5P556|DAAM2_CHICK Disheveled-associated activator of morphogenesis 2 OS=Gallus gallus OX=9031 GN=DAAM2 PE=1 SV=2
+g26023.t2	sp|A0A1D5P556|DAAM2_CHICK	61.1	2.42e-23	100	sp|A0A1D5P556|DAAM2_CHICK Disheveled-associated activator of morphogenesis 2 OS=Gallus gallus OX=9031 GN=DAAM2 PE=1 SV=2
+g26087.t1	sp|Q9JLL0|CRIM1_MOUSE	38.7	4.64e-137	442	sp|Q9JLL0|CRIM1_MOUSE Cysteine-rich motor neuron 1 protein OS=Mus musculus OX=10090 GN=Crim1 PE=2 SV=2
+g26116.t1	sp|Q61321|SIX4_MOUSE	67.2	3.50e-70	244	sp|Q61321|SIX4_MOUSE Homeobox protein SIX4 OS=Mus musculus OX=10090 GN=Six4 PE=1 SV=1
+g26118.t1	sp|Q6NZ04|SIX1B_DANRE	92.6	2.03e-128	370	sp|Q6NZ04|SIX1B_DANRE Homeobox protein six1b OS=Danio rerio OX=7955 GN=six1b PE=1 SV=1
+g26168.t1	sp|P51432|PLCB3_MOUSE	49.6	2.81e-276	824	sp|P51432|PLCB3_MOUSE 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3 OS=Mus musculus OX=10090 GN=Plcb3 PE=1 SV=2
+g26168.t2	sp|P51432|PLCB3_MOUSE	49.6	2.16e-276	824	sp|P51432|PLCB3_MOUSE 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3 OS=Mus musculus OX=10090 GN=Plcb3 PE=1 SV=2
+g26168.t3	sp|P51432|PLCB3_MOUSE	50.2	4.37e-279	831	sp|P51432|PLCB3_MOUSE 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-3 OS=Mus musculus OX=10090 GN=Plcb3 PE=1 SV=2
+g26170.t1	sp|Q15147|PLCB4_HUMAN	57.9	0.0	1251	sp|Q15147|PLCB4_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4 OS=Homo sapiens OX=9606 GN=PLCB4 PE=1 SV=3
+g26170.t2	sp|Q15147|PLCB4_HUMAN	58.2	0.0	1152	sp|Q15147|PLCB4_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4 OS=Homo sapiens OX=9606 GN=PLCB4 PE=1 SV=3
+g26170.t3	sp|Q15147|PLCB4_HUMAN	59.5	0.0	1159	sp|Q15147|PLCB4_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-4 OS=Homo sapiens OX=9606 GN=PLCB4 PE=1 SV=3
+g26172.t1	sp|Q2KJY2|KI26B_HUMAN	50.4	2.51e-185	620	sp|Q2KJY2|KI26B_HUMAN Kinesin-like protein KIF26B OS=Homo sapiens OX=9606 GN=KIF26B PE=1 SV=1
+g26172.t2	sp|Q2KJY2|KI26B_HUMAN	50.4	1.95e-185	620	sp|Q2KJY2|KI26B_HUMAN Kinesin-like protein KIF26B OS=Homo sapiens OX=9606 GN=KIF26B PE=1 SV=1
+g26172.t3	sp|Q2KJY2|KI26B_HUMAN	50.4	1.98e-185	620	sp|Q2KJY2|KI26B_HUMAN Kinesin-like protein KIF26B OS=Homo sapiens OX=9606 GN=KIF26B PE=1 SV=1
+g26172.t4	sp|Q2KJY2|KI26B_HUMAN	50.4	1.89e-185	620	sp|Q2KJY2|KI26B_HUMAN Kinesin-like protein KIF26B OS=Homo sapiens OX=9606 GN=KIF26B PE=1 SV=1
+g26178.t1	sp|Q7L8C5|SYT13_HUMAN	31.2	1.63e-12	72.8	sp|Q7L8C5|SYT13_HUMAN Synaptotagmin-13 OS=Homo sapiens OX=9606 GN=SYT13 PE=1 SV=1
+g26182.t1	sp|P59722|EGLN1_RAT	60.2	8.33e-90	270	sp|P59722|EGLN1_RAT Egl nine homolog 1 (Fragment) OS=Rattus norvegicus OX=10116 GN=Egln1 PE=2 SV=2
+g26233.t1	sp|Q9HB14|KCNKD_HUMAN	49.7	8.26e-120	357	sp|Q9HB14|KCNKD_HUMAN Potassium channel subfamily K member 13 OS=Homo sapiens OX=9606 GN=KCNK13 PE=1 SV=2
+g26239.t1	sp|P62147|CALM1_BRAFL	98.7	1.10e-68	207	sp|P62147|CALM1_BRAFL Calmodulin-1 OS=Branchiostoma floridae OX=7739 PE=2 SV=2
+g26287.t1	sp|Q8IMC6|ASATR_DROME	76.5	2.39e-146	480	sp|Q8IMC6|ASATR_DROME Tau-tubulin kinase homolog Asator OS=Drosophila melanogaster OX=7227 GN=Asator PE=1 SV=2
+g26329.t1	sp|Q02280|KCNAE_DROME	64.1	0.0	929	sp|Q02280|KCNAE_DROME Potassium voltage-gated channel protein eag OS=Drosophila melanogaster OX=7227 GN=eag PE=1 SV=2
+g26329.t2	sp|Q02280|KCNAE_DROME	64.1	0.0	929	sp|Q02280|KCNAE_DROME Potassium voltage-gated channel protein eag OS=Drosophila melanogaster OX=7227 GN=eag PE=1 SV=2
+g26332.t1	sp|Q8CD91|SMOC2_MOUSE	43.2	1.22e-26	116	sp|Q8CD91|SMOC2_MOUSE SPARC-related modular calcium-binding protein 2 OS=Mus musculus OX=10090 GN=Smoc2 PE=1 SV=1
+g2634.t1	sp|Q8BUB6|UST_MOUSE	29.7	2.65e-33	130	sp|Q8BUB6|UST_MOUSE Uronyl 2-sulfotransferase OS=Mus musculus OX=10090 GN=Ust PE=2 SV=3
+g2634.t2	sp|Q8BUB6|UST_MOUSE	29.7	2.42e-33	130	sp|Q8BUB6|UST_MOUSE Uronyl 2-sulfotransferase OS=Mus musculus OX=10090 GN=Ust PE=2 SV=3
+g26351.t1	sp|Q8TD19|NEK9_HUMAN	53.2	2.11e-248	726	sp|Q8TD19|NEK9_HUMAN Serine/threonine-protein kinase Nek9 OS=Homo sapiens OX=9606 GN=NEK9 PE=1 SV=2
+g2638.t1	sp|P21932|ADCY3_RAT	43.2	1.12e-247	733	sp|P21932|ADCY3_RAT Adenylate cyclase type 3 OS=Rattus norvegicus OX=10116 GN=Adcy3 PE=1 SV=1
+g26452.t1	sp|Q2VL58|PAX9_CALJA	69.1	4.41e-88	274	sp|Q2VL58|PAX9_CALJA Paired box protein Pax-9 OS=Callithrix jacchus OX=9483 GN=PAX9 PE=3 SV=1
+g26452.t2	sp|Q2VL58|PAX9_CALJA	69.1	1.56e-87	274	sp|Q2VL58|PAX9_CALJA Paired box protein Pax-9 OS=Callithrix jacchus OX=9483 GN=PAX9 PE=3 SV=1
+g26453.t1	sp|Q90980|CNG3_CHICK	47.8	1.08e-112	348	sp|Q90980|CNG3_CHICK Cyclic nucleotide-gated channel rod photoreceptor subunit alpha OS=Gallus gallus OX=9031 PE=2 SV=1
+g26475.t1	sp|P47990|XDH_CHICK	55.0	0.0	1483	sp|P47990|XDH_CHICK Xanthine dehydrogenase/oxidase OS=Gallus gallus OX=9031 GN=XDH PE=1 SV=1
+g26496.t1	sp|Q9EQT3|RHOU_MOUSE	61.4	6.82e-88	266	sp|Q9EQT3|RHOU_MOUSE Rho-related GTP-binding protein RhoU OS=Mus musculus OX=10090 GN=Rhou PE=2 SV=1
+g26521.t1	sp|P01126|REL_AVIRE	41.4	1.23e-62	217	sp|P01126|REL_AVIRE Transforming protein rel polyprotein OS=Avian reticuloendotheliosis virus OX=11636 GN=V-REL PE=3 SV=1
+g26543.t1	sp|P57103|NAC3_HUMAN	57.0	0.0	964	sp|P57103|NAC3_HUMAN Sodium/calcium exchanger 3 OS=Homo sapiens OX=9606 GN=SLC8A3 PE=1 SV=2
+g26554.t1	sp|Q868Z9|PPN_DROME	40.9	2.31e-155	504	sp|Q868Z9|PPN_DROME Papilin OS=Drosophila melanogaster OX=7227 GN=Ppn PE=1 SV=2
+g26624.t1	sp|Q7LFX5|CHSTF_HUMAN	33.5	2.18e-43	162	sp|Q7LFX5|CHSTF_HUMAN Carbohydrate sulfotransferase 15 OS=Homo sapiens OX=9606 GN=CHST15 PE=1 SV=1
+g26701.t1	sp|A3QJU3|COQ8B_DANRE	49.4	3.12e-188	556	sp|A3QJU3|COQ8B_DANRE Atypical kinase COQ8B, mitochondrial OS=Danio rerio OX=7955 GN=coq8b PE=3 SV=2
+g26792.t1	sp|Q60954|MEIS1_MOUSE	43.6	3.83e-42	153	sp|Q60954|MEIS1_MOUSE Homeobox protein Meis1 OS=Mus musculus OX=10090 GN=Meis1 PE=1 SV=1
+g26792.t2	sp|Q60954|MEIS1_MOUSE	50.7	3.29e-46	163	sp|Q60954|MEIS1_MOUSE Homeobox protein Meis1 OS=Mus musculus OX=10090 GN=Meis1 PE=1 SV=1
+g26797.t1	sp|P62992|RS27A_BOVIN	84.6	2.88e-89	259	sp|P62992|RS27A_BOVIN Ubiquitin-ribosomal protein eS31 fusion protein OS=Bos taurus OX=9913 GN=RPS27A PE=1 SV=2
+g26829.t1	sp|P08912|ACM5_HUMAN	48.8	8.45e-14	69.7	sp|P08912|ACM5_HUMAN Muscarinic acetylcholine receptor M5 OS=Homo sapiens OX=9606 GN=CHRM5 PE=1 SV=2
+g26891.t1	sp|Q91048|PTK7_CHICK	37.3	3.94e-222	665	sp|Q91048|PTK7_CHICK Inactive tyrosine-protein kinase 7 OS=Gallus gallus OX=9031 GN=PTK7 PE=2 SV=1
+g26969.t1	sp|P43699|NKX21_HUMAN	58.5	1.05e-47	170	sp|P43699|NKX21_HUMAN Homeobox protein Nkx-2.1 OS=Homo sapiens OX=9606 GN=NKX2-1 PE=1 SV=1
+g26978.t1	sp|Q63344|MOT2_RAT	25.1	7.57e-31	129	sp|Q63344|MOT2_RAT Monocarboxylate transporter 2 OS=Rattus norvegicus OX=10116 GN=Slc16a7 PE=1 SV=2
+g27039.t1	sp|Q5RI75|RASEF_MOUSE	47.1	7.83e-48	177	sp|Q5RI75|RASEF_MOUSE Ras and EF-hand domain-containing protein homolog OS=Mus musculus OX=10090 GN=Rasef PE=1 SV=1
+g27039.t2	sp|Q5RI75|RASEF_MOUSE	47.1	5.07e-48	177	sp|Q5RI75|RASEF_MOUSE Ras and EF-hand domain-containing protein homolog OS=Mus musculus OX=10090 GN=Rasef PE=1 SV=1
+g27039.t3	sp|Q5RI75|RASEF_MOUSE	47.1	8.52e-48	177	sp|Q5RI75|RASEF_MOUSE Ras and EF-hand domain-containing protein homolog OS=Mus musculus OX=10090 GN=Rasef PE=1 SV=1
+g2708.t1	sp|Q6NRD3|SH3R1_XENLA	32.3	4.02e-59	209	sp|Q6NRD3|SH3R1_XENLA E3 ubiquitin-protein ligase SH3RF1 OS=Xenopus laevis OX=8355 GN=sh3rf1 PE=1 SV=1
+g27088.t1	sp|Q2KI84|HARS1_BOVIN	41.1	2.46e-97	320	sp|Q2KI84|HARS1_BOVIN Histidine--tRNA ligase, cytoplasmic OS=Bos taurus OX=9913 GN=HARS1 PE=2 SV=1
+g27088.t2	sp|Q2KI84|HARS1_BOVIN	41.1	1.75e-97	320	sp|Q2KI84|HARS1_BOVIN Histidine--tRNA ligase, cytoplasmic OS=Bos taurus OX=9913 GN=HARS1 PE=2 SV=1
+g27088.t3	sp|Q2KI84|HARS1_BOVIN	40.4	7.78e-88	294	sp|Q2KI84|HARS1_BOVIN Histidine--tRNA ligase, cytoplasmic OS=Bos taurus OX=9913 GN=HARS1 PE=2 SV=1
+g27128.t1	sp|E9QI36|HARS1_DANRE	34.0	2.50e-85	290	sp|E9QI36|HARS1_DANRE Histidine--tRNA ligase OS=Danio rerio OX=7955 GN=hars PE=3 SV=2
+g27155.t1	sp|Q962T1|RL32_SPOFR	71.7	1.87e-49	156	sp|Q962T1|RL32_SPOFR Large ribosomal subunit protein eL32 OS=Spodoptera frugiperda OX=7108 GN=RpL32 PE=2 SV=1
+g2720.t1	sp|Q6Q473|CLA4A_MOUSE	33.0	1.60e-120	393	sp|Q6Q473|CLA4A_MOUSE Calcium-activated chloride channel regulator 4A OS=Mus musculus OX=10090 GN=Clca4a PE=1 SV=2
+g27738.t1	sp|C8YR32|LOXH1_MOUSE	35.1	2.81e-24	111	sp|C8YR32|LOXH1_MOUSE Lipoxygenase homology domain-containing protein 1 OS=Mus musculus OX=10090 GN=Loxhd1 PE=2 SV=1
+g27738.t2	sp|C8YR32|LOXH1_MOUSE	35.1	2.38e-24	111	sp|C8YR32|LOXH1_MOUSE Lipoxygenase homology domain-containing protein 1 OS=Mus musculus OX=10090 GN=Loxhd1 PE=2 SV=1
+g27747.t1	sp|O97758|ZO1_CANLF	46.8	2.21e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g27747.t2	sp|O97758|ZO1_CANLF	46.8	2.21e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g27747.t3	sp|O97758|ZO1_CANLF	46.8	2.21e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g27747.t4	sp|O97758|ZO1_CANLF	46.8	2.20e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g27747.t5	sp|O97758|ZO1_CANLF	46.8	2.23e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g27747.t6	sp|O97758|ZO1_CANLF	46.8	2.19e-07	59.7	sp|O97758|ZO1_CANLF Tight junction protein 1 OS=Canis lupus familiaris OX=9615 GN=TJP1 PE=1 SV=1
+g2782.t1	sp|Q9Z2W8|GRIA4_MOUSE	39.8	8.32e-206	615	sp|Q9Z2W8|GRIA4_MOUSE Glutamate receptor 4 OS=Mus musculus OX=10090 GN=Gria4 PE=1 SV=2
+g2784.t1	sp|Q9Z2W8|GRIA4_MOUSE	35.8	4.39e-155	481	sp|Q9Z2W8|GRIA4_MOUSE Glutamate receptor 4 OS=Mus musculus OX=10090 GN=Gria4 PE=1 SV=2
+g2784.t2	sp|Q9Z2W8|GRIA4_MOUSE	35.8	7.47e-155	481	sp|Q9Z2W8|GRIA4_MOUSE Glutamate receptor 4 OS=Mus musculus OX=10090 GN=Gria4 PE=1 SV=2
+g2785.t1	sp|P63080|GBRB3_MOUSE	46.6	5.46e-124	371	sp|P63080|GBRB3_MOUSE Gamma-aminobutyric acid receptor subunit beta-3 OS=Mus musculus OX=10090 GN=Gabrb3 PE=1 SV=1
+g2786.t1	sp|P28472|GBRB3_HUMAN	61.5	4.00e-131	390	sp|P28472|GBRB3_HUMAN Gamma-aminobutyric acid receptor subunit beta-3 OS=Homo sapiens OX=9606 GN=GABRB3 PE=1 SV=1
+g27870.t1	sp|Q9QXL2|KI21A_MOUSE	65.2	4.33e-75	249	sp|Q9QXL2|KI21A_MOUSE Kinesin-like protein KIF21A OS=Mus musculus OX=10090 GN=Kif21a PE=1 SV=2
+g27991.t1	sp|Q9XSU4|RS11_CANLF	81.9	5.93e-85	249	sp|Q9XSU4|RS11_CANLF Small ribosomal subunit protein uS17 OS=Canis lupus familiaris OX=9615 GN=RPS11 PE=1 SV=2
+g28006.t1	sp|P35951|LDLR_MOUSE	33.7	2.15e-75	261	sp|P35951|LDLR_MOUSE Low-density lipoprotein receptor OS=Mus musculus OX=10090 GN=Ldlr PE=1 SV=2
+g28006.t2	sp|P35951|LDLR_MOUSE	33.7	2.48e-76	261	sp|P35951|LDLR_MOUSE Low-density lipoprotein receptor OS=Mus musculus OX=10090 GN=Ldlr PE=1 SV=2
+g28073.t1	sp|Q99469|STAC_HUMAN	30.3	3.08e-25	112	sp|Q99469|STAC_HUMAN SH3 and cysteine-rich domain-containing protein OS=Homo sapiens OX=9606 GN=STAC PE=1 SV=1
+g28073.t2	sp|Q6DBR6|STAC3_DANRE	35.0	1.64e-17	88.2	sp|Q6DBR6|STAC3_DANRE SH3 and cysteine-rich domain-containing protein 3 OS=Danio rerio OX=7955 GN=stac3 PE=1 SV=1
+g28113.t1	sp|Q24278|CNGA_DROME	27.6	6.10e-44	175	sp|Q24278|CNGA_DROME Cyclic nucleotide-gated cation channel subunit A OS=Drosophila melanogaster OX=7227 GN=CngA PE=2 SV=2
+g28113.t2	sp|Q24278|CNGA_DROME	27.6	6.10e-44	175	sp|Q24278|CNGA_DROME Cyclic nucleotide-gated cation channel subunit A OS=Drosophila melanogaster OX=7227 GN=CngA PE=2 SV=2
+g28113.t3	sp|Q24278|CNGA_DROME	28.4	1.39e-44	177	sp|Q24278|CNGA_DROME Cyclic nucleotide-gated cation channel subunit A OS=Drosophila melanogaster OX=7227 GN=CngA PE=2 SV=2
+g2814.t1	sp|Q15723|ELF2_HUMAN	69.3	8.76e-50	177	sp|Q15723|ELF2_HUMAN ETS-related transcription factor Elf-2 OS=Homo sapiens OX=9606 GN=ELF2 PE=1 SV=2
+g2814.t2	sp|Q15723|ELF2_HUMAN	69.3	1.34e-50	177	sp|Q15723|ELF2_HUMAN ETS-related transcription factor Elf-2 OS=Homo sapiens OX=9606 GN=ELF2 PE=1 SV=2
+g28140.t1	sp|Q6NV04|HACL2_DANRE	64.2	1.45e-284	791	sp|Q6NV04|HACL2_DANRE 2-hydroxyacyl-CoA lyase 2 OS=Danio rerio OX=7955 GN=ilvbl PE=2 SV=1
+g2827.t1	sp|Q03041|CNGA2_BOVIN	58.7	1.01e-229	657	sp|Q03041|CNGA2_BOVIN Cyclic nucleotide-gated channel alpha-2 OS=Bos taurus OX=9913 GN=CNGA2 PE=1 SV=1
+g28365.t1	sp|Q9C0K1|S39A8_HUMAN	28.7	4.34e-20	97.4	sp|Q9C0K1|S39A8_HUMAN Metal cation symporter ZIP8 OS=Homo sapiens OX=9606 GN=SLC39A8 PE=1 SV=1
+g28435.t1	sp|Q90YV2|RL15_ICTPU	74.6	6.05e-110	316	sp|Q90YV2|RL15_ICTPU Large ribosomal subunit protein eL15 OS=Ictalurus punctatus OX=7998 GN=rpl15 PE=2 SV=3
+g2861.t1	sp|Q90744|NAGAB_CHICK	52.8	5.78e-149	431	sp|Q90744|NAGAB_CHICK Alpha-N-acetylgalactosaminidase OS=Gallus gallus OX=9031 GN=NAGA PE=1 SV=1
+g2861.t2	sp|Q90744|NAGAB_CHICK	54.2	2.26e-143	419	sp|Q90744|NAGAB_CHICK Alpha-N-acetylgalactosaminidase OS=Gallus gallus OX=9031 GN=NAGA PE=1 SV=1
+g2861.t3	sp|Q9P2G9|KLHL8_HUMAN	46.4	1.80e-95	311	sp|Q9P2G9|KLHL8_HUMAN Kelch-like protein 8 OS=Homo sapiens OX=9606 GN=KLHL8 PE=1 SV=4
+g28676.t1	sp|O04193|WLI2A_ARATH	48.0	2.82e-22	89.4	sp|O04193|WLI2A_ARATH LIM domain-containing protein WLIM2a OS=Arabidopsis thaliana OX=3702 GN=WLIN2A PE=1 SV=1
+g28676.t2	sp|O04193|WLI2A_ARATH	48.0	5.83e-19	89.7	sp|O04193|WLI2A_ARATH LIM domain-containing protein WLIM2a OS=Arabidopsis thaliana OX=3702 GN=WLIN2A PE=1 SV=1
+g28676.t3	sp|O04193|WLI2A_ARATH	48.0	8.36e-19	89.7	sp|O04193|WLI2A_ARATH LIM domain-containing protein WLIM2a OS=Arabidopsis thaliana OX=3702 GN=WLIN2A PE=1 SV=1
+g28676.t4	sp|O04193|WLI2A_ARATH	48.0	5.67e-19	89.7	sp|O04193|WLI2A_ARATH LIM domain-containing protein WLIM2a OS=Arabidopsis thaliana OX=3702 GN=WLIN2A PE=1 SV=1
+g28738.t1	sp|P52799|EFNB2_HUMAN	27.6	6.76e-15	76.6	sp|P52799|EFNB2_HUMAN Ephrin-B2 OS=Homo sapiens OX=9606 GN=EFNB2 PE=1 SV=1
+g2876.t1	sp|P01026|CO3_RAT	29.2	2.81e-170	563	sp|P01026|CO3_RAT Complement C3 OS=Rattus norvegicus OX=10116 GN=C3 PE=1 SV=3
+g2877.t1	sp|Q0ZZJ6|VCO31_AUSSU	30.1	8.82e-131	441	sp|Q0ZZJ6|VCO31_AUSSU A.superbus venom factor 1 OS=Austrelaps superbus OX=29156 PE=1 SV=1
+g28957.t1	sp|H2L0Q3|GABR1_CAEEL	40.0	8.17e-09	54.3	sp|H2L0Q3|GABR1_CAEEL Gamma-aminobutyric acid type B receptor subunit 1 OS=Caenorhabditis elegans OX=6239 GN=gbb-1 PE=1 SV=2
+g28958.t1	sp|Q80T41|GABR2_MOUSE	44.8	2.39e-221	656	sp|Q80T41|GABR2_MOUSE Gamma-aminobutyric acid type B receptor subunit 2 OS=Mus musculus OX=10090 GN=Gabbr2 PE=1 SV=2
+g28958.t2	sp|Q80T41|GABR2_MOUSE	44.9	2.62e-223	661	sp|Q80T41|GABR2_MOUSE Gamma-aminobutyric acid type B receptor subunit 2 OS=Mus musculus OX=10090 GN=Gabbr2 PE=1 SV=2
+g29132.t1	sp|Q28GP7|SNX33_XENTR	38.9	1.03e-120	369	sp|Q28GP7|SNX33_XENTR Sorting nexin-33 OS=Xenopus tropicalis OX=8364 GN=snx33 PE=2 SV=1
+g29132.t2	sp|Q28GP7|SNX33_XENTR	37.8	1.01e-121	372	sp|Q28GP7|SNX33_XENTR Sorting nexin-33 OS=Xenopus tropicalis OX=8364 GN=snx33 PE=2 SV=1
+g29204.t1	sp|B6ZIW0|KUN_HAELO	42.4	2.25e-22	96.7	sp|B6ZIW0|KUN_HAELO Thrombin inhibitor hemalin OS=Haemaphysalis longicornis OX=44386 PE=2 SV=1
+g29262.t1	sp|P42669|PURA_MOUSE	51.9	3.84e-74	233	sp|P42669|PURA_MOUSE Transcriptional activator protein Pur-alpha OS=Mus musculus OX=10090 GN=Pura PE=1 SV=1
+g29262.t2	sp|Q6PHK6|PURB_DANRE	49.4	3.00e-74	231	sp|Q6PHK6|PURB_DANRE Transcriptional regulator protein Pur-beta OS=Danio rerio OX=7955 GN=purb PE=2 SV=3
+g2927.t1	sp|O75899|GABR2_HUMAN	41.0	5.71e-76	255	sp|O75899|GABR2_HUMAN Gamma-aminobutyric acid type B receptor subunit 2 OS=Homo sapiens OX=9606 GN=GABBR2 PE=1 SV=1
+g2933.t1	sp|Q963B7|RL9_SPOFR	70.9	5.37e-88	260	sp|Q963B7|RL9_SPOFR Large ribosomal subunit protein uL6 OS=Spodoptera frugiperda OX=7108 GN=RpL9 PE=2 SV=1
+g29457.t1	sp|Q5T7P8|SYT6_HUMAN	51.1	2.75e-104	324	sp|Q5T7P8|SYT6_HUMAN Synaptotagmin-6 OS=Homo sapiens OX=9606 GN=SYT6 PE=1 SV=3
+g29457.t2	sp|Q5T7P8|SYT6_HUMAN	51.1	4.12e-104	324	sp|Q5T7P8|SYT6_HUMAN Synaptotagmin-6 OS=Homo sapiens OX=9606 GN=SYT6 PE=1 SV=3
+g29521.t1	sp|Q6DGN0|RERGL_DANRE	38.2	3.34e-33	121	sp|Q6DGN0|RERGL_DANRE Ras-related and estrogen-regulated growth inhibitor-like protein OS=Danio rerio OX=7955 GN=rergl PE=2 SV=1
+g29563.t1	sp|Q12912|IRAG2_HUMAN	33.0	4.41e-15	84.3	sp|Q12912|IRAG2_HUMAN Inositol 1,4,5-triphosphate receptor associated 2 OS=Homo sapiens OX=9606 GN=IRAG2 PE=1 SV=3
+g29563.t2	sp|Q12912|IRAG2_HUMAN	32.8	2.69e-16	88.2	sp|Q12912|IRAG2_HUMAN Inositol 1,4,5-triphosphate receptor associated 2 OS=Homo sapiens OX=9606 GN=IRAG2 PE=1 SV=3
+g29563.t3	sp|Q12912|IRAG2_HUMAN	33.3	5.68e-15	84.0	sp|Q12912|IRAG2_HUMAN Inositol 1,4,5-triphosphate receptor associated 2 OS=Homo sapiens OX=9606 GN=IRAG2 PE=1 SV=3
+g29632.t1	sp|K0DZA0|HTYE_ASPRU	29.7	4.48e-34	130	sp|K0DZA0|HTYE_ASPRU 2-oxoglutarate-dependent dioxygenase htyE OS=Aspergillus rugulosus OX=41736 GN=htyE PE=1 SV=1
+g2964.t1	sp|Q9WVI4|GCYA2_RAT	43.7	1.03e-162	490	sp|Q9WVI4|GCYA2_RAT Guanylate cyclase soluble subunit alpha-2 OS=Rattus norvegicus OX=10116 GN=Gucy1a2 PE=1 SV=2
+g2965.t1	sp|Q4ZHR9|GCYB1_CANLF	58.7	4.78e-82	259	sp|Q4ZHR9|GCYB1_CANLF Guanylate cyclase soluble subunit beta-1 OS=Canis lupus familiaris OX=9615 GN=GUCY1B1 PE=2 SV=1
+g2966.t1	sp|Q02153|GCYB1_HUMAN	63.0	2.68e-127	379	sp|Q02153|GCYB1_HUMAN Guanylate cyclase soluble subunit beta-1 OS=Homo sapiens OX=9606 GN=GUCY1B1 PE=1 SV=1
+g29792.t1	sp|Q8IV01|SYT12_HUMAN	44.4	1.86e-79	252	sp|Q8IV01|SYT12_HUMAN Synaptotagmin-12 OS=Homo sapiens OX=9606 GN=SYT12 PE=1 SV=1
+g29827.t1	sp|Q9Z0Y9|NR1H3_MOUSE	43.4	1.41e-101	315	sp|Q9Z0Y9|NR1H3_MOUSE Oxysterols receptor LXR-alpha OS=Mus musculus OX=10090 GN=Nr1h3 PE=1 SV=3
+g29827.t2	sp|Q5E9B6|NR1H3_BOVIN	43.7	6.50e-103	318	sp|Q5E9B6|NR1H3_BOVIN Oxysterols receptor LXR-alpha OS=Bos taurus OX=9913 GN=NR1H3 PE=2 SV=1
+g30003.t1	sp|P20742|PZP_HUMAN	29.7	9.45e-178	574	sp|P20742|PZP_HUMAN Pregnancy zone protein OS=Homo sapiens OX=9606 GN=PZP PE=1 SV=4
+g30016.t1	sp|P03967|RASD_DICDI	40.9	4.35e-35	125	sp|P03967|RASD_DICDI Ras-like protein rasD OS=Dictyostelium discoideum OX=44689 GN=rasD PE=1 SV=2
+g30029.t1	sp|Q8N394|TMTC2_HUMAN	48.4	9.11e-169	512	sp|Q8N394|TMTC2_HUMAN Protein O-mannosyl-transferase TMTC2 OS=Homo sapiens OX=9606 GN=TMTC2 PE=1 SV=1
+g30034.t1	sp|E7F9T0|MICA1_DANRE	54.4	8.55e-150	471	sp|E7F9T0|MICA1_DANRE [F-actin]-monooxygenase mical1 OS=Danio rerio OX=7955 GN=mical1 PE=3 SV=1
+g30068.t1	sp|P22303|ACES_HUMAN	36.6	8.35e-83	274	sp|P22303|ACES_HUMAN Acetylcholinesterase OS=Homo sapiens OX=9606 GN=ACHE PE=1 SV=1
+g3007.t1	sp|A0JN41|CAH10_BOVIN	36.0	2.33e-56	189	sp|A0JN41|CAH10_BOVIN Carbonic anhydrase-related protein 10 OS=Bos taurus OX=9913 GN=CA10 PE=2 SV=1
+g3019.t1	sp|Q9QUQ5|TRPC4_MOUSE	52.6	1.16e-268	783	sp|Q9QUQ5|TRPC4_MOUSE Short transient receptor potential channel 4 OS=Mus musculus OX=10090 GN=Trpc4 PE=1 SV=1
+g3020.t1	sp|Q5RBP1|NPNT_PONAB	43.4	8.70e-40	159	sp|Q5RBP1|NPNT_PONAB Nephronectin OS=Pongo abelii OX=9601 GN=NPNT PE=2 SV=1
+g3020.t2	sp|Q5RBP1|NPNT_PONAB	43.4	6.40e-40	159	sp|Q5RBP1|NPNT_PONAB Nephronectin OS=Pongo abelii OX=9601 GN=NPNT PE=2 SV=1
+g3021.t1	sp|Q5RBP1|NPNT_PONAB	36.9	2.30e-37	152	sp|Q5RBP1|NPNT_PONAB Nephronectin OS=Pongo abelii OX=9601 GN=NPNT PE=2 SV=1
+g3022.t1	sp|Q91ZZ5|RXFP2_MOUSE	44.8	3.36e-100	327	sp|Q91ZZ5|RXFP2_MOUSE Relaxin receptor 2 OS=Mus musculus OX=10090 GN=Rxfp2 PE=2 SV=2
+g30290.t1	sp|Q00492|SUM1_LYTVA	74.6	1.49e-29	107	sp|Q00492|SUM1_LYTVA Transcription factor SUM-1 OS=Lytechinus variegatus OX=7654 GN=SUM-1 PE=2 SV=1
+g30301.t1	sp|Q66J52|S226B_XENLA	27.1	4.28e-45	169	sp|Q66J52|S226B_XENLA Solute carrier family 22 member 6-B OS=Xenopus laevis OX=8355 GN=slc22a6-b PE=2 SV=1
+g30315.t1	sp|K0E3U5|ECDK_ASPRU	27.7	4.37e-23	100	sp|K0E3U5|ECDK_ASPRU 2-oxoglutarate-dependent dioxygenase ecdK OS=Aspergillus rugulosus OX=41736 GN=ecdK PE=1 SV=1
+g30353.t1	sp|Q75J93|CPAS1_DICDI	28.9	5.49e-57	213	sp|Q75J93|CPAS1_DICDI Circularly permutated Ras protein 1 OS=Dictyostelium discoideum OX=44689 GN=cpras1 PE=3 SV=1
+g30353.t2	sp|Q75J93|CPAS1_DICDI	29.1	7.35e-60	221	sp|Q75J93|CPAS1_DICDI Circularly permutated Ras protein 1 OS=Dictyostelium discoideum OX=44689 GN=cpras1 PE=3 SV=1
+g30353.t3	sp|Q75J93|CPAS1_DICDI	28.9	4.49e-57	213	sp|Q75J93|CPAS1_DICDI Circularly permutated Ras protein 1 OS=Dictyostelium discoideum OX=44689 GN=cpras1 PE=3 SV=1
+g30364.t1	sp|O57406|CEL1A_XENLA	39.1	2.91e-105	330	sp|O57406|CEL1A_XENLA CUGBP Elav-like family member 1-A OS=Xenopus laevis OX=8355 GN=cugbp1-a PE=1 SV=1
+g30364.t2	sp|O57406|CEL1A_XENLA	39.1	3.98e-105	329	sp|O57406|CEL1A_XENLA CUGBP Elav-like family member 1-A OS=Xenopus laevis OX=8355 GN=cugbp1-a PE=1 SV=1
+g30364.t3	sp|O57406|CEL1A_XENLA	39.3	1.07e-107	336	sp|O57406|CEL1A_XENLA CUGBP Elav-like family member 1-A OS=Xenopus laevis OX=8355 GN=cugbp1-a PE=1 SV=1
+g3043.t1	sp|O54834|RHG06_MOUSE	35.3	4.15e-60	219	sp|O54834|RHG06_MOUSE Rho GTPase-activating protein 6 OS=Mus musculus OX=10090 GN=Arhgap6 PE=1 SV=3
+g30442.t1	sp|Q91ZG2|MPPD1_MOUSE	50.9	2.78e-102	305	sp|Q91ZG2|MPPD1_MOUSE Metallophosphoesterase domain-containing protein 1 OS=Mus musculus OX=10090 GN=Mpped1 PE=2 SV=1
+g30689.t1	sp|Q7JQ32|GC76C_DROME	53.9	1.83e-201	612	sp|Q7JQ32|GC76C_DROME Receptor-type guanylate cyclase Gyc76C OS=Drosophila melanogaster OX=7227 GN=Gyc76C PE=1 SV=1
+g3069.t1	sp|Q6NTV6|INF2_XENLA	27.1	1.25e-64	245	sp|Q6NTV6|INF2_XENLA Inverted formin-2 OS=Xenopus laevis OX=8355 GN=inf2 PE=2 SV=1
+g3069.t2	sp|Q6NTV6|INF2_XENLA	27.0	6.90e-64	243	sp|Q6NTV6|INF2_XENLA Inverted formin-2 OS=Xenopus laevis OX=8355 GN=inf2 PE=2 SV=1
+g30690.t1	sp|Q7JQ32|GC76C_DROME	26.1	7.14e-29	122	sp|Q7JQ32|GC76C_DROME Receptor-type guanylate cyclase Gyc76C OS=Drosophila melanogaster OX=7227 GN=Gyc76C PE=1 SV=1
+g30691.t1	sp|Q07553|GCY3E_DROME	43.2	3.46e-249	742	sp|Q07553|GCY3E_DROME Guanylate cyclase 32E OS=Drosophila melanogaster OX=7227 GN=Gyc32E PE=1 SV=4
+g30706.t1	sp|P80018|GLBC_MOLAR	36.0	5.69e-29	108	sp|P80018|GLBC_MOLAR Globin C, coelomic OS=Molpadia arenicola OX=7698 PE=1 SV=3
+g30706.t2	sp|P80018|GLBC_MOLAR	36.0	3.97e-29	108	sp|P80018|GLBC_MOLAR Globin C, coelomic OS=Molpadia arenicola OX=7698 PE=1 SV=3
+g30710.t1	sp|Q8N461|FXL16_HUMAN	59.2	4.32e-86	277	sp|Q8N461|FXL16_HUMAN F-box/LRR-repeat protein 16 OS=Homo sapiens OX=9606 GN=FBXL16 PE=1 SV=2
+g30734.t1	sp|F1PT61|MYH16_CANLF	63.0	0.0	1102	sp|F1PT61|MYH16_CANLF Myosin-16 OS=Canis lupus familiaris OX=9615 GN=MYH16 PE=3 SV=2
+g30734.t2	sp|F1PT61|MYH16_CANLF	63.0	0.0	1102	sp|F1PT61|MYH16_CANLF Myosin-16 OS=Canis lupus familiaris OX=9615 GN=MYH16 PE=3 SV=2
+g30760.t1	sp|Q9QX11|CYH1_MOUSE	69.7	1.26e-169	483	sp|Q9QX11|CYH1_MOUSE Cytohesin-1 OS=Mus musculus OX=10090 GN=Cyth1 PE=1 SV=2
+g30773.t1	sp|Q6WCQ1|MPRIP_HUMAN	34.1	4.81e-43	174	sp|Q6WCQ1|MPRIP_HUMAN Myosin phosphatase Rho-interacting protein OS=Homo sapiens OX=9606 GN=MPRIP PE=1 SV=3
+g30835.t1	sp|Q0V7M8|F167A_BOVIN	35.0	1.23e-19	85.9	sp|Q0V7M8|F167A_BOVIN Protein FAM167A OS=Bos taurus OX=9913 GN=FAM167A PE=2 SV=1
+g3088.t1	sp|P54281|CLCA1_BOVIN	33.2	1.22e-76	263	sp|P54281|CLCA1_BOVIN Calcium-activated chloride channel regulator 1 OS=Bos taurus OX=9913 PE=1 SV=1
+g31062.t1	sp|Q90922|NET1_CHICK	56.7	9.71e-242	682	sp|Q90922|NET1_CHICK Netrin-1 OS=Gallus gallus OX=9031 GN=NTN1 PE=1 SV=1
+g3110.t1	sp|P08650|CO5_RAT	31.8	4.18e-43	164	sp|P08650|CO5_RAT Complement C5 OS=Rattus norvegicus OX=10116 GN=C5 PE=1 SV=3
+g3112.t1	sp|P98093|CO3_ONCMY	30.1	6.20e-138	464	sp|P98093|CO3_ONCMY Complement C3 (Fragment) OS=Oncorhynchus mykiss OX=8022 GN=c3 PE=1 SV=1
+g3116.t1	sp|Q5RBR9|RL31_PONAB	76.1	2.31e-60	184	sp|Q5RBR9|RL31_PONAB Large ribosomal subunit protein eL31 OS=Pongo abelii OX=9601 GN=RPL31 PE=2 SV=1
+g31196.t1	sp|A4D2P6|GRD2I_HUMAN	30.6	1.06e-58	217	sp|A4D2P6|GRD2I_HUMAN Delphilin OS=Homo sapiens OX=9606 GN=GRID2IP PE=1 SV=2
+g31196.t2	sp|A4D2P6|GRD2I_HUMAN	26.5	6.18e-90	321	sp|A4D2P6|GRD2I_HUMAN Delphilin OS=Homo sapiens OX=9606 GN=GRID2IP PE=1 SV=2
+g31207.t1	sp|Q8WPA2|AR_BOMMO	29.2	5.75e-31	122	sp|Q8WPA2|AR_BOMMO Allatostatin-A receptor OS=Bombyx mori OX=7091 GN=AR PE=2 SV=1
+g31274.t1	sp|Q8AV57|SDK2_CHICK	37.7	0.0	1308	sp|Q8AV57|SDK2_CHICK Protein sidekick-2 OS=Gallus gallus OX=9031 GN=SDK2 PE=1 SV=2
+g31274.t2	sp|Q8AV57|SDK2_CHICK	37.8	0.0	1310	sp|Q8AV57|SDK2_CHICK Protein sidekick-2 OS=Gallus gallus OX=9031 GN=SDK2 PE=1 SV=2
+g31274.t3	sp|Q8AV57|SDK2_CHICK	37.5	0.0	1301	sp|Q8AV57|SDK2_CHICK Protein sidekick-2 OS=Gallus gallus OX=9031 GN=SDK2 PE=1 SV=2
+g31285.t1	sp|Q86Y38|XYLT1_HUMAN	49.3	1.39e-251	733	sp|Q86Y38|XYLT1_HUMAN Xylosyltransferase 1 OS=Homo sapiens OX=9606 GN=XYLT1 PE=1 SV=1
+g31295.t1	sp|Q920M7|SYT17_MOUSE	52.6	1.01e-128	384	sp|Q920M7|SYT17_MOUSE Synaptotagmin-17 OS=Mus musculus OX=10090 GN=Syt17 PE=1 SV=1
+g3138.t1	sp|A2AVA0|SVEP1_MOUSE	24.3	1.46e-54	217	sp|A2AVA0|SVEP1_MOUSE Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Mus musculus OX=10090 GN=Svep1 PE=1 SV=1
+g31383.t1	sp|Q9U9P7|PITC1_DROME	57.3	5.59e-61	196	sp|Q9U9P7|PITC1_DROME Cytoplasmic phosphatidylinositol transfer protein 1 OS=Drosophila melanogaster OX=7227 GN=rdgBbeta PE=2 SV=1
+g31446.t1	sp|P58872|RHBL3_HUMAN	35.5	3.19e-61	208	sp|P58872|RHBL3_HUMAN Rhomboid-related protein 3 OS=Homo sapiens OX=9606 GN=RHBDL3 PE=1 SV=1
+g3163.t1	sp|P47835|RS3B_XENLA	73.1	1.25e-20	85.1	sp|P47835|RS3B_XENLA Small ribosomal subunit protein uS3B OS=Xenopus laevis OX=8355 GN=rps3-b PE=2 SV=1
+g31633.t1	sp|P35980|RL18_MOUSE	70.7	6.74e-92	269	sp|P35980|RL18_MOUSE Large ribosomal subunit protein eL18 OS=Mus musculus OX=10090 GN=Rpl18 PE=1 SV=3
+g31773.t1	sp|O88427|CAC1H_MOUSE	45.4	0.0	1246	sp|O88427|CAC1H_MOUSE Voltage-dependent T-type calcium channel subunit alpha-1H OS=Mus musculus OX=10090 GN=Cacna1h PE=1 SV=3
+g31773.t2	sp|O95180|CAC1H_HUMAN	45.5	0.0	1248	sp|O95180|CAC1H_HUMAN Voltage-dependent T-type calcium channel subunit alpha-1H OS=Homo sapiens OX=9606 GN=CACNA1H PE=1 SV=4
+g31773.t3	sp|O95180|CAC1H_HUMAN	44.1	0.0	1191	sp|O95180|CAC1H_HUMAN Voltage-dependent T-type calcium channel subunit alpha-1H OS=Homo sapiens OX=9606 GN=CACNA1H PE=1 SV=4
+g31773.t4	sp|O88427|CAC1H_MOUSE	45.4	0.0	1247	sp|O88427|CAC1H_MOUSE Voltage-dependent T-type calcium channel subunit alpha-1H OS=Mus musculus OX=10090 GN=Cacna1h PE=1 SV=3
+g31773.t5	sp|O95180|CAC1H_HUMAN	45.5	0.0	1248	sp|O95180|CAC1H_HUMAN Voltage-dependent T-type calcium channel subunit alpha-1H OS=Homo sapiens OX=9606 GN=CACNA1H PE=1 SV=4
+g31773.t6	sp|Q9EQ60|CAC1H_RAT	43.0	0.0	1078	sp|Q9EQ60|CAC1H_RAT Voltage-dependent T-type calcium channel subunit alpha-1H OS=Rattus norvegicus OX=10116 GN=Cacna1h PE=2 SV=2
+g31790.t1	sp|O46470|RGS7_BOVIN	45.8	1.41e-49	170	sp|O46470|RGS7_BOVIN Regulator of G-protein signaling 7 OS=Bos taurus OX=9913 GN=RGS7 PE=1 SV=1
+g31851.t1	sp|P33095|RS15A_STRPU	87.7	8.41e-81	238	sp|P33095|RS15A_STRPU Small ribosomal subunit protein uS8 OS=Strongylocentrotus purpuratus OX=7668 GN=RPS15A PE=2 SV=3
+g31903.t1	sp|Q9UKN7|MYO15_HUMAN	24.9	3.03e-46	186	sp|Q9UKN7|MYO15_HUMAN Unconventional myosin-XV OS=Homo sapiens OX=9606 GN=MYO15A PE=1 SV=2
+g31908.t1	sp|Q8VDS3|CBX7_MOUSE	39.5	1.47e-18	84.3	sp|Q8VDS3|CBX7_MOUSE Chromobox protein homolog 7 OS=Mus musculus OX=10090 GN=Cbx7 PE=1 SV=1
+g32025.t1	sp|O96647|RL10_BOMMA	79.2	7.37e-122	348	sp|O96647|RL10_BOMMA Large ribosomal subunit protein uL16 OS=Bombyx mandarina OX=7092 GN=RpL10 PE=2 SV=1
+g32054.t1	sp|O75689|ADAP1_HUMAN	42.1	7.09e-101	306	sp|O75689|ADAP1_HUMAN Arf-GAP with dual PH domain-containing protein 1 OS=Homo sapiens OX=9606 GN=ADAP1 PE=1 SV=2
+g32054.t2	sp|O75689|ADAP1_HUMAN	43.8	9.48e-105	316	sp|O75689|ADAP1_HUMAN Arf-GAP with dual PH domain-containing protein 1 OS=Homo sapiens OX=9606 GN=ADAP1 PE=1 SV=2
+g32119.t1	sp|Q9Y272|RASD1_HUMAN	52.1	1.05e-78	243	sp|Q9Y272|RASD1_HUMAN Dexamethasone-induced Ras-related protein 1 OS=Homo sapiens OX=9606 GN=RASD1 PE=1 SV=1
+g32330.t1	sp|P98105|LYAM2_RAT	33.1	1.77e-11	67.8	sp|P98105|LYAM2_RAT E-selectin OS=Rattus norvegicus OX=10116 GN=Sele PE=2 SV=1
+g3362.t1	sp|P28572|SC6A9_RAT	47.5	1.30e-118	362	sp|P28572|SC6A9_RAT Sodium- and chloride-dependent glycine transporter 1 OS=Rattus norvegicus OX=10116 GN=Slc6a9 PE=1 SV=2
+g3367.t1	sp|Q13887|KLF5_HUMAN	55.6	7.23e-29	121	sp|Q13887|KLF5_HUMAN Krueppel-like factor 5 OS=Homo sapiens OX=9606 GN=KLF5 PE=1 SV=2
+g3418.t1	sp|O35385|PPE2_MOUSE	44.5	5.63e-204	594	sp|O35385|PPE2_MOUSE Serine/threonine-protein phosphatase with EF-hands 2 OS=Mus musculus OX=10090 GN=Ppef2 PE=1 SV=1
+g3418.t2	sp|O35385|PPE2_MOUSE	43.6	9.77e-201	587	sp|O35385|PPE2_MOUSE Serine/threonine-protein phosphatase with EF-hands 2 OS=Mus musculus OX=10090 GN=Ppef2 PE=1 SV=1
+g3433.t1	sp|P19477|FIBA_APOPA	42.3	7.09e-46	157	sp|P19477|FIBA_APOPA Fibrinogen-like protein A OS=Apostichopus parvimensis OX=1902835 PE=2 SV=1
+g3444.t1	sp|Q8VDL9|GLIS2_MOUSE	63.5	1.22e-31	131	sp|Q8VDL9|GLIS2_MOUSE Zinc finger protein GLIS2 OS=Mus musculus OX=10090 GN=Glis2 PE=1 SV=1
+g3448.t1	sp|Q96PE3|INP4A_HUMAN	32.8	1.03e-132	430	sp|Q96PE3|INP4A_HUMAN Inositol polyphosphate-4-phosphatase type I A OS=Homo sapiens OX=9606 GN=INPP4A PE=1 SV=1
+g3448.t2	sp|Q96PE3|INP4A_HUMAN	32.9	3.62e-132	428	sp|Q96PE3|INP4A_HUMAN Inositol polyphosphate-4-phosphatase type I A OS=Homo sapiens OX=9606 GN=INPP4A PE=1 SV=1
+g3467.t1	sp|Q9QYB2|DACH1_MOUSE	75.0	2.78e-60	210	sp|Q9QYB2|DACH1_MOUSE Dachshund homolog 1 OS=Mus musculus OX=10090 GN=Dach1 PE=1 SV=1
+g3479.t1	sp|O09167|RL21_MOUSE	66.5	9.97e-73	219	sp|O09167|RL21_MOUSE Large ribosomal subunit protein eL21 OS=Mus musculus OX=10090 GN=Rpl21 PE=1 SV=4
+g3533.t1	sp|E7FCN8|INTU_DANRE	38.8	2.65e-103	338	sp|E7FCN8|INTU_DANRE Protein inturned OS=Danio rerio OX=7955 GN=intu PE=3 SV=1
+g3551.t1	sp|A7Y2W8|SC6A9_XENLA	51.3	6.04e-199	575	sp|A7Y2W8|SC6A9_XENLA Sodium- and chloride-dependent glycine transporter 1 OS=Xenopus laevis OX=8355 GN=slc6a9 PE=2 SV=1
+g3554.t1	sp|Q9GV77|FREM2_LYTVA	62.9	0.0	3853	sp|Q9GV77|FREM2_LYTVA Extracellular matrix protein 3 OS=Lytechinus variegatus OX=7654 GN=ECM3 PE=1 SV=1
+g357.t1	sp|Q8ITC7|CAPAR_DROME	30.4	8.87e-24	107	sp|Q8ITC7|CAPAR_DROME Neuropeptides capa receptor OS=Drosophila melanogaster OX=7227 GN=CapaR PE=2 SV=3
+g3577.t1	sp|Q14AW5|NSUN7_MOUSE	38.5	1.57e-93	309	sp|Q14AW5|NSUN7_MOUSE Putative methyltransferase NSUN7 OS=Mus musculus OX=10090 GN=Nsun7 PE=2 SV=2
+g3577.t2	sp|Q14AW5|NSUN7_MOUSE	38.5	9.65e-94	309	sp|Q14AW5|NSUN7_MOUSE Putative methyltransferase NSUN7 OS=Mus musculus OX=10090 GN=Nsun7 PE=2 SV=2
+g3610.t1	sp|Q6GMK0|MGT4B_DANRE	55.8	1.47e-170	496	sp|Q6GMK0|MGT4B_DANRE Alpha-1,3-mannosyl-glycoprotein 4-beta-N-acetylglucosaminyltransferase B OS=Danio rerio OX=7955 GN=mgat4bQ9UQ53 PE=2 SV=1
+g3643.t1	sp|Q14517|FAT1_HUMAN	40.6	0.0	1298	sp|Q14517|FAT1_HUMAN Protocadherin Fat 1 OS=Homo sapiens OX=9606 GN=FAT1 PE=1 SV=2
+g3643.t2	sp|Q14517|FAT1_HUMAN	40.8	0.0	1304	sp|Q14517|FAT1_HUMAN Protocadherin Fat 1 OS=Homo sapiens OX=9606 GN=FAT1 PE=1 SV=2
+g381.t1	sp|A7T1N0|TMP2L_NEMVE	28.5	4.34e-117	400	sp|A7T1N0|TMP2L_NEMVE Transient receptor potential cation channel subfamily M member-like 2 OS=Nematostella vectensis OX=45351 GN=TRPM2 PE=1 SV=1
+g3822.t1	sp|Q6VV64|KCNKI_MOUSE	29.2	8.35e-23	103	sp|Q6VV64|KCNKI_MOUSE Potassium channel subfamily K member 18 OS=Mus musculus OX=10090 GN=Kcnk18 PE=1 SV=1
+g3822.t2	sp|Q23435|TWK9_CAEEL	28.0	7.18e-23	104	sp|Q23435|TWK9_CAEEL TWiK family of potassium channels protein 9 OS=Caenorhabditis elegans OX=6239 GN=twk-9 PE=2 SV=2
+g3823.t1	sp|O14639|ABLM1_HUMAN	30.7	1.17e-100	330	sp|O14639|ABLM1_HUMAN Actin-binding LIM protein 1 OS=Homo sapiens OX=9606 GN=ABLIM1 PE=1 SV=3
+g3823.t2	sp|Q6H8Q1|ABLM2_HUMAN	35.2	2.47e-102	328	sp|Q6H8Q1|ABLM2_HUMAN Actin-binding LIM protein 2 OS=Homo sapiens OX=9606 GN=ABLIM2 PE=1 SV=2
+g3823.t3	sp|Q6H8Q1|ABLM2_HUMAN	35.2	3.66e-102	328	sp|Q6H8Q1|ABLM2_HUMAN Actin-binding LIM protein 2 OS=Homo sapiens OX=9606 GN=ABLIM2 PE=1 SV=2
+g3823.t4	sp|Q6H8Q1|ABLM2_HUMAN	35.1	2.16e-102	328	sp|Q6H8Q1|ABLM2_HUMAN Actin-binding LIM protein 2 OS=Homo sapiens OX=9606 GN=ABLIM2 PE=1 SV=2
+g3823.t5	sp|Q6H8Q1|ABLM2_HUMAN	35.7	7.58e-107	339	sp|Q6H8Q1|ABLM2_HUMAN Actin-binding LIM protein 2 OS=Homo sapiens OX=9606 GN=ABLIM2 PE=1 SV=2
+g3823.t6	sp|Q6H8Q1|ABLM2_HUMAN	34.9	8.81e-102	326	sp|Q6H8Q1|ABLM2_HUMAN Actin-binding LIM protein 2 OS=Homo sapiens OX=9606 GN=ABLIM2 PE=1 SV=2
+g3883.t1	sp|Q14185|DOCK1_HUMAN	51.0	0.0	1615	sp|Q14185|DOCK1_HUMAN Dedicator of cytokinesis protein 1 OS=Homo sapiens OX=9606 GN=DOCK1 PE=1 SV=2
+g3883.t2	sp|Q14185|DOCK1_HUMAN	51.0	0.0	1615	sp|Q14185|DOCK1_HUMAN Dedicator of cytokinesis protein 1 OS=Homo sapiens OX=9606 GN=DOCK1 PE=1 SV=2
+g3891.t1	sp|F1S5L4|GPAT1_PIG	32.7	1.33e-127	406	sp|F1S5L4|GPAT1_PIG Glycerol-3-phosphate acyltransferase 1, mitochondrial OS=Sus scrofa OX=9823 GN=GPAM PE=2 SV=3
+g3924.t1	sp|Q5ZI20|S39AD_CHICK	42.3	4.18e-17	83.2	sp|Q5ZI20|S39AD_CHICK Zinc transporter ZIP13 OS=Gallus gallus OX=9031 GN=SLC39A13 PE=2 SV=1
+g3925.t1	sp|Q5ZI20|S39AD_CHICK	61.0	7.43e-40	139	sp|Q5ZI20|S39AD_CHICK Zinc transporter ZIP13 OS=Gallus gallus OX=9031 GN=SLC39A13 PE=2 SV=1
+g3973.t1	sp|O64411|PAO1_MAIZE	26.7	2.67e-21	100	sp|O64411|PAO1_MAIZE Polyamine oxidase 1 OS=Zea mays OX=4577 GN=MPAO1 PE=1 SV=1
+g4023.t1	sp|Q91V87|FGRL1_MOUSE	46.3	1.58e-105	328	sp|Q91V87|FGRL1_MOUSE Fibroblast growth factor receptor-like 1 OS=Mus musculus OX=10090 GN=Fgfrl1 PE=1 SV=1
+g4031.t1	sp|Q9EPI1|XYLT1_RAT	29.4	1.31e-16	80.9	sp|Q9EPI1|XYLT1_RAT Xylosyltransferase 1 (Fragment) OS=Rattus norvegicus OX=10116 GN=Xylt1 PE=2 SV=1
+g4044.t1	sp|P47832|RL26_CHICK	74.6	4.59e-54	168	sp|P47832|RL26_CHICK Large ribosomal subunit protein uL24 (Fragment) OS=Gallus gallus OX=9031 GN=RPL26 PE=2 SV=1
+g4082.t1	sp|Q8K2Q9|SHOT1_MOUSE	28.8	4.52e-24	110	sp|Q8K2Q9|SHOT1_MOUSE Shootin-1 OS=Mus musculus OX=10090 GN=Shtn1 PE=1 SV=1
+g4082.t2	sp|Q8K2Q9|SHOT1_MOUSE	28.8	4.53e-24	110	sp|Q8K2Q9|SHOT1_MOUSE Shootin-1 OS=Mus musculus OX=10090 GN=Shtn1 PE=1 SV=1
+g4082.t3	sp|Q8K2Q9|SHOT1_MOUSE	30.0	1.46e-19	96.3	sp|Q8K2Q9|SHOT1_MOUSE Shootin-1 OS=Mus musculus OX=10090 GN=Shtn1 PE=1 SV=1
+g4082.t4	sp|Q8K2Q9|SHOT1_MOUSE	28.8	4.70e-24	110	sp|Q8K2Q9|SHOT1_MOUSE Shootin-1 OS=Mus musculus OX=10090 GN=Shtn1 PE=1 SV=1
+g4122.t1	sp|Q8BTQ0|PCGF3_MOUSE	56.0	2.31e-85	257	sp|Q8BTQ0|PCGF3_MOUSE Polycomb group RING finger protein 3 OS=Mus musculus OX=10090 GN=PcgF3 PE=1 SV=1
+g4167.t1	sp|P53464|ACTM_HELTB	98.3	2.30e-264	720	sp|P53464|ACTM_HELTB Actin, cytoskeletal OS=Heliocidaris tuberculata OX=7635 PE=3 SV=1
+g4177.t1	sp|Q9UA35|S28A3_EPTST	41.8	1.89e-120	377	sp|Q9UA35|S28A3_EPTST Solute carrier family 28 member 3 OS=Eptatretus stoutii OX=7765 GN=SLC28A3 PE=2 SV=1
+g426.t1	sp|P08429|RL4A_XENLA	68.6	3.21e-166	473	sp|P08429|RL4A_XENLA Large ribosomal subunit protein uL4A OS=Xenopus laevis OX=8355 GN=rpl4-a PE=2 SV=2
+g4266.t1	sp|Q9H4W6|COE3_HUMAN	70.4	7.64e-236	664	sp|Q9H4W6|COE3_HUMAN Transcription factor COE3 OS=Homo sapiens OX=9606 GN=EBF3 PE=1 SV=2
+g4266.t2	sp|O73742|COE3_XENLA	75.8	5.53e-230	652	sp|O73742|COE3_XENLA Transcription factor COE3 OS=Xenopus laevis OX=8355 GN=coe3 PE=2 SV=2
+g4300.t1	sp|Q811W2|CP26B_MOUSE	33.6	1.21e-87	281	sp|Q811W2|CP26B_MOUSE Cytochrome P450 26B1 OS=Mus musculus OX=10090 GN=Cyp26b1 PE=1 SV=1
+g4310.t1	sp|Q3LUD4|LZTS2_RAT	47.4	3.23e-07	57.8	sp|Q3LUD4|LZTS2_RAT Leucine zipper putative tumor suppressor 2 OS=Rattus norvegicus OX=10116 GN=Lzts2 PE=1 SV=2
+g4310.t2	sp|Q3LUD4|LZTS2_RAT	47.4	3.32e-07	57.8	sp|Q3LUD4|LZTS2_RAT Leucine zipper putative tumor suppressor 2 OS=Rattus norvegicus OX=10116 GN=Lzts2 PE=1 SV=2
+g4403.t1	sp|Q9WVC1|SLIT2_RAT	68.6	2.77e-63	225	sp|Q9WVC1|SLIT2_RAT Slit homolog 2 protein (Fragment) OS=Rattus norvegicus OX=10116 GN=Slit2 PE=1 SV=3
+g4403.t2	sp|Q9WVC1|SLIT2_RAT	71.9	1.84e-68	238	sp|Q9WVC1|SLIT2_RAT Slit homolog 2 protein (Fragment) OS=Rattus norvegicus OX=10116 GN=Slit2 PE=1 SV=3
+g4403.t3	sp|Q9WVC1|SLIT2_RAT	65.3	5.75e-61	219	sp|Q9WVC1|SLIT2_RAT Slit homolog 2 protein (Fragment) OS=Rattus norvegicus OX=10116 GN=Slit2 PE=1 SV=3
+g4448.t1	sp|Q9P212|PLCE1_HUMAN	25.9	1.16e-149	522	sp|Q9P212|PLCE1_HUMAN 1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase epsilon-1 OS=Homo sapiens OX=9606 GN=PLCE1 PE=1 SV=3
+g446.t1	sp|Q5REV9|NPT2B_PONAB	54.5	4.94e-184	542	sp|Q5REV9|NPT2B_PONAB Sodium-dependent phosphate transport protein 2B OS=Pongo abelii OX=9601 GN=SLC34A2 PE=2 SV=1
+g4494.t1	sp|D2KQB0|HHEX_PATMI	82.0	3.52e-65	203	sp|D2KQB0|HHEX_PATMI Hematopoietically-expressed homeobox protein HHEX homolog OS=Patiria miniata OX=46514 GN=hhex PE=2 SV=1
+g4503.t1	sp|Q9I8C7|ACH10_CHICK	37.4	4.55e-76	249	sp|Q9I8C7|ACH10_CHICK Neuronal acetylcholine receptor subunit alpha-10 OS=Gallus gallus OX=9031 GN=CHRNA10 PE=3 SV=1
+g4503.t2	sp|Q9I8C7|ACH10_CHICK	37.4	4.67e-76	249	sp|Q9I8C7|ACH10_CHICK Neuronal acetylcholine receptor subunit alpha-10 OS=Gallus gallus OX=9031 GN=CHRNA10 PE=3 SV=1
+g4596.t1	sp|Q6PIL6|KCIP4_HUMAN	58.9	2.34e-81	245	sp|Q6PIL6|KCIP4_HUMAN Kv channel-interacting protein 4 OS=Homo sapiens OX=9606 GN=KCNIP4 PE=1 SV=1
+g4596.t2	sp|Q6PIL6|KCIP4_HUMAN	58.9	5.97e-81	246	sp|Q6PIL6|KCIP4_HUMAN Kv channel-interacting protein 4 OS=Homo sapiens OX=9606 GN=KCNIP4 PE=1 SV=1
+g4604.t1	sp|Q06889|EGR3_HUMAN	83.3	2.96e-21	99.0	sp|Q06889|EGR3_HUMAN Early growth response protein 3 OS=Homo sapiens OX=9606 GN=EGR3 PE=1 SV=1
+g4618.t1	sp|O54990|PROM1_MOUSE	27.4	2.58e-13	76.3	sp|O54990|PROM1_MOUSE Prominin-1 OS=Mus musculus OX=10090 GN=Prom1 PE=1 SV=1
+g462.t1	sp|Q9W734|SMAD6_CHICK	45.0	8.56e-109	328	sp|Q9W734|SMAD6_CHICK Mothers against decapentaplegic homolog 6 OS=Gallus gallus OX=9031 GN=SMAD6 PE=2 SV=1
+g4631.t1	sp|Q96JA1|LRIG1_HUMAN	39.0	1.03e-06	55.5	sp|Q96JA1|LRIG1_HUMAN Leucine-rich repeats and immunoglobulin-like domains protein 1 OS=Homo sapiens OX=9606 GN=LRIG1 PE=1 SV=2
+g4638.t1	sp|Q812E0|CPEB2_MOUSE	80.4	5.13e-169	496	sp|Q812E0|CPEB2_MOUSE Cytoplasmic polyadenylation element-binding protein 2 OS=Mus musculus OX=10090 GN=Cpeb2 PE=1 SV=1
+g4654.t1	sp|Q9VE46|SC5A7_DROME	58.9	1.63e-205	590	sp|Q9VE46|SC5A7_DROME High-affinity choline transporter 1 OS=Drosophila melanogaster OX=7227 GN=ChT PE=2 SV=2
+g4702.t1	sp|Q62773|S28A2_RAT	34.3	1.13e-28	119	sp|Q62773|S28A2_RAT Sodium/nucleoside cotransporter 2 OS=Rattus norvegicus OX=10116 GN=Slc28a2 PE=1 SV=1
+g4737.t1	sp|O19071|MGAT2_PIG	46.6	7.99e-120	362	sp|O19071|MGAT2_PIG Alpha-1,6-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase OS=Sus scrofa OX=9823 GN=MGAT2 PE=3 SV=1
+g4746.t1	sp|Q3U285|LCORL_MOUSE	22.8	5.01e-13	76.3	sp|Q3U285|LCORL_MOUSE Ligand-dependent nuclear receptor corepressor-like protein OS=Mus musculus OX=10090 GN=Lcorl PE=2 SV=1
+g4816.t1	sp|Q8MJ24|LOXL4_BOVIN	39.6	3.64e-175	522	sp|Q8MJ24|LOXL4_BOVIN Lysyl oxidase homolog 4 OS=Bos taurus OX=9913 GN=LOXL4 PE=2 SV=1
+g4816.t2	sp|F1RD85|LOX3A_DANRE	38.3	9.78e-175	522	sp|F1RD85|LOX3A_DANRE Lysyl oxidase homolog 3A OS=Danio rerio OX=7955 GN=loxl3a PE=2 SV=1
+g488.t1	sp|Q6DIB5|MEG10_MOUSE	44.1	4.86e-34	145	sp|Q6DIB5|MEG10_MOUSE Multiple epidermal growth factor-like domains protein 10 OS=Mus musculus OX=10090 GN=Megf10 PE=1 SV=1
+g4958.t1	sp|Q6BEA0|PLXA4_DANRE	34.6	5.40e-310	947	sp|Q6BEA0|PLXA4_DANRE Plexin-A4 OS=Danio rerio OX=7955 GN=plxna4 PE=2 SV=1
+g497.t1	sp|Q90VZ9|HXA7_CHICK	42.1	5.23e-34	127	sp|Q90VZ9|HXA7_CHICK Homeobox protein Hox-A7 OS=Gallus gallus OX=9031 GN=HOXA7 PE=2 SV=1
+g498.t1	sp|P10179|HMB4_TRIGR	92.8	1.99e-36	130	sp|P10179|HMB4_TRIGR Homeobox protein HB4 (Fragment) OS=Tripneustes gratilla OX=7673 PE=3 SV=1
+g5017.t1	sp|Q9CZR2|NALD2_MOUSE	40.8	5.30e-175	522	sp|Q9CZR2|NALD2_MOUSE N-acetylated-alpha-linked acidic dipeptidase 2 OS=Mus musculus OX=10090 GN=Naalad2 PE=1 SV=2
+g502.t1	sp|P31272|HXB9_XENLA	66.7	5.88e-16	78.6	sp|P31272|HXB9_XENLA Homeobox protein Hox-B9 OS=Xenopus laevis OX=8355 GN=hoxb9 PE=2 SV=1
+g5040.t1	sp|Q5ZLX4|ARHG3_CHICK	46.4	2.71e-14	77.8	sp|Q5ZLX4|ARHG3_CHICK Rho guanine nucleotide exchange factor 3 OS=Gallus gallus OX=9031 GN=Arhgef3 PE=2 SV=1
+g5047.t1	sp|P59764|DOCK4_MOUSE	27.9	1.26e-108	377	sp|P59764|DOCK4_MOUSE Dedicator of cytokinesis protein 4 OS=Mus musculus OX=10090 GN=Dock4 PE=1 SV=1
+g5047.t2	sp|P59764|DOCK4_MOUSE	27.5	2.38e-107	373	sp|P59764|DOCK4_MOUSE Dedicator of cytokinesis protein 4 OS=Mus musculus OX=10090 GN=Dock4 PE=1 SV=1
+g506.t1	sp|A0A1S4F2V5|CATL_AEDAE	61.1	1.24e-136	394	sp|A0A1S4F2V5|CATL_AEDAE Cathepsin L-like peptidase OS=Aedes aegypti OX=7159 PE=1 SV=1
+g5094.t1	sp|Q96JB6|LOXL4_HUMAN	43.8	1.47e-11	64.7	sp|Q96JB6|LOXL4_HUMAN Lysyl oxidase homolog 4 OS=Homo sapiens OX=9606 GN=LOXL4 PE=1 SV=1
+g5122.t1	sp|Q00537|CDK17_HUMAN	59.7	2.04e-198	564	sp|Q00537|CDK17_HUMAN Cyclin-dependent kinase 17 OS=Homo sapiens OX=9606 GN=CDK17 PE=1 SV=2
+g5122.t2	sp|Q00537|CDK17_HUMAN	59.6	4.43e-202	573	sp|Q00537|CDK17_HUMAN Cyclin-dependent kinase 17 OS=Homo sapiens OX=9606 GN=CDK17 PE=1 SV=2
+g5159.t1	sp|A8K7I4|CLCA1_HUMAN	23.2	7.19e-28	125	sp|A8K7I4|CLCA1_HUMAN Calcium-activated chloride channel regulator 1 OS=Homo sapiens OX=9606 GN=CLCA1 PE=1 SV=3
+g5159.t2	sp|A8K7I4|CLCA1_HUMAN	23.4	1.04e-28	128	sp|A8K7I4|CLCA1_HUMAN Calcium-activated chloride channel regulator 1 OS=Homo sapiens OX=9606 GN=CLCA1 PE=1 SV=3
+g5192.t1	sp|P49579|ACHB_XENLA	36.3	5.03e-12	65.5	sp|P49579|ACHB_XENLA Acetylcholine receptor subunit beta (Fragment) OS=Xenopus laevis OX=8355 GN=chrnb1 PE=2 SV=1
+g5259.t1	sp|Q920B0|FRM4B_MOUSE	44.3	6.07e-137	447	sp|Q920B0|FRM4B_MOUSE FERM domain-containing protein 4B OS=Mus musculus OX=10090 GN=Frmd4b PE=1 SV=2
+g5259.t2	sp|Q920B0|FRM4B_MOUSE	44.3	1.02e-136	447	sp|Q920B0|FRM4B_MOUSE FERM domain-containing protein 4B OS=Mus musculus OX=10090 GN=Frmd4b PE=1 SV=2
+g5259.t3	sp|Q920B0|FRM4B_MOUSE	46.9	6.97e-143	463	sp|Q920B0|FRM4B_MOUSE FERM domain-containing protein 4B OS=Mus musculus OX=10090 GN=Frmd4b PE=1 SV=2
+g5259.t4	sp|Q920B0|FRM4B_MOUSE	43.6	8.54e-134	440	sp|Q920B0|FRM4B_MOUSE FERM domain-containing protein 4B OS=Mus musculus OX=10090 GN=Frmd4b PE=1 SV=2
+g5363.t1	sp|P48740|MASP1_HUMAN	31.2	2.92e-07	57.0	sp|P48740|MASP1_HUMAN Mannan-binding lectin serine protease 1 OS=Homo sapiens OX=9606 GN=MASP1 PE=1 SV=3
+g537.t1	sp|O43822|CF410_HUMAN	41.6	1.81e-53	176	sp|O43822|CF410_HUMAN Cilia- and flagella-associated protein 410 OS=Homo sapiens OX=9606 GN=CFAP410 PE=1 SV=1
+g5393.t1	sp|Q07E41|CTTB2_DASNO	32.7	1.93e-74	279	sp|Q07E41|CTTB2_DASNO Cortactin-binding protein 2 OS=Dasypus novemcinctus OX=9361 GN=CTTNBP2 PE=3 SV=1
+g5440.t1	sp|Q5RJF7|CA2D4_MOUSE	29.2	3.66e-123	408	sp|Q5RJF7|CA2D4_MOUSE Voltage-dependent calcium channel subunit alpha-2/delta-4 OS=Mus musculus OX=10090 GN=Cacna2d4 PE=2 SV=1
+g5441.t1	sp|Q14315|FLNC_HUMAN	45.0	0.0	2194	sp|Q14315|FLNC_HUMAN Filamin-C OS=Homo sapiens OX=9606 GN=FLNC PE=1 SV=3
+g5441.t2	sp|Q14315|FLNC_HUMAN	44.3	0.0	2182	sp|Q14315|FLNC_HUMAN Filamin-C OS=Homo sapiens OX=9606 GN=FLNC PE=1 SV=3
+g5460.t1	sp|P81926|SODC_HALRO	55.6	2.96e-47	157	sp|P81926|SODC_HALRO Superoxide dismutase [Cu-Zn] OS=Halocynthia roretzi OX=7729 PE=1 SV=2
+g5460.t2	sp|P81926|SODC_HALRO	55.6	1.52e-47	157	sp|P81926|SODC_HALRO Superoxide dismutase [Cu-Zn] OS=Halocynthia roretzi OX=7729 PE=1 SV=2
+g5520.t1	sp|Q9WTW7|S23A1_RAT	43.4	3.79e-151	449	sp|Q9WTW7|S23A1_RAT Solute carrier family 23 member 1 OS=Rattus norvegicus OX=10116 GN=Slc23a1 PE=2 SV=1
+g5557.t1	sp|Q01815|CAC1C_MOUSE	58.4	7.70e-94	308	sp|Q01815|CAC1C_MOUSE Voltage-dependent L-type calcium channel subunit alpha-1C OS=Mus musculus OX=10090 GN=Cacna1c PE=1 SV=1
+g5558.t1	sp|Q99244|CAC1D_MESAU	57.6	0.0	941	sp|Q99244|CAC1D_MESAU Voltage-dependent L-type calcium channel subunit alpha-1D OS=Mesocricetus auratus OX=10036 GN=CACNA1D PE=2 SV=2
+g5558.t2	sp|Q99244|CAC1D_MESAU	58.0	0.0	936	sp|Q99244|CAC1D_MESAU Voltage-dependent L-type calcium channel subunit alpha-1D OS=Mesocricetus auratus OX=10036 GN=CACNA1D PE=2 SV=2
+g5558.t3	sp|Q99244|CAC1D_MESAU	55.4	8.08e-177	545	sp|Q99244|CAC1D_MESAU Voltage-dependent L-type calcium channel subunit alpha-1D OS=Mesocricetus auratus OX=10036 GN=CACNA1D PE=2 SV=2
+g5558.t4	sp|Q25452|CAC1M_MUSDO	64.0	8.67e-129	407	sp|Q25452|CAC1M_MUSDO Muscle calcium channel subunit alpha-1 OS=Musca domestica OX=7370 PE=2 SV=1
+g5572.t1	sp|Q9UHX3|AGRE2_HUMAN	26.9	1.68e-19	97.8	sp|Q9UHX3|AGRE2_HUMAN Adhesion G protein-coupled receptor E2 OS=Homo sapiens OX=9606 GN=ADGRE2 PE=1 SV=2
+g5572.t2	sp|Q9UHX3|AGRE2_HUMAN	26.9	1.62e-19	97.8	sp|Q9UHX3|AGRE2_HUMAN Adhesion G protein-coupled receptor E2 OS=Homo sapiens OX=9606 GN=ADGRE2 PE=1 SV=2
+g5573.t1	sp|Q8IZF6|AGRG4_HUMAN	24.4	4.21e-35	149	sp|Q8IZF6|AGRG4_HUMAN Adhesion G-protein coupled receptor G4 OS=Homo sapiens OX=9606 GN=ADGRG4 PE=1 SV=2
+g5616.t1	sp|Q9JHB3|TIMP4_MOUSE	28.4	1.22e-18	85.1	sp|Q9JHB3|TIMP4_MOUSE Metalloproteinase inhibitor 4 OS=Mus musculus OX=10090 GN=Timp4 PE=2 SV=1
+g5618.t1	sp|Q6QM28|SYN_HELPO	46.7	2.03e-59	198	sp|Q6QM28|SYN_HELPO Synapsin OS=Helix pomatia OX=6536 GN=SYN PE=1 SV=1
+g5651.t1	sp|Q06442|WNT5A_AMBME	48.7	1.04e-112	334	sp|Q06442|WNT5A_AMBME Protein Wnt-5a OS=Ambystoma mexicanum OX=8296 GN=WNT-5A PE=2 SV=1
+g5671.t1	sp|P23824|GATA2_CHICK	42.0	3.29e-84	270	sp|P23824|GATA2_CHICK GATA-binding factor 2 OS=Gallus gallus OX=9031 GN=GATA2 PE=2 SV=1
+g5736.t1	sp|P30531|SC6A1_HUMAN	60.2	5.31e-256	719	sp|P30531|SC6A1_HUMAN Sodium- and chloride-dependent GABA transporter 1 OS=Homo sapiens OX=9606 GN=SLC6A1 PE=1 SV=2
+g5737.t1	sp|G5ECX0|LPLT2_CAEEL	30.1	7.98e-26	119	sp|G5ECX0|LPLT2_CAEEL Latrophilin-like protein LAT-2 OS=Caenorhabditis elegans OX=6239 GN=lat-2 PE=2 SV=1
+g5822.t1	sp|Q8JI28|TLL1_XENLA	39.5	6.06e-54	208	sp|Q8JI28|TLL1_XENLA Tolloid-like protein 1 OS=Xenopus laevis OX=8355 GN=tll1 PE=1 SV=1
+g5822.t2	sp|Q9DER7|TLL1_CHICK	39.8	1.43e-53	207	sp|Q9DER7|TLL1_CHICK Tolloid-like protein 1 OS=Gallus gallus OX=9031 GN=TLL1 PE=2 SV=1
+g5904.t1	sp|Q9P4D1|ACT_KOMPG	32.5	3.21e-43	164	sp|Q9P4D1|ACT_KOMPG Actin OS=Komagataella phaffii (strain GS115 / ATCC 20864) OX=644223 GN=ACT1 PE=1 SV=1
+g5904.t2	sp|Q9P4D1|ACT_KOMPG	32.5	3.53e-43	164	sp|Q9P4D1|ACT_KOMPG Actin OS=Komagataella phaffii (strain GS115 / ATCC 20864) OX=644223 GN=ACT1 PE=1 SV=1
+g5904.t3	sp|Q9P4D1|ACT_KOMPG	32.5	9.32e-43	164	sp|Q9P4D1|ACT_KOMPG Actin OS=Komagataella phaffii (strain GS115 / ATCC 20864) OX=644223 GN=ACT1 PE=1 SV=1
+g5940.t1	sp|Q6ZR37|PKHG7_HUMAN	32.8	6.17e-53	200	sp|Q6ZR37|PKHG7_HUMAN Pleckstrin homology domain-containing family G member 7 OS=Homo sapiens OX=9606 GN=PLEKHG7 PE=1 SV=2
+g5940.t2	sp|Q6ZR37|PKHG7_HUMAN	32.8	5.50e-53	200	sp|Q6ZR37|PKHG7_HUMAN Pleckstrin homology domain-containing family G member 7 OS=Homo sapiens OX=9606 GN=PLEKHG7 PE=1 SV=2
+g5950.t1	sp|P19370|ACHB2_CARAU	25.5	1.44e-21	100	sp|P19370|ACHB2_CARAU Neuronal acetylcholine receptor subunit beta-2 (Fragment) OS=Carassius auratus OX=7957 GN=chrnb2 PE=2 SV=1
+g5960.t1	sp|Q91ZT5|FGD4_MOUSE	40.0	1.31e-121	395	sp|Q91ZT5|FGD4_MOUSE FYVE, RhoGEF and PH domain-containing protein 4 OS=Mus musculus OX=10090 GN=Fgd4 PE=1 SV=1
+g5960.t2	sp|Q91ZT5|FGD4_MOUSE	40.0	1.34e-121	395	sp|Q91ZT5|FGD4_MOUSE FYVE, RhoGEF and PH domain-containing protein 4 OS=Mus musculus OX=10090 GN=Fgd4 PE=1 SV=1
+g605.t1	sp|Q9UPZ6|THS7A_HUMAN	34.6	0.0	1001	sp|Q9UPZ6|THS7A_HUMAN Thrombospondin type-1 domain-containing protein 7A OS=Homo sapiens OX=9606 GN=THSD7A PE=1 SV=4
+g6077.t1	sp|Q08830|FGL1_HUMAN	43.4	1.73e-53	183	sp|Q08830|FGL1_HUMAN Fibrinogen-like protein 1 OS=Homo sapiens OX=9606 GN=FGL1 PE=1 SV=3
+g6124.t1	sp|Q9P2N4|ATS9_HUMAN	37.9	0.0	1122	sp|Q9P2N4|ATS9_HUMAN A disintegrin and metalloproteinase with thrombospondin motifs 9 OS=Homo sapiens OX=9606 GN=ADAMTS9 PE=1 SV=4
+g6185.t1	sp|Q06033|ITIH3_HUMAN	31.7	2.37e-118	402	sp|Q06033|ITIH3_HUMAN Inter-alpha-trypsin inhibitor heavy chain H3 OS=Homo sapiens OX=9606 GN=ITIH3 PE=1 SV=2
+g6221.t1	sp|Q9ULR3|PPM1H_HUMAN	51.3	2.42e-155	455	sp|Q9ULR3|PPM1H_HUMAN Protein phosphatase 1H OS=Homo sapiens OX=9606 GN=PPM1H PE=1 SV=2
+g6250.t1	sp|Q90YH9|TES_CHICK	47.3	6.49e-138	404	sp|Q90YH9|TES_CHICK Testin OS=Gallus gallus OX=9031 GN=TES PE=2 SV=1
+g6250.t2	sp|Q90YH9|TES_CHICK	46.7	1.04e-135	398	sp|Q90YH9|TES_CHICK Testin OS=Gallus gallus OX=9031 GN=TES PE=2 SV=1
+g6258.t1	sp|Q6P1C6|LRIG3_MOUSE	44.4	1.28e-109	372	sp|Q6P1C6|LRIG3_MOUSE Leucine-rich repeats and immunoglobulin-like domains protein 3 OS=Mus musculus OX=10090 GN=Lrig3 PE=1 SV=1
+g6301.t1	sp|Q6BEA0|PLXA4_DANRE	36.3	1.28e-97	325	sp|Q6BEA0|PLXA4_DANRE Plexin-A4 OS=Danio rerio OX=7955 GN=plxna4 PE=2 SV=1
+g6301.t2	sp|B0S5N4|PLXA3_DANRE	37.3	4.01e-97	323	sp|B0S5N4|PLXA3_DANRE Plexin A3 OS=Danio rerio OX=7955 GN=plxna3 PE=2 SV=2
+g6302.t1	sp|Q9UIW2|PLXA1_HUMAN	29.6	1.08e-48	185	sp|Q9UIW2|PLXA1_HUMAN Plexin-A1 OS=Homo sapiens OX=9606 GN=PLXNA1 PE=1 SV=3
+g6326.t1	sp|P07942|LAMB1_HUMAN	51.1	0.0	1060	sp|P07942|LAMB1_HUMAN Laminin subunit beta-1 OS=Homo sapiens OX=9606 GN=LAMB1 PE=1 SV=2
+g6326.t2	sp|P07942|LAMB1_HUMAN	51.3	0.0	1065	sp|P07942|LAMB1_HUMAN Laminin subunit beta-1 OS=Homo sapiens OX=9606 GN=LAMB1 PE=1 SV=2
+g6351.t1	sp|Q5RCN7|MFD4A_PONAB	39.4	2.08e-78	259	sp|Q5RCN7|MFD4A_PONAB Major facilitator superfamily domain-containing protein 4A OS=Pongo abelii OX=9601 GN=MFSD4A PE=2 SV=1
+g6405.t1	sp|Q8N2S1|LTBP4_HUMAN	48.1	9.52e-06	53.1	sp|Q8N2S1|LTBP4_HUMAN Latent-transforming growth factor beta-binding protein 4 OS=Homo sapiens OX=9606 GN=LTBP4 PE=1 SV=2
+g6416.t1	sp|Q8WSR4|ITPR_PATPE	64.2	0.0	2578	sp|Q8WSR4|ITPR_PATPE Inositol 1,4,5-trisphosphate receptor OS=Patiria pectinifera OX=7594 GN=IP3R PE=1 SV=1
+g6416.t2	sp|Q8WSR4|ITPR_PATPE	64.9	0.0	2590	sp|Q8WSR4|ITPR_PATPE Inositol 1,4,5-trisphosphate receptor OS=Patiria pectinifera OX=7594 GN=IP3R PE=1 SV=1
+g6435.t1	sp|A6QLU6|AGRD1_BOVIN	32.0	1.97e-32	139	sp|A6QLU6|AGRD1_BOVIN Adhesion G-protein coupled receptor D1 OS=Bos taurus OX=9913 GN=ADGRD1 PE=2 SV=1
+g6451.t1	sp|P11680|PROP_MOUSE	37.9	1.87e-52	190	sp|P11680|PROP_MOUSE Properdin OS=Mus musculus OX=10090 GN=Cfp PE=1 SV=2
+g6457.t1	sp|Q96RW7|HMCN1_HUMAN	42.3	2.11e-74	267	sp|Q96RW7|HMCN1_HUMAN Hemicentin-1 OS=Homo sapiens OX=9606 GN=HMCN1 PE=1 SV=2
+g6463.t1	sp|P98157|LRP1_CHICK	34.8	3.42e-60	233	sp|P98157|LRP1_CHICK Low-density lipoprotein receptor-related protein 1 OS=Gallus gallus OX=9031 GN=LRP1 PE=2 SV=1
+g6509.t1	sp|P17971|KCNAL_DROME	67.9	1.49e-243	686	sp|P17971|KCNAL_DROME Potassium voltage-gated channel protein Shal OS=Drosophila melanogaster OX=7227 GN=Shal PE=1 SV=2
+g6525.t1	sp|P68907|PZRN3_RAT	32.4	2.79e-59	218	sp|P68907|PZRN3_RAT E3 ubiquitin-protein ligase PDZRN3 OS=Rattus norvegicus OX=10116 GN=Pdzrn3 PE=1 SV=1
+g6526.t1	sp|Q6ZMN7|PZRN4_HUMAN	37.9	4.06e-19	88.6	sp|Q6ZMN7|PZRN4_HUMAN PDZ domain-containing RING finger protein 4 OS=Homo sapiens OX=9606 GN=PDZRN4 PE=1 SV=3
+g6564.t1	sp|Q8AVH7|EGFL6_XENLA	38.7	2.99e-44	172	sp|Q8AVH7|EGFL6_XENLA Epidermal growth factor-like protein 6 OS=Xenopus laevis OX=8355 GN=egfl6 PE=2 SV=1
+g6587.t1	sp|P56652|ITIH3_BOVIN	33.6	3.79e-124	401	sp|P56652|ITIH3_BOVIN Inter-alpha-trypsin inhibitor heavy chain H3 OS=Bos taurus OX=9913 GN=ITIH3 PE=1 SV=2
+g6732.t1	sp|P47911|RL6_MOUSE	52.6	2.19e-73	229	sp|P47911|RL6_MOUSE Large ribosomal subunit protein eL6 OS=Mus musculus OX=10090 GN=Rpl6 PE=1 SV=3
+g6815.t1	sp|P61375|LHX5_MOUSE	57.1	1.27e-119	356	sp|P61375|LHX5_MOUSE LIM/homeobox protein Lhx5 OS=Mus musculus OX=10090 GN=Lhx5 PE=2 SV=1
+g6860.t1	sp|Q96LW2|KS6R_HUMAN	41.8	1.39e-75	243	sp|Q96LW2|KS6R_HUMAN Ribosomal protein S6 kinase-related protein OS=Homo sapiens OX=9606 GN=RSKR PE=1 SV=3
+g6891.t1	sp|Q5RF58|LAT4_PONAB	37.0	1.52e-115	360	sp|Q5RF58|LAT4_PONAB Large neutral amino acids transporter small subunit 4 OS=Pongo abelii OX=9601 GN=SLC43A2 PE=2 SV=1
+g692.t1	sp|Q60519|SEM5B_MOUSE	40.4	1.08e-240	714	sp|Q60519|SEM5B_MOUSE Semaphorin-5B OS=Mus musculus OX=10090 GN=Sema5b PE=2 SV=2
+g692.t2	sp|Q60519|SEM5B_MOUSE	39.9	2.18e-227	677	sp|Q60519|SEM5B_MOUSE Semaphorin-5B OS=Mus musculus OX=10090 GN=Sema5b PE=2 SV=2
+g6944.t1	sp|Q9Y6R7|FCGBP_HUMAN	28.8	1.46e-77	292	sp|Q9Y6R7|FCGBP_HUMAN IgGFc-binding protein OS=Homo sapiens OX=9606 GN=FCGBP PE=1 SV=3
+g7007.t1	sp|Q8WZ42|TITIN_HUMAN	28.8	1.19e-12	75.1	sp|Q8WZ42|TITIN_HUMAN Titin OS=Homo sapiens OX=9606 GN=TTN PE=1 SV=4
+g7081.t1	sp|Q65Z59|YPEL1_CHLAE	91.1	3.03e-77	226	sp|Q65Z59|YPEL1_CHLAE Protein yippee-like 1 OS=Chlorocebus aethiops OX=9534 GN=YPEL1 PE=3 SV=1
+g7114.t1	sp|Q9HBW9|AGRL4_HUMAN	28.9	2.23e-27	124	sp|Q9HBW9|AGRL4_HUMAN Adhesion G protein-coupled receptor L4 OS=Homo sapiens OX=9606 GN=ADGRL4 PE=1 SV=3
+g7124.t1	sp|Q07263|ACHA3_BOVIN	43.1	1.84e-139	415	sp|Q07263|ACHA3_BOVIN Neuronal acetylcholine receptor subunit alpha-3 OS=Bos taurus OX=9913 GN=CHRNA3 PE=2 SV=1
+g7125.t1	sp|P09481|ACHA3_CHICK	38.6	6.42e-125	379	sp|P09481|ACHA3_CHICK Neuronal acetylcholine receptor subunit alpha-3 OS=Gallus gallus OX=9031 GN=CHRNA3 PE=1 SV=2
+g7130.t1	sp|Q80U40|RIMB2_MOUSE	30.8	7.57e-95	332	sp|Q80U40|RIMB2_MOUSE RIMS-binding protein 2 OS=Mus musculus OX=10090 GN=Rimbp2 PE=1 SV=3
+g7130.t2	sp|Q80U40|RIMB2_MOUSE	31.2	1.45e-98	343	sp|Q80U40|RIMB2_MOUSE RIMS-binding protein 2 OS=Mus musculus OX=10090 GN=Rimbp2 PE=1 SV=3
+g7130.t3	sp|Q80U40|RIMB2_MOUSE	31.4	1.44e-99	345	sp|Q80U40|RIMB2_MOUSE RIMS-binding protein 2 OS=Mus musculus OX=10090 GN=Rimbp2 PE=1 SV=3
+g7241.t1	sp|P09480|ACHA2_CHICK	40.5	1.26e-114	351	sp|P09480|ACHA2_CHICK Neuronal acetylcholine receptor subunit alpha-2 OS=Gallus gallus OX=9031 GN=CHRNA2 PE=2 SV=1
+g7243.t1	sp|O88831|KKCC2_RAT	65.0	4.38e-168	496	sp|O88831|KKCC2_RAT Calcium/calmodulin-dependent protein kinase kinase 2 OS=Rattus norvegicus OX=10116 GN=Camkk2 PE=1 SV=1
+g7288.t1	sp|Q5F4B2|SWP70_CHICK	35.8	1.46e-37	152	sp|Q5F4B2|SWP70_CHICK Switch-associated protein 70 OS=Gallus gallus OX=9031 GN=SWAP70 PE=2 SV=1
+g7406.t1	sp|Q8BM89|ARSJ_MOUSE	38.8	2.16e-94	302	sp|Q8BM89|ARSJ_MOUSE Arylsulfatase J OS=Mus musculus OX=10090 GN=Arsj PE=2 SV=1
+g7426.t1	sp|Q10739|MMP14_RAT	39.1	1.77e-97	310	sp|Q10739|MMP14_RAT Matrix metalloproteinase-14 OS=Rattus norvegicus OX=10116 GN=Mmp14 PE=2 SV=2
+g7439.t1	sp|P22781|DDC_CAVPO	63.1	1.01e-221	624	sp|P22781|DDC_CAVPO Aromatic-L-amino-acid decarboxylase OS=Cavia porcellus OX=10141 GN=DDC PE=2 SV=1
+g7481.t1	sp|A8WHP3|SC5A9_DANRE	63.1	9.67e-83	261	sp|A8WHP3|SC5A9_DANRE Sodium/glucose cotransporter 4 OS=Danio rerio OX=7955 GN=slc5a9 PE=2 SV=1
+g7500.t1	sp|L7VG99|T132E_DANRE	25.4	3.87e-61	231	sp|L7VG99|T132E_DANRE Transmembrane protein 132E OS=Danio rerio OX=7955 GN=tmem132e PE=2 SV=1
+g7522.t1	sp|Q5E9U1|P2RX4_BOVIN	48.7	1.00e-100	321	sp|Q5E9U1|P2RX4_BOVIN P2X purinoceptor 4 OS=Bos taurus OX=9913 GN=P2RX4 PE=2 SV=1
+g7522.t2	sp|Q5E9U1|P2RX4_BOVIN	48.7	1.56e-98	315	sp|Q5E9U1|P2RX4_BOVIN P2X purinoceptor 4 OS=Bos taurus OX=9913 GN=P2RX4 PE=2 SV=1
+g759.t1	sp|Q0VGT2|GLI2_MOUSE	48.0	6.45e-44	166	sp|Q0VGT2|GLI2_MOUSE Zinc finger protein GLI2 OS=Mus musculus OX=10090 GN=Gli2 PE=1 SV=2
+g7652.t1	sp|Q9BGQ3|SEPT5_MACFA	68.8	5.10e-149	432	sp|Q9BGQ3|SEPT5_MACFA Septin-5 OS=Macaca fascicularis OX=9541 GN=SEPTIN5 PE=2 SV=1
+g7652.t2	sp|Q9BGQ3|SEPT5_MACFA	68.8	2.98e-150	431	sp|Q9BGQ3|SEPT5_MACFA Septin-5 OS=Macaca fascicularis OX=9541 GN=SEPTIN5 PE=2 SV=1
+g7671.t1	sp|Q96DH6|MSI2H_HUMAN	60.1	6.91e-79	246	sp|Q96DH6|MSI2H_HUMAN RNA-binding protein Musashi homolog 2 OS=Homo sapiens OX=9606 GN=MSI2 PE=1 SV=1
+g7799.t1	sp|P05387|RLA2_HUMAN	80.0	3.66e-30	108	sp|P05387|RLA2_HUMAN Large ribosomal subunit protein P2 OS=Homo sapiens OX=9606 GN=RPLP2 PE=1 SV=1
+g7826.t1	sp|O73718|TBX3_CHICK	69.9	4.72e-91	289	sp|O73718|TBX3_CHICK T-box transcription factor TBX3 (Fragment) OS=Gallus gallus OX=9031 GN=TBX3 PE=2 SV=1
+g7920.t1	sp|P53667|LIMK1_HUMAN	44.9	1.84e-170	503	sp|P53667|LIMK1_HUMAN LIM domain kinase 1 OS=Homo sapiens OX=9606 GN=LIMK1 PE=1 SV=3
+g7962.t1	sp|O19132|NOS1_RABIT	30.6	1.07e-55	211	sp|O19132|NOS1_RABIT Nitric oxide synthase 1 OS=Oryctolagus cuniculus OX=9986 GN=NOS1 PE=2 SV=1
+g7963.t1	sp|P29475|NOS1_HUMAN	56.9	0.0	957	sp|P29475|NOS1_HUMAN Nitric oxide synthase 1 OS=Homo sapiens OX=9606 GN=NOS1 PE=1 SV=2
+g7963.t2	sp|P29475|NOS1_HUMAN	57.5	0.0	958	sp|P29475|NOS1_HUMAN Nitric oxide synthase 1 OS=Homo sapiens OX=9606 GN=NOS1 PE=1 SV=2
+g7964.t1	sp|Q29498|NOS1_SHEEP	56.1	2.28e-12	68.2	sp|Q29498|NOS1_SHEEP Nitric oxide synthase 1 OS=Ovis aries OX=9940 GN=NOS1 PE=2 SV=3
+g7964.t2	sp|Q29498|NOS1_SHEEP	56.1	2.41e-13	68.2	sp|Q29498|NOS1_SHEEP Nitric oxide synthase 1 OS=Ovis aries OX=9940 GN=NOS1 PE=2 SV=3
+g7989.t1	sp|Q61382|TRAF4_MOUSE	49.7	1.36e-128	380	sp|Q61382|TRAF4_MOUSE TNF receptor-associated factor 4 OS=Mus musculus OX=10090 GN=Traf4 PE=1 SV=2
+g7989.t2	sp|Q61382|TRAF4_MOUSE	46.7	4.79e-92	285	sp|Q61382|TRAF4_MOUSE TNF receptor-associated factor 4 OS=Mus musculus OX=10090 GN=Traf4 PE=1 SV=2
+g8011.t1	sp|Q9WVT6|CAH14_MOUSE	42.3	1.82e-57	191	sp|Q9WVT6|CAH14_MOUSE Carbonic anhydrase 14 OS=Mus musculus OX=10090 GN=Ca14 PE=1 SV=1
+g8094.t1	sp|Q63226|GRID2_RAT	29.3	8.06e-83	286	sp|Q63226|GRID2_RAT Glutamate receptor ionotropic, delta-2 OS=Rattus norvegicus OX=10116 GN=Grid2 PE=1 SV=2
+g8094.t2	sp|Q63226|GRID2_RAT	29.0	3.85e-70	250	sp|Q63226|GRID2_RAT Glutamate receptor ionotropic, delta-2 OS=Rattus norvegicus OX=10116 GN=Grid2 PE=1 SV=2
+g8094.t3	sp|Q63226|GRID2_RAT	30.0	2.60e-85	293	sp|Q63226|GRID2_RAT Glutamate receptor ionotropic, delta-2 OS=Rattus norvegicus OX=10116 GN=Grid2 PE=1 SV=2
+g8122.t1	sp|Q9H239|MMP28_HUMAN	27.4	3.82e-11	68.6	sp|Q9H239|MMP28_HUMAN Matrix metalloproteinase-28 OS=Homo sapiens OX=9606 GN=MMP28 PE=1 SV=2
+g8133.t1	sp|O43435|TBX1_HUMAN	72.4	2.08e-124	369	sp|O43435|TBX1_HUMAN T-box transcription factor TBX1 OS=Homo sapiens OX=9606 GN=TBX1 PE=1 SV=1
+g8133.t2	sp|O43435|TBX1_HUMAN	68.8	2.11e-118	355	sp|O43435|TBX1_HUMAN T-box transcription factor TBX1 OS=Homo sapiens OX=9606 GN=TBX1 PE=1 SV=1
+g8133.t3	sp|O43435|TBX1_HUMAN	72.4	1.05e-123	369	sp|O43435|TBX1_HUMAN T-box transcription factor TBX1 OS=Homo sapiens OX=9606 GN=TBX1 PE=1 SV=1
+g8150.t1	sp|Q8K418|BRS3_RAT	31.6	7.86e-27	114	sp|Q8K418|BRS3_RAT Bombesin receptor subtype-3 OS=Rattus norvegicus OX=10116 GN=Brs3 PE=2 SV=1
+g8152.t1	sp|Q6PAY6|HYPDH_XENLA	40.7	1.71e-93	296	sp|Q6PAY6|HYPDH_XENLA Hydroxyproline dehydrogenase OS=Xenopus laevis OX=8355 GN=prodh2 PE=2 SV=1
+g8167.t1	sp|Q6PAJ1|BCR_MOUSE	35.0	1.06e-137	452	sp|Q6PAJ1|BCR_MOUSE Breakpoint cluster region protein OS=Mus musculus OX=10090 GN=Bcr PE=1 SV=3
+g8215.t1	sp|Q3TCN2|PLBL2_MOUSE	42.0	3.87e-89	285	sp|Q3TCN2|PLBL2_MOUSE Putative phospholipase B-like 2 OS=Mus musculus OX=10090 GN=Plbd2 PE=1 SV=2
+g8306.t1	sp|O73718|TBX3_CHICK	67.7	8.04e-124	377	sp|O73718|TBX3_CHICK T-box transcription factor TBX3 (Fragment) OS=Gallus gallus OX=9031 GN=TBX3 PE=2 SV=1
+g8306.t2	sp|O73718|TBX3_CHICK	70.9	1.90e-127	385	sp|O73718|TBX3_CHICK T-box transcription factor TBX3 (Fragment) OS=Gallus gallus OX=9031 GN=TBX3 PE=2 SV=1
+g841.t1	sp|Q6DGV1|CELF4_DANRE	48.2	1.29e-140	421	sp|Q6DGV1|CELF4_DANRE CUGBP Elav-like family member 4 OS=Danio rerio OX=7955 GN=celf4 PE=2 SV=1
+g841.t2	sp|Q6DGV1|CELF4_DANRE	49.1	4.53e-144	429	sp|Q6DGV1|CELF4_DANRE CUGBP Elav-like family member 4 OS=Danio rerio OX=7955 GN=celf4 PE=2 SV=1
+g841.t3	sp|Q6DGV1|CELF4_DANRE	50.9	6.03e-148	438	sp|Q6DGV1|CELF4_DANRE CUGBP Elav-like family member 4 OS=Danio rerio OX=7955 GN=celf4 PE=2 SV=1
+g841.t4	sp|Q6DGV1|CELF4_DANRE	50.7	6.50e-145	430	sp|Q6DGV1|CELF4_DANRE CUGBP Elav-like family member 4 OS=Danio rerio OX=7955 GN=celf4 PE=2 SV=1
+g8566.t1	sp|Q8IZF6|AGRG4_HUMAN	25.0	1.57e-25	118	sp|Q8IZF6|AGRG4_HUMAN Adhesion G-protein coupled receptor G4 OS=Homo sapiens OX=9606 GN=ADGRG4 PE=1 SV=2
+g8616.t1	sp|Q8N9W6|BOLL_HUMAN	60.7	1.43e-43	156	sp|Q8N9W6|BOLL_HUMAN Protein boule-like OS=Homo sapiens OX=9606 GN=BOLL PE=1 SV=2
+g8634.t1	sp|Q9W4Y2|PDFR_DROME	38.9	8.23e-44	163	sp|Q9W4Y2|PDFR_DROME PDF receptor OS=Drosophila melanogaster OX=7227 GN=Pdfr PE=1 SV=2
+g8655.t1	sp|A0A0R4IKU3|RECK_DANRE	40.9	1.14e-220	649	sp|A0A0R4IKU3|RECK_DANRE Reversion-inducing cysteine-rich protein with Kazal motifs OS=Danio rerio OX=7955 GN=reck PE=1 SV=3
+g8732.t1	sp|O42603|CRFR2_XENLA	36.8	1.35e-65	221	sp|O42603|CRFR2_XENLA Corticotropin-releasing factor receptor 2 OS=Xenopus laevis OX=8355 GN=crhr2 PE=2 SV=1
+g8742.t1	sp|O61366|GPRS_DROME	54.5	4.46e-100	328	sp|O61366|GPRS_DROME Serine-enriched protein OS=Drosophila melanogaster OX=7227 GN=gprs PE=4 SV=3
+g8742.t2	sp|O61366|GPRS_DROME	54.5	9.27e-99	328	sp|O61366|GPRS_DROME Serine-enriched protein OS=Drosophila melanogaster OX=7227 GN=gprs PE=4 SV=3
+g8769.t1	sp|O35219|KCNH2_MOUSE	49.8	0.0	933	sp|O35219|KCNH2_MOUSE Voltage-gated inwardly rectifying potassium channel KCNH2 OS=Mus musculus OX=10090 GN=Kcnh2 PE=1 SV=2
+g8769.t2	sp|O35219|KCNH2_MOUSE	58.0	1.29e-262	766	sp|O35219|KCNH2_MOUSE Voltage-gated inwardly rectifying potassium channel KCNH2 OS=Mus musculus OX=10090 GN=Kcnh2 PE=1 SV=2
+g8769.t3	sp|O35219|KCNH2_MOUSE	57.8	5.23e-263	766	sp|O35219|KCNH2_MOUSE Voltage-gated inwardly rectifying potassium channel KCNH2 OS=Mus musculus OX=10090 GN=Kcnh2 PE=1 SV=2
+g8812.t1	sp|P61356|RL27_BOVIN	71.9	2.99e-64	196	sp|P61356|RL27_BOVIN Large ribosomal subunit protein eL27 OS=Bos taurus OX=9913 GN=RPL27 PE=2 SV=2
+g885.t1	sp|Q55CA9|RASZ_DICDI	32.0	5.39e-29	111	sp|Q55CA9|RASZ_DICDI Ras-like protein rasZ OS=Dictyostelium discoideum OX=44689 GN=rasZ PE=3 SV=1
+g8860.t1	sp|Q60748|CRFR2_MOUSE	37.9	1.91e-53	187	sp|Q60748|CRFR2_MOUSE Corticotropin-releasing factor receptor 2 OS=Mus musculus OX=10090 GN=Crhr2 PE=1 SV=2
+g8866.t1	sp|Q95V11|CMAH_ASTRU	60.6	3.72e-220	623	sp|Q95V11|CMAH_ASTRU Cytidine monophosphate-N-acetylneuraminic acid hydroxylase OS=Asterias rubens OX=7604 GN=cnh PE=1 SV=1
+g894.t1	sp|P11722|FINC_CHICK	23.7	6.77e-31	136	sp|P11722|FINC_CHICK Fibronectin OS=Gallus gallus OX=9031 GN=FN1 PE=2 SV=4
+g8953.t1	sp|A2ARA8|ITA8_MOUSE	30.1	8.34e-119	394	sp|A2ARA8|ITA8_MOUSE Integrin alpha-8 OS=Mus musculus OX=10090 GN=Itga8 PE=1 SV=1
+g8990.t1	sp|P12716|ACTC_PISOC	97.2	2.68e-263	717	sp|P12716|ACTC_PISOC Actin, cytoplasmic OS=Pisaster ochraceus OX=7612 PE=3 SV=1
+g8999.t1	sp|Q0P4P2|FBCD1_XENTR	45.9	5.98e-54	199	sp|Q0P4P2|FBCD1_XENTR Fibrinogen C domain-containing protein 1 OS=Xenopus tropicalis OX=8364 GN=fibcd1 PE=2 SV=1
+g9003.t1	sp|P53708|ITA8_HUMAN	28.8	4.11e-105	356	sp|P53708|ITA8_HUMAN Integrin alpha-8 OS=Homo sapiens OX=9606 GN=ITGA8 PE=1 SV=3
+g9004.t1	sp|P53708|ITA8_HUMAN	29.4	1.15e-89	311	sp|P53708|ITA8_HUMAN Integrin alpha-8 OS=Homo sapiens OX=9606 GN=ITGA8 PE=1 SV=3
+g9006.t1	sp|P53708|ITA8_HUMAN	29.5	5.76e-109	367	sp|P53708|ITA8_HUMAN Integrin alpha-8 OS=Homo sapiens OX=9606 GN=ITGA8 PE=1 SV=3
+g9007.t1	sp|A2ARA8|ITA8_MOUSE	30.3	1.24e-131	427	sp|A2ARA8|ITA8_MOUSE Integrin alpha-8 OS=Mus musculus OX=10090 GN=Itga8 PE=1 SV=1
+g9010.t1	sp|P28799|GRN_HUMAN	40.1	1.81e-145	470	sp|P28799|GRN_HUMAN Progranulin OS=Homo sapiens OX=9606 GN=GRN PE=1 SV=2
+g9010.t2	sp|P28799|GRN_HUMAN	40.1	1.47e-145	470	sp|P28799|GRN_HUMAN Progranulin OS=Homo sapiens OX=9606 GN=GRN PE=1 SV=2
+g9143.t1	sp|Q6T5B8|GDF8_CAPHI	28.2	4.56e-24	106	sp|Q6T5B8|GDF8_CAPHI Growth/differentiation factor 8 OS=Capra hircus OX=9925 GN=MSTN PE=2 SV=2
+g9180.t1	sp|Q90456|MR1BA_DANRE	30.6	1.77e-09	61.6	sp|Q90456|MR1BA_DANRE Melatonin receptor type 1B-A (Fragment) OS=Danio rerio OX=7955 GN=mtnr1ba PE=2 SV=2
+g9187.t1	sp|Q7PQ25|CCDCX_ANOGA	59.8	9.07e-30	122	sp|Q7PQ25|CCDCX_ANOGA Coiled-coil domain-containing protein AGAP005037 OS=Anopheles gambiae OX=7165 GN=AGAP005037 PE=4 SV=4
+g9211.t1	sp|Q9JKA7|HCN4_RAT	44.7	1.07e-113	369	sp|Q9JKA7|HCN4_RAT Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 OS=Rattus norvegicus OX=10116 GN=Hcn4 PE=1 SV=1
+g9326.t1	sp|Q5R4S0|AAKG2_PONAB	51.3	1.72e-136	409	sp|Q5R4S0|AAKG2_PONAB 5'-AMP-activated protein kinase subunit gamma-2 OS=Pongo abelii OX=9601 GN=PRKAG2 PE=2 SV=1
+g9326.t2	sp|Q9UGJ0|AAKG2_HUMAN	51.4	9.48e-135	406	sp|Q9UGJ0|AAKG2_HUMAN 5'-AMP-activated protein kinase subunit gamma-2 OS=Homo sapiens OX=9606 GN=PRKAG2 PE=1 SV=1
+g9326.t3	sp|Q5R4S0|AAKG2_PONAB	51.3	8.85e-137	409	sp|Q5R4S0|AAKG2_PONAB 5'-AMP-activated protein kinase subunit gamma-2 OS=Pongo abelii OX=9601 GN=PRKAG2 PE=2 SV=1
+g9326.t4	sp|Q5R4S0|AAKG2_PONAB	51.2	5.56e-135	405	sp|Q5R4S0|AAKG2_PONAB 5'-AMP-activated protein kinase subunit gamma-2 OS=Pongo abelii OX=9601 GN=PRKAG2 PE=2 SV=1
+g9335.t1	sp|P10897|CY561_BOVIN	46.2	1.06e-54	179	sp|P10897|CY561_BOVIN Transmembrane ascorbate-dependent reductase CYB561 OS=Bos taurus OX=9913 GN=CYB561 PE=1 SV=2
+g9358.t1	sp|F1R332|GAL2A_DANRE	25.3	5.39e-14	75.9	sp|F1R332|GAL2A_DANRE Galanin receptor 2a OS=Danio rerio OX=7955 GN=galr2a PE=2 SV=2
+g9372.t1	sp|Q924U1|KISSR_RAT	52.6	8.61e-42	149	sp|Q924U1|KISSR_RAT KiSS-1 receptor OS=Rattus norvegicus OX=10116 GN=Kiss1r PE=2 SV=2
+g9380.t1	sp|O42602|CRFR1_XENLA	35.1	1.42e-42	159	sp|O42602|CRFR1_XENLA Corticotropin-releasing factor receptor 1 OS=Xenopus laevis OX=8355 GN=crhr1 PE=2 SV=1
+g9382.t1	sp|Q6BD04|GPR54_ORENI	40.4	4.60e-65	216	sp|Q6BD04|GPR54_ORENI G-protein coupled receptor 54 OS=Oreochromis niloticus OX=8128 GN=gpr54 PE=2 SV=1
+g9394.t1	sp|P07228|ITB1_CHICK	34.0	1.54e-134	421	sp|P07228|ITB1_CHICK Integrin beta-1 OS=Gallus gallus OX=9031 GN=ITGB1 PE=1 SV=1
+g9397.t1	sp|P12607|ITB1B_XENLA	38.0	5.82e-171	516	sp|P12607|ITB1B_XENLA Integrin beta-1-B OS=Xenopus laevis OX=8355 GN=itgb1-b PE=2 SV=1
+g9400.t1	sp|Q8WZA2|RPGF4_HUMAN	43.1	4.72e-280	811	sp|Q8WZA2|RPGF4_HUMAN Rap guanine nucleotide exchange factor 4 OS=Homo sapiens OX=9606 GN=RAPGEF4 PE=1 SV=1
+g9401.t1	sp|Q13797|ITA9_HUMAN	30.4	2.83e-113	377	sp|Q13797|ITA9_HUMAN Integrin alpha-9 OS=Homo sapiens OX=9606 GN=ITGA9 PE=1 SV=2
+g9401.t2	sp|Q13797|ITA9_HUMAN	30.9	1.94e-115	383	sp|Q13797|ITA9_HUMAN Integrin alpha-9 OS=Homo sapiens OX=9606 GN=ITGA9 PE=1 SV=2
+g9406.t1	sp|Q1LZF7|PTH1R_BOVIN	39.7	5.09e-87	285	sp|Q1LZF7|PTH1R_BOVIN Parathyroid hormone/parathyroid hormone-related peptide receptor OS=Bos taurus OX=9913 GN=PTH1R PE=2 SV=1
+g9415.t1	sp|D2YVH7|LECM_OXYSU	32.9	1.10e-17	78.6	sp|D2YVH7|LECM_OXYSU C-type lectin mannose-binding isoform OS=Oxyuranus scutellatus OX=8668 PE=1 SV=1
+g9424.t1	sp|Q63258|ITA7_RAT	32.3	1.97e-38	154	sp|Q63258|ITA7_RAT Integrin alpha-7 OS=Rattus norvegicus OX=10116 GN=Itga7 PE=1 SV=2
+g9431.t1	sp|Q9R1W5|CALRL_MOUSE	43.3	9.00e-92	288	sp|Q9R1W5|CALRL_MOUSE Calcitonin gene-related peptide type 1 receptor OS=Mus musculus OX=10090 GN=Calcrl PE=1 SV=2
+g9456.t1	sp|Q6DFQ7|TM198_XENTR	38.9	1.43e-62	207	sp|Q6DFQ7|TM198_XENTR Transmembrane protein 198 OS=Xenopus tropicalis OX=8364 GN=tmem198 PE=1 SV=1
+g9462.t1	sp|Q6AYA5|T106B_RAT	34.3	1.86e-28	112	sp|Q6AYA5|T106B_RAT Transmembrane protein 106B OS=Rattus norvegicus OX=10116 GN=Tmem106b PE=1 SV=1
+g9465.t1	sp|O95622|ADCY5_HUMAN	54.7	9.02e-222	662	sp|O95622|ADCY5_HUMAN Adenylate cyclase type 5 OS=Homo sapiens OX=9606 GN=ADCY5 PE=1 SV=3
+g9718.t1	sp|Q6DGI0|RGS8_DANRE	54.5	1.05e-37	140	sp|Q6DGI0|RGS8_DANRE Regulator of G-protein signaling 8 OS=Danio rerio OX=7955 GN=rgs8 PE=2 SV=1
+g9744.t1	sp|Q4LDE5|SVEP1_HUMAN	30.4	9.82e-31	134	sp|Q4LDE5|SVEP1_HUMAN Sushi, von Willebrand factor type A, EGF and pentraxin domain-containing protein 1 OS=Homo sapiens OX=9606 GN=SVEP1 PE=1 SV=3
+g9745.t1	sp|Q8VCK5|KLH20_MOUSE	82.5	3.12e-151	451	sp|Q8VCK5|KLH20_MOUSE Kelch-like protein 20 OS=Mus musculus OX=10090 GN=Klhl20 PE=2 SV=2
+g9775.t1	sp|P38401|GNAI1_CAVPO	51.7	2.34e-116	344	sp|P38401|GNAI1_CAVPO Guanine nucleotide-binding protein G(i) subunit alpha-1 OS=Cavia porcellus OX=10141 GN=GNAI1 PE=2 SV=3
+g9794.t1	sp|Q9JHB4|WDR31_MOUSE	38.0	4.79e-69	232	sp|Q9JHB4|WDR31_MOUSE WD repeat-containing protein 31 OS=Mus musculus OX=10090 GN=Wdr31 PE=2 SV=1
+g9843.t1	sp|Q6UWE0|LRSM1_HUMAN	33.1	8.64e-18	92.0	sp|Q6UWE0|LRSM1_HUMAN E3 ubiquitin-protein ligase LRSAM1 OS=Homo sapiens OX=9606 GN=LRSAM1 PE=1 SV=1
+g9931.t1	sp|P53413|LMX1B_CHICK	56.6	1.05e-83	265	sp|P53413|LMX1B_CHICK LIM/homeobox protein LMX-1.2 OS=Gallus gallus OX=9031 GN=LMX1B PE=2 SV=2
+g9958.t1	sp|Q6IP59|CTL2_XENLA	40.7	1.90e-160	483	sp|Q6IP59|CTL2_XENLA Choline transporter-like protein 2 OS=Xenopus laevis OX=8355 GN=slc44a2 PE=2 SV=1
+g9962.t1	sp|Q9D3A8|CAPON_MOUSE	66.3	3.19e-67	222	sp|Q9D3A8|CAPON_MOUSE Carboxyl-terminal PDZ ligand of neuronal nitric oxide synthase protein OS=Mus musculus OX=10090 GN=Nos1ap PE=1 SV=3
+g9976.t1	sp|P46530|NOTC1_DANRE	26.2	6.10e-30	134	sp|P46530|NOTC1_DANRE Neurogenic locus notch homolog protein 1 OS=Danio rerio OX=7955 GN=notch1a PE=2 SV=1
