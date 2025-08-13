@@ -16,7 +16,9 @@ Contact: [jegarcia@hpcf.upr.edu](mailto:jegarcia@hpcf.upr.edu)
 
 ## Usage
 1.0_scRNASeq_Visualizations: Recreate Joshua's 35 clusters and mapping - 250707
-2.2_scRNASeq_Complete_v1: Complete Pipeline *USE THIS as of 250714*
+2.2_scRNASeq_Complete_v1: First working iteration
+2.2_scRNASeq_250813: Complete version of annotation
+SupraclusterAnalysis: Analyze large groups within the UMAP, such as muscle, connective tissue, etc.
 
 
 ## Requirements
