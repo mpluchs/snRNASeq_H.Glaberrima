@@ -1,7 +1,7 @@
 ---
 title: "2.2 snRNASeq"
 author: "Matthew Luchs"
-date: "2025-07-14"
+date: "2025-07-01"
 output: html_document
 ---
 ***============ scRNASeq Analysis =============***
@@ -113,9 +113,10 @@ sce <- as.SingleCellExperiment(all.combined)
 # Remove low-abundance genes (systematic zeros)
 # Keep genes with average count > 0.1 across all cells
 ave.counts <- Matrix::rowMeans(counts(sce))
-#scrap.genes <- ave.counts <= 0.1
-#count(scrap.genes)
+scrap.genes <- ave.counts <= 0.1
+count(scrap.genes)
 keep.genes <- ave.counts >= 0.1
+count(keep.genes)
 sce.filtered <- sce[keep.genes, ]
 
 message(paste("Filtered from", nrow(sce), "to", nrow(sce.filtered), "genes"))
@@ -313,6 +314,33 @@ centroids2 <- do.call(rbind, lapply(split(as.data.frame(embeddings2), clusters2)
 p2 <- p2 + annotate("text", x = centroids2[,1], y = centroids2[,2], 
                     label = rownames(centroids2), size = 4, color = "black")
 print(p2)
+
+#UMAP by Regenerating vs Control
+
+# Create a new metadata column for treatment groups
+seurat.deconv$treatment_group <- ifelse(seurat.deconv$sample %in% c("C1", "C2"), "Control", "Regenerating")
+
+# Create UMAP plot colored by treatment groups with Control cells in front
+DimPlot(seurat.deconv, reduction = "umap", group.by = "treatment_group", 
+        cols = c("Control" = "#0173B2", "Regenerating" = "#DE8F05"),
+        order = "Control") +  # This puts Control cells on top
+  ggtitle("UMAP: Control vs Regenerating Groups") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(color = "Group")
+
+# Optional: Add cluster labels to the plot
+embeddings <- Embeddings(seurat.deconv, reduction = "umap")
+clusters <- seurat.deconv$seurat_clusters
+centroids <- do.call(rbind, lapply(split(as.data.frame(embeddings), clusters), function(x) apply(x, 2, mean)))
+
+DimPlot(seurat.deconv, reduction = "umap", group.by = "treatment_group", 
+        cols = c("Control" = "#0173B2", "Regenerating" = "#DE8F05"),
+        order = "Control") +  # This puts Control cells on top
+  ggtitle("UMAP: Control vs Regenerating Groups") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(color = "Group") +
+  annotate("text", x = centroids[,1], y = centroids[,2], 
+           label = rownames(centroids), size = 4, color = "black")
 
 # 8c. Representative cluster distribution plots
 # Create table of cluster vs sample
@@ -1433,3 +1461,4 @@ ggplot(composition_by_original, aes(x = new_cluster, y = percentage, fill = orig
         legend.position = "bottom") +
   coord_cartesian(ylim = c(0, 100))
 ```
+
