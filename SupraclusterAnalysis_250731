@@ -1,0 +1,305 @@
+---
+title: "Supracluster Analysis"
+author: "Matthew Luchs"
+date: "2025-07-30"
+output: html_document
+---
+```{r}
+library(Seurat)
+library(tidyverse)
+library(ggplot2)
+library(openxlsx)
+library(readxl)
+library(patchwork)
+
+# Main function to analyze a subset of clusters
+analyze_cluster_subset <- function(seurat_obj, 
+                                  source_resolution = 1.6,
+                                  target_clusters = c("7", "10", "16", "19"),
+                                  new_resolution = 0.8,
+                                  dims_to_use = 1:15,
+                                  output_prefix = "cluster_subset",
+                                  save_files = TRUE,
+                                  output_dir = "/home/matthew/data/") {
+  
+  cat("=== CLUSTER SUBSET ANALYSIS ===\n")
+  cat("Source resolution:", source_resolution, "\n")
+  cat("Target clusters:", paste(target_clusters, collapse = ", "), "\n")
+  cat("New clustering resolution:", new_resolution, "\n")
+  cat("PCA dimensions to use:", paste(range(dims_to_use), collapse = "-"), "\n\n")
+  
+  # Step 1: Extract cells from specified clusters
+  source_column <- paste0("RNA_snn_res.", source_resolution)
+  
+  # Check if source resolution exists
+  if (!source_column %in% colnames(seurat_obj@meta.data)) {
+    stop(paste("Source resolution", source_resolution, "not found in data"))
+  }
+  
+  # Set identity to source resolution
+Idents(seurat_obj) <- source_column
+
+# Extract subset
+clusters_subset <- subset(seurat_obj, cells = WhichCells(seurat_obj, idents = target_clusters))
+  
+  # Save original cluster information
+  clusters_subset$original_cluster <- clusters_subset@meta.data[[source_column]]
+  clusters_subset$source_resolution <- source_resolution
+  
+  # Step 2: Re-analyze the subset
+  cat("Re-analyzing subset...\n")
+  
+  # Scale data using variable features from original object
+  clusters_subset <- ScaleData(clusters_subset)
+  
+  # Run PCA
+  clusters_subset <- RunPCA(clusters_subset, features = VariableFeatures(seurat_obj))
+  
+  # Find neighbors and clusters
+  clusters_subset <- FindNeighbors(clusters_subset, dims = dims_to_use)
+  clusters_subset <- FindClusters(clusters_subset, resolution = new_resolution)
+  
+  # Run UMAP
+  clusters_subset <- RunUMAP(clusters_subset, dims = dims_to_use)
+  
+  cat("New clustering complete. Found", length(unique(clusters_subset$seurat_clusters)), "new clusters\n\n")
+  
+  # Step 3: Create visualizations
+  cat("Creating visualizations...\n")
+  
+  # UMAP colored by new subclusters
+  p1 <- DimPlot(clusters_subset, reduction = "umap", label = TRUE, label.size = 4) +
+    ggtitle(paste("UMAP: New Subclusters (Resolution", new_resolution, ")")) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+  # UMAP colored by sample
+  p2 <- DimPlot(clusters_subset, reduction = "umap", group.by = "sample") +
+    ggtitle("UMAP: Colored by Sample") +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+  # UMAP colored by original cluster
+  p3 <- DimPlot(clusters_subset, reduction = "umap", group.by = "original_cluster") +
+    ggtitle(paste("UMAP: Original Clusters (", paste(target_clusters, collapse = ","), ")")) +
+    theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+  # Combine UMAP plots
+  umap_combined <- p1 / p2 / p3
+  
+  # Step 4: Create proportional analysis
+  cat("Creating proportional analysis...\n")
+  
+  # Create comprehensive composition data
+  cluster_composition <- data.frame(
+    new_cluster = clusters_subset$seurat_clusters,
+    original_cluster = clusters_subset$original_cluster,
+    sample = clusters_subset$sample
+  )
+  
+  # Calculate counts for each combination
+  composition_counts <- cluster_composition %>%
+    group_by(new_cluster, original_cluster, sample) %>%
+    summarise(count = n(), .groups = 'drop')
+  
+  # Define colors
+  sample_colors <- c("C1" = "#2166AC", "C2" = "#5AADE4", "R1" = "#D73027", "R2" = "#F46D43")
+  n_original <- length(unique(clusters_subset$original_cluster))
+  original_colors <- rainbow(n_original)
+  names(original_colors) <- unique(clusters_subset$original_cluster)
+  
+  # Sample composition within each new cluster (stacked to 100%)
+  composition_by_sample <- composition_counts %>%
+    group_by(new_cluster) %>%
+    mutate(total_in_cluster = sum(count),
+           percentage = (count / total_in_cluster) * 100)
+  
+  p4 <- ggplot(composition_by_sample, aes(x = new_cluster, y = percentage, fill = sample)) +
+    geom_bar(stat = "identity", position = "stack", width = 0.8) +
+    scale_fill_manual(values = sample_colors) +
+    theme_minimal(base_size = 12) +
+    labs(title = "Sample Composition Within Each New Cluster", 
+         x = "New Cluster", 
+         y = "Percentage of Cells in Cluster",
+         fill = "Sample",
+         subtitle = "Shows what samples make up each new cluster (stacked to 100%)") +
+    theme(plot.title = element_text(hjust = 0.5),
+          plot.subtitle = element_text(hjust = 0.5, size = 10),
+          panel.grid.minor = element_blank(),
+          legend.position = "bottom") +
+    coord_cartesian(ylim = c(0, 100))
+  
+  # Original cluster composition within each new cluster (stacked to 100%)
+  composition_by_original <- composition_counts %>%
+    group_by(new_cluster) %>%
+    mutate(total_in_cluster = sum(count),
+           percentage = (count / total_in_cluster) * 100)
+  
+  p5 <- ggplot(composition_by_original, aes(x = new_cluster, y = percentage, fill = original_cluster)) +
+    geom_bar(stat = "identity", position = "stack", width = 0.8) +
+    scale_fill_manual(values = original_colors) +
+    theme_minimal(base_size = 12) +
+    labs(title = "Original Cluster Composition Within Each New Cluster", 
+         x = "New Cluster", 
+         y = "Percentage of Cells in Cluster",
+         fill = "Original Cluster",
+         subtitle = "Shows what original clusters make up each new cluster (stacked to 100%)") +
+    theme(plot.title = element_text(hjust = 0.5),
+          plot.subtitle = element_text(hjust = 0.5, size = 10),
+          panel.grid.minor = element_blank(),
+          legend.position = "bottom") +
+    coord_cartesian(ylim = c(0, 100))
+  
+  # Sample distribution across new clusters (dodged bars)
+  sample_cluster_counts <- table(clusters_subset$seurat_clusters, clusters_subset$sample)
+  sample_totals <- colSums(sample_cluster_counts)
+  
+  df_by_sample <- data.frame()
+  for(sample in names(sample_totals)) {
+    for(cluster in rownames(sample_cluster_counts)) {
+      count <- sample_cluster_counts[cluster, sample]
+      percentage <- (count / sample_totals[sample]) * 100
+      df_by_sample <- rbind(df_by_sample, data.frame(
+        Cluster = cluster,
+        Sample = sample,
+        Count = count,
+        Percentage = percentage
+      ))
+    }
+  }
+  
+  p6 <- ggplot(df_by_sample, aes(x = Cluster, y = Percentage, fill = Sample)) +
+    geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+    scale_fill_manual(values = sample_colors) +
+    theme_minimal(base_size = 12) +
+    labs(title = "Percent of Each Sample in Each New Cluster", 
+         x = "New Cluster", 
+         y = "% of Sample's Total Cells",
+         fill = "Sample",
+         subtitle = "Shows what proportion of each sample's cells are found in each new cluster") +
+    theme(plot.title = element_text(hjust = 0.5),
+          plot.subtitle = element_text(hjust = 0.5, size = 10),
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          panel.grid.minor = element_blank(),
+          legend.position = "bottom") +
+    coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+  
+  # Combine proportion plots
+  proportion_combined <- (p4 | p5) / p6
+  
+  # Step 5: Find marker genes
+  cat("Finding marker genes...\n")
+  
+  cluster_markers <- FindAllMarkers(
+    object = clusters_subset,
+    only.pos = TRUE,
+    min.pct = 0.25,
+    logfc.threshold = 0.25
+  )
+  
+  top50_per_cluster <- cluster_markers %>%
+    group_by(cluster) %>%
+    slice_max(order_by = avg_log2FC, n = 50)
+  
+  top50_per_cluster <- cluster_markers %>%
+  group_by(cluster) %>%
+  slice_max(order_by = avg_log2FC, n = 50)
+  
+  # Add annotations if available
+if (exists("annotations")) {
+  top50_per_cluster <- top50_per_cluster %>%
+    left_join(annotations, by = c("gene" = "gene_id")) %>%
+    select(gene, cluster, p_val, avg_log2FC, pct.1, pct.2, p_val_adj, 
+           uniprot_id, gene_symbol, description)
+  cat("Annotations added to marker genes\n")
+} else {
+  cat("Warning: 'annotations' object not found. Saving without annotations.\n")
+}
+  
+  # Step 6: Save results (if requested)
+  if (save_files) {
+    cat("Saving results...\n")
+    
+    # Create output directory if it doesn't exist
+    if (!dir.exists(output_dir)) {
+      dir.create(output_dir, recursive = TRUE)
+    }
+    
+    # Save plots
+    ggsave(paste0(output_dir, output_prefix, "_umap_plots.png"), 
+           umap_combined, width = 12, height = 16, dpi = 300)
+    
+    ggsave(paste0(output_dir, output_prefix, "_proportion_plots.png"), 
+           proportion_combined, width = 16, height = 12, dpi = 300)
+    
+    # Save marker genes to Excel
+    wb <- createWorkbook()
+    clusters <- unique(top50_per_cluster$cluster)
+    for(cluster in clusters) {
+      cluster_data <- top50_per_cluster %>% filter(cluster == !!cluster)
+      addWorksheet(wb, sheetName = paste0("Cluster_", cluster))
+      writeData(wb, sheet = paste0("Cluster_", cluster), x = cluster_data)
+    }
+    saveWorkbook(wb, paste0(output_dir, output_prefix, "_top50_genes_per_cluster.xlsx"), overwrite = TRUE)
+    
+    # Save composition data
+    write.csv(composition_counts, paste0(output_dir, output_prefix, "_composition_data.csv"), row.names = FALSE)
+    
+    cat("Files saved to:", output_dir, "\n")
+  }
+  
+  # Step 7: Print summary
+  cat("\n=== ANALYSIS SUMMARY ===\n")
+  cat("Original clusters analyzed:", paste(target_clusters, collapse = ", "), "\n")
+  cat("New clusters found:", length(unique(clusters_subset$seurat_clusters)), "\n")
+  cat("Total cells:", ncol(clusters_subset), "\n")
+  cat("Cells per new cluster:\n")
+  print(table(clusters_subset$seurat_clusters))
+  cat("\nCells per sample:\n")
+  print(table(clusters_subset$sample))
+  cat("\nCells per original cluster:\n")
+  print(table(clusters_subset$original_cluster))
+  
+  # Return results
+  return(list(
+    seurat_object = clusters_subset,
+    umap_plots = umap_combined,
+    proportion_plots = proportion_combined,
+    marker_genes = top50_per_cluster,
+    composition_data = composition_counts,
+    summary_stats = list(
+      original_clusters = target_clusters,
+      new_clusters = unique(clusters_subset$seurat_clusters),
+      total_cells = ncol(clusters_subset),
+      cells_per_new_cluster = table(clusters_subset$seurat_clusters),
+      cells_per_sample = table(clusters_subset$sample),
+      cells_per_original_cluster = table(clusters_subset$original_cluster)
+    )
+  ))
+}
+```
+
+
+```{r}
+# Analyze your nervous system clusters
+result <- analyze_cluster_subset(
+  seurat_obj = seurat.deconv,
+  source_resolution = 1.6,              # Which resolution to extract from
+  target_clusters = c("1","5","6","7","8","9","10","12","14","15","16","19","21","26"),  # Which clusters to analyze
+  new_resolution = 0.8,                # Resolution for re-clustering
+  output_prefix = "connectivetissue"      # Prefix for output files
+)
+
+# View the plots
+print(result$umap_plots)
+print(result$proportion_plots)
+
+# Access the re-clustered Seurat object
+new_seurat <- result$seurat_object
+
+# Get marker genes
+markers <- result$marker_genes
+```
+
+
