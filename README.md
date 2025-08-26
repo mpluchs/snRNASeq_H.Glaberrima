@@ -20,6 +20,7 @@ Contact: [jegarcia@hpcf.upr.edu](mailto:jegarcia@hpcf.upr.edu)
 2.2_scRNASeq_Complete_v1: First working iteration
 2.2_scRNASeq_250813: Complete version of annotation
 SupraclusterAnalysis: Analyze large groups within the UMAP, such as muscle, connective tissue, etc.
+1.0_TracjectoryAnalysis: First iteration of psuedotime and trajectory analysis of snRNA data
 
 
 ## Requirements
