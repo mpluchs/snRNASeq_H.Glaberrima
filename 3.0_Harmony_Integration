@@ -1,0 +1,584 @@
+```{r}
+# =============================================================================
+# INSTALL AND LOAD PACKAGES
+# =============================================================================
+
+# Set seed for reproducibility
+set.seed(42)
+
+# CRAN packages
+required_cran <- c("tidyverse", "Seurat", "Matrix", 
+                   "patchwork", "ggplot2", "dplyr", 
+                   "openxlsx", "readr", "stringr", "harmony")
+
+for (pkg in required_cran) {
+  if (!require(pkg, quietly = TRUE, character.only = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+# Install presto for fast differential expression
+if (!require("presto", quietly = TRUE)) {
+  if (!require("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+  }
+  remotes::install_github("immunogenomics/presto")
+}
+
+# Load all libraries
+library(Seurat)
+library(tidyverse)
+library(Matrix)
+library(patchwork)
+library(ggplot2)
+library(dplyr)
+library(openxlsx)
+library(readr)
+library(stringr)
+library(presto)
+library(harmony)
+
+message("All packages loaded successfully!")
+```
+
+
+```{r}
+# =============================================================================
+# LOAD DATA
+# =============================================================================
+
+# Define sample information
+sample_info <- data.frame(
+  sample_id = c("C1a", "C2a", "R1a", "R2a", "R2", "R5", "R7", 
+                "R10", "R2X", "R7X", "R10X", "N",
+                "nint1", "nint2", "nmes", "nmes30", 
+                "rm1", "rm1-30", "rm3", "rm3-30",
+                "M1-sc", "M2-sc", "R1-sc", "R2-sc"),
+  path = c(
+    # Original snRNA-seq samples (RNC)
+    "/data/pepino/Sn_FASTQ_240924/C1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/C2a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/R1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/R2a/outs/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R2/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R5/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R7/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R10/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R2X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R7X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R10X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/N/filtered_feature_bc_matrix/",
+    # New snRNA-seq samples (Intestine)
+    "/data/pepino/Single_nuclei_FASTQ/250909/nint1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/nint2a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/nmesa/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/nmes_30a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/rm1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/rm1_30a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/rm3a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Single_nuclei_FASTQ/250909/rm3_30a/outs/filtered_feature_bc_matrix/",
+    # scRNA-seq samples
+    "/data/pepino/00_Hglab-Reg-Intestine-scRNA-counts/M1/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/00_Hglab-Reg-Intestine-scRNA-counts/M2/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/00_Hglab-Reg-Intestine-scRNA-counts/R1/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/00_Hglab-Reg-Intestine-scRNA-counts/R2/outs/filtered_feature_bc_matrix/"
+  ),
+  data_type = c(rep("snRNA", 20), rep("scRNA", 4)),
+  tissue = c(rep("RNC", 12), rep("Intestine", 8), rep("Intestine", 4)),
+  stringsAsFactors = FALSE
+)
+
+# Load and create Seurat objects
+seurat_list <- list()
+for (i in 1:nrow(sample_info)) {
+  sample_id <- sample_info$sample_id[i]
+  path <- sample_info$path[i]
+  
+  message("Loading sample: ", sample_id)
+  counts <- Read10X(path)
+  seurat_list[[sample_id]] <- CreateSeuratObject(
+    counts = counts,
+    project = sample_id,
+    min.cells = 3,
+    min.features = 200
+  )
+}
+
+# Merge all samples
+simple_obj <- merge(
+  seurat_list[[1]],
+  y = seurat_list[2:length(seurat_list)],
+  add.cell.ids = names(seurat_list),
+  project = "integrated_analysis"
+)
+
+# Add sample metadata
+simple_obj$sample <- sapply(strsplit(colnames(simple_obj), "_"), `[`, 1)
+simple_obj$data_type <- sample_info$data_type[match(simple_obj$sample, sample_info$sample_id)]
+simple_obj$tissue <- sample_info$tissue[match(simple_obj$sample, sample_info$sample_id)]
+
+message("Total cells before QC: ", ncol(simple_obj))
+print(table(simple_obj$sample, simple_obj$data_type))
+
+# =============================================================================
+# QC FILTERING
+# =============================================================================
+
+# Calculate QC metrics
+simple_obj[["percent.mt"]] <- PercentageFeatureSet(simple_obj, pattern = "^MT-")
+simple_obj[["percent.ribo"]] <- PercentageFeatureSet(simple_obj, pattern = "^RP[SL]")
+simple_obj[["log10GenesPerUMI"]] <- log10(simple_obj$nFeature_RNA) / 
+                                     log10(simple_obj$nCount_RNA)
+
+# Apply QC filters
+simple_obj <- subset(
+  simple_obj,
+  subset = nFeature_RNA > 200 & 
+           nFeature_RNA < 7500 & 
+           nCount_RNA < 40000 &
+           percent.mt < 10 &
+           log10GenesPerUMI > 0.8
+)
+
+message("Total cells after QC: ", ncol(simple_obj))
+print(table(simple_obj$sample))
+
+# =============================================================================
+# DOWNSAMPLING (to balance samples)
+# =============================================================================
+
+message("\nDownsampling to maximum 50,000 cells per sample...")
+
+max_cells_per_sample <- 50000
+set.seed(42)
+
+cell_ids_to_keep <- c()
+for (samp in unique(simple_obj$sample)) {
+  cells <- WhichCells(simple_obj, expression = sample == samp)
+  n_cells <- length(cells)
+  
+  if (n_cells > max_cells_per_sample) {
+    cells <- sample(cells, max_cells_per_sample)
+    message(paste0("  ", samp, ": ", n_cells, " -> ", max_cells_per_sample, " (downsampled)"))
+  } else {
+    message(paste0("  ", samp, ": ", n_cells, " (kept all)"))
+  }
+  
+  cell_ids_to_keep <- c(cell_ids_to_keep, cells)
+}
+
+simple_obj <- subset(simple_obj, cells = cell_ids_to_keep)
+
+message("\nTotal cells after downsampling: ", ncol(simple_obj))
+print(table(simple_obj$sample))
+
+# =============================================================================
+# NORMALIZATION, VARIABLE FEATURES, AND SCALING
+# =============================================================================
+
+simple_obj <- NormalizeData(simple_obj, normalization.method = "LogNormalize", scale.factor = 10000)
+simple_obj <- FindVariableFeatures(simple_obj, selection.method = "vst", nfeatures = 3000)
+
+# ONLY scale variable features - NOT all genes!
+simple_obj <- ScaleData(simple_obj, features = VariableFeatures(simple_obj))
+```
+
+
+```{r}
+output_path <- "/data/matthew/Spring26/250120Test/250120_simple.rds"
+saveRDS(simple_obj, file = output_path, compress = TRUE)
+```
+
+
+```{r}
+simple_obj <- LoadSeuratRds("/data/matthew/Spring26/250120Test/250120_simple.rds")
+```
+
+
+```{r}
+# ============================================================================
+# PCA AND HARMONY INTEGRATION
+# =============================================================================
+
+message("Running PCA...")
+simple_obj <- RunPCA(simple_obj, features = VariableFeatures(simple_obj), npcs = 50, verbose = FALSE)
+
+message("Running Harmony integration...")
+# Integrate by sample AND data_type to correct for both batch and technical differences
+simple_obj <- RunHarmony(
+  simple_obj, 
+  group.by.vars = c("sample", "data_type"),
+  max.iter.harmony = 20,
+  verbose = TRUE
+)
+
+message("Harmony integration complete!")
+
+# =============================================================================
+# CLUSTERING ON HARMONY EMBEDDINGS
+# =============================================================================
+
+message("Clustering on Harmony embeddings...")
+simple_obj <- FindNeighbors(simple_obj, reduction = "harmony", dims = 1:30, k.param = 20)
+simple_obj <- FindClusters(simple_obj, resolution = 0.8, algorithm = 1)
+Idents(simple_obj) <- "seurat_clusters"
+
+# =============================================================================
+# UMAP ON HARMONY EMBEDDINGS
+# =============================================================================
+
+message("Running UMAP on Harmony embeddings...")
+simple_obj <- RunUMAP(simple_obj, reduction = "harmony", dims = 1:30, 
+                      n.neighbors = 30, min.dist = 0.3, seed.use = 42)
+
+# =============================================================================
+# FIND CLUSTER MARKERS
+# =============================================================================
+
+message("Finding cluster markers...")
+
+if (packageVersion("Seurat") >= "5.0.0") {
+  simple_obj <- JoinLayers(simple_obj)
+}
+
+cluster_markers <- FindAllMarkers(
+  object = simple_obj,
+  only.pos = TRUE,
+  min.pct = 0.25,
+  logfc.threshold = 0.5,
+  test.use = "wilcox"
+)
+
+top50_per_cluster <- cluster_markers %>%
+  group_by(cluster) %>%
+  slice_max(order_by = avg_log2FC, n = 50) %>%
+  ungroup()
+
+# =============================================================================
+# ANNOTATE MARKERS WITH BLAST RESULTS
+# =============================================================================
+
+message("Loading and processing BLAST annotations...")
+
+annot <- read.delim("/data/matthew/250911_new/filtered_mito_title_annotations.tsv", 
+                    header = FALSE, stringsAsFactors = FALSE)
+
+colnames(annot) <- c("qseqid", "sseqid", "pident", "length", "mismatch", 
+                     "gapopen", "qstart", "qend", "sstart", "send", 
+                     "evalue", "bitscore", "description")
+
+annot$gene_id <- str_extract(annot$qseqid, "g\\d+")
+annot$gene_symbol <- str_extract(annot$sseqid, "(?<=\\|)[A-Z0-9]+(?=_)")
+annot$protein_name <- str_remove(annot$description, "^sp\\|[^\\s]+\\s+")
+
+annot_sorted <- annot[order(annot$gene_id, -annot$bitscore), ]
+annot_best <- annot_sorted[!duplicated(annot_sorted$gene_id), ]
+
+annotated_markers <- merge(cluster_markers, annot_best, 
+                           by.x = "gene", by.y = "gene_id", 
+                           all.x = TRUE)
+
+annotated_markers <- annotated_markers[, c("cluster", "gene", "p_val", "avg_log2FC", 
+                                            "pct.1", "pct.2", "p_val_adj", 
+                                            "gene_symbol", "protein_name", 
+                                            "pident", "evalue", "bitscore")]
+
+annotated_markers <- annotated_markers[order(annotated_markers$cluster, 
+                                              -annotated_markers$avg_log2FC), ]
+```
+
+```{r}
+output_path <- "/data/matthew/Spring26/ALL_Harmony_260126.rds"
+saveRDS(simple_obj, file = output_path, compress = TRUE)
+simple_obj <- readRDS("/data/matthew/Spring26/ALL_Harmony_260126.rds")
+```
+
+
+```{r}
+# =============================================================================
+# GENERATE UMAPS
+# =============================================================================
+
+output_dir <- "/data/matthew/Spring26/results/harmony_integrated_analysis"
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Define colors
+sample_colors <- c(
+  # RNC samples
+  "N" = "#2E8B57", "C1a" = "#4169E1", "C2a" = "#20B2AA",
+  "R1a" = "#DC143C", "R2a" = "#FF6347", "R2" = "#FFD700",
+  "R5" = "#FFA500", "R7" = "#FF4500", "R10" = "#8B0000",
+  "R2X" = "#FF8C00", "R7X" = "#FF1493", "R10X" = "#8B008B",
+  # Intestine snRNA samples
+  "nint1" = "#00CED1", "nint2" = "#4682B4",
+  "nmes" = "#9370DB", "nmes30" = "#BA55D3",
+  "rm1" = "#CD5C5C", "rm1-30" = "#F08080",
+  "rm3" = "#FA8072", "rm3-30" = "#E9967A",
+  # Intestine scRNA samples
+  "M1_sc" = "#87CEEB", "M2_sc" = "#6495ED",
+  "R1_sc" = "#FFC0CB", "R2_sc" = "#FFB6C1"
+)
+
+# 1. UMAP colored by clusters
+p1 <- DimPlot(simple_obj, reduction = "umap", label = TRUE, label.size = 4) +
+  ggtitle("UMAP: Harmony-Integrated Clusters") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(file.path(output_dir, "umap_harmony_clusters.png"), p1, width = 10, height = 8, dpi = 300)
+
+# 2. UMAP colored by sample
+p2 <- DimPlot(simple_obj, reduction = "umap", group.by = "sample") +
+  scale_color_manual(values = sample_colors) +
+  ggtitle("UMAP: Harmony Integration - All Samples") +
+  theme(plot.title = element_text(hjust = 0.5), legend.text = element_text(size = 8))
+
+ggsave(file.path(output_dir, "umap_harmony_samples.png"), p2, width = 12, height = 8, dpi = 300)
+
+# 3. UMAP: snRNA vs scRNA
+p3 <- DimPlot(simple_obj, reduction = "umap", group.by = "data_type",
+              cols = c("snRNA" = "gray", "scRNA" = "red"),
+              order = "scRNA") +  # Explicitly plot scRNA on top
+  ggtitle("UMAP: Harmony Integration - snRNA-seq vs scRNA-seq") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+print(p3)
+ggsave(file.path(output_dir, "umap_harmony_data_type.png"), p3, width = 10, height = 8, dpi = 300)
+
+# 4. UMAP: RNC vs Intestine
+p4 <- DimPlot(simple_obj, reduction = "umap", group.by = "tissue",
+              cols = c("RNC" = "#4682B4", "Intestine" = "#FFD700")) +
+  ggtitle("UMAP: Harmony Integration - RNC vs Intestine") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(file.path(output_dir, "umap_harmony_tissue.png"), p4, width = 10, height = 8, dpi = 300)
+
+# 5. Create treatment/condition groups
+simple_obj$condition <- case_when(
+  simple_obj$sample %in% c("N", "C1a", "C2a") ~ "Normal RNC",
+  simple_obj$sample %in% c("nint1", "nint2") ~ "Normal Intestine (snRNA)",
+  simple_obj$sample %in% c("M1_sc", "M2_sc") ~ "Normal Intestine (scRNA)",
+  simple_obj$sample %in% c("nmes", "nmes30") ~ "Normal Mesentery",
+  simple_obj$sample %in% c("rm1", "rm1-30") ~ "Regen Mesentery Day 1",
+  simple_obj$sample %in% c("rm3", "rm3-30") ~ "Regen Mesentery Day 3",
+  simple_obj$sample %in% c("R1_sc", "R2_sc") ~ "Regen Intestine (scRNA)",
+  simple_obj$sample %in% c("R2", "R2X") ~ "Regen RNC Day 2",
+  simple_obj$sample %in% c("R1a", "R2a", "R5") ~ "Regen RNC Day 5",
+  simple_obj$sample %in% c("R7", "R7X") ~ "Regen RNC Day 7",
+  simple_obj$sample %in% c("R10", "R10X") ~ "Regen RNC Day 10",
+  TRUE ~ "Other"
+)
+
+condition_colors <- c(
+  "Normal RNC" = "#2E8B57",
+  "Normal Intestine (snRNA)" = "#4682B4",
+  "Normal Intestine (scRNA)" = "#87CEEB",
+  "Normal Mesentery" = "#20B2AA",
+  "Regen Mesentery Day 1" = "#DC143C",
+  "Regen Mesentery Day 3" = "#B22222",
+  "Regen Intestine (scRNA)" = "#FFC0CB",
+  "Regen RNC Day 2" = "#FF4500",
+  "Regen RNC Day 5" = "#FFD700",
+  "Regen RNC Day 7" = "#8B008B",
+  "Regen RNC Day 10" = "#1E90FF"
+)
+
+p5 <- DimPlot(simple_obj, reduction = "umap", group.by = "condition",
+              cols = condition_colors) +
+  ggtitle("UMAP: Harmony Integration - All Conditions") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.text = element_text(size = 7),
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(file.path(output_dir, "umap_harmony_conditions.png"), p5, width = 12, height = 8, dpi = 300)
+
+# 6. Split by tissue type
+p6 <- DimPlot(simple_obj, reduction = "umap", split.by = "tissue", ncol = 2) +
+  ggtitle("UMAP: Harmony Integration - Split by Tissue") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(file.path(output_dir, "umap_harmony_split_tissue.png"), p6, width = 16, height = 8, dpi = 300)
+
+# 7. Split by data type
+p7 <- DimPlot(simple_obj, reduction = "umap", split.by = "data_type", ncol = 2) +
+  ggtitle("UMAP: Harmony Integration - Split by Data Type") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(file.path(output_dir, "umap_harmony_split_datatype.png"), p7, width = 16, height = 8, dpi = 300)
+
+# Print all plots
+print(p1); print(p2); print(p3); print(p4); print(p5); print(p6); print(p7)
+
+# =============================================================================
+# CLUSTER COMPOSITION ANALYSIS
+# =============================================================================
+
+# Cluster composition by sample
+table_data <- table(simple_obj$seurat_clusters, simple_obj$sample)
+prop_by_cluster <- prop.table(table_data, margin = 1) * 100
+df_stacked <- as.data.frame(as.table(prop_by_cluster))
+colnames(df_stacked) <- c("Cluster", "Sample", "Percentage")
+
+p8 <- ggplot(df_stacked, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 10) +
+  labs(title = "Sample Composition by Cluster (Harmony Integrated)", 
+       x = "Cluster", y = "% of Cells in Cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.text = element_text(size = 7),
+        legend.key.size = unit(0.3, "cm"))
+
+ggsave(file.path(output_dir, "cluster_composition_samples.png"), 
+       p8, width = 14, height = 8, dpi = 300)
+
+# Cluster composition by tissue
+table_tissue <- table(simple_obj$seurat_clusters, simple_obj$tissue)
+prop_tissue <- prop.table(table_tissue, margin = 1) * 100
+df_tissue <- as.data.frame(as.table(prop_tissue))
+colnames(df_tissue) <- c("Cluster", "Tissue", "Percentage")
+
+p9 <- ggplot(df_tissue, aes(x = Cluster, y = Percentage, fill = Tissue)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = c("RNC" = "#4682B4", "Intestine" = "#FFD700")) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Tissue Composition by Cluster (Harmony Integrated)", 
+       x = "Cluster", y = "% of Cells in Cluster") +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggsave(file.path(output_dir, "cluster_composition_tissue.png"), 
+       p9, width = 12, height = 8, dpi = 300)
+
+print(p8); print(p9)
+
+# =============================================================================
+# SAVE RESULTS
+# =============================================================================
+
+message("Saving results...")
+
+# Save all markers to Excel
+wb_all <- createWorkbook()
+for(clust in sort(unique(cluster_markers$cluster))) {
+  data_subset <- cluster_markers[cluster_markers$cluster == clust, ]
+  addWorksheet(wb_all, sheetName = paste0("Cluster_", clust))
+  writeData(wb_all, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_all, file.path(output_dir, "cluster_markers_all.xlsx"), overwrite = TRUE)
+
+# Save top 50 markers to Excel
+wb_50 <- createWorkbook()
+for(clust in sort(unique(top50_per_cluster$cluster))) {
+  data_subset <- top50_per_cluster[top50_per_cluster$cluster == clust, ]
+  addWorksheet(wb_50, sheetName = paste0("Cluster_", clust))
+  writeData(wb_50, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_50, file.path(output_dir, "cluster_markers_top50.xlsx"), overwrite = TRUE)
+
+# Save annotated markers to Excel
+wb_annotated <- createWorkbook()
+for(clust in sort(unique(annotated_markers$cluster))) {
+  data_subset <- annotated_markers[annotated_markers$cluster == clust, ]
+  addWorksheet(wb_annotated, sheetName = paste0("Cluster_", clust))
+  writeData(wb_annotated, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_annotated, file.path(output_dir, "cluster_markers_annotated.xlsx"), 
+             overwrite = TRUE)
+
+# Save CSV files
+write.csv(cluster_markers, file.path(output_dir, "cluster_markers_all.csv"), row.names = FALSE)
+write.csv(top50_per_cluster, file.path(output_dir, "cluster_markers_top50.csv"), row.names = FALSE)
+write.csv(annotated_markers, file.path(output_dir, "cluster_markers_annotated.csv"), row.names = FALSE)
+
+
+# Save Seurat object
+saveRDS(simple_obj, file.path(output_dir, "seurat_harmony_integrated.rds"), compress = TRUE)
+
+# =============================================================================
+# SUMMARY STATISTICS
+# =============================================================================
+
+message("\n", paste(rep("=", 70), collapse = ""))
+message("HARMONY INTEGRATION ANALYSIS COMPLETE!")
+message(paste(rep("=", 70), collapse = ""))
+message("Total cells analyzed: ", ncol(simple_obj))
+message("Number of clusters: ", length(unique(simple_obj$seurat_clusters)))
+message("Total marker genes found: ", nrow(cluster_markers))
+message("Markers with annotations: ", sum(!is.na(annotated_markers$gene_symbol)))
+message("\nSample breakdown:")
+message("  snRNA-seq samples: ", sum(simple_obj$data_type == "snRNA"))
+message("  scRNA-seq samples: ", sum(simple_obj$data_type == "scRNA"))
+message("  RNC tissue: ", sum(simple_obj$tissue == "RNC"))
+message("  Intestine tissue: ", sum(simple_obj$tissue == "Intestine"))
+message("\nResults saved to: ", output_dir)
+message("  - 9 UMAP plots (Harmony-integrated)")
+message("  - 2 cluster composition plots")
+message("  - Cluster markers (all, top 50, and annotated)")
+message("  - Excel files with one sheet per cluster")
+message("  - CSV files for easy access")
+message("  - Seurat object with Harmony embeddings (RDS file)")
+message(paste(rep("=", 70), collapse = ""))
+```
+
+```{r}
+# =============================================================================
+# CREATE TISSUE + REGENERATION STATUS GROUPS
+# =============================================================================
+
+# Create a new metadata column combining tissue and regeneration status
+simple_obj$tissue_regen <- case_when(
+  # Normal RNC (nerve cord)
+  simple_obj$sample %in% c("N", "C1a", "C2a") ~ "RNC_Normal",
+  
+  # Regenerating RNC
+  simple_obj$sample %in% c("R1a", "R2a", "R2", "R5", "R7", "R10", 
+                           "R2X", "R7X", "R10X") ~ "RNC_Regenerating",
+  
+  # Normal Intestine
+  simple_obj$sample %in% c("nint1", "nint2", "nmes", "nmes30",
+                           "M1_sc", "M2_sc") ~ "Intestine_Normal",
+  
+  # Regenerating Intestine
+  simple_obj$sample %in% c("rm1", "rm1-30", "rm3", "rm3-30",
+                           "R1_sc", "R2_sc") ~ "Intestine_Regenerating",
+  
+  TRUE ~ "Other"
+)
+
+# Define colors: darker = normal, lighter = regenerating (same hue family)
+tissue_regen_colors <- c(
+  "RNC_Normal" = "lightgray",           # Dark blue
+  "RNC_Regenerating" = "dodgerblue3",     # Light blue
+  "Intestine_Normal" = "darkgray",     # Dark orange/gold
+  "Intestine_Regenerating" = "#FCD34D" # Light yellow/gold
+)
+
+# Create the UMAP plot
+p10 <- DimPlot(simple_obj, reduction = "umap", group.by = "tissue_regen",
+               cols = tissue_regen_colors) +
+  ggtitle("UMAP: Tissue Type and Regeneration Status") +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.title = element_blank())
+
+ggsave(file.path(output_dir, "umap_harmony_tissue_regeneration.png"), 
+       p10, width = 12, height = 8, dpi = 300)
+
+print(p10)
+
+# Optional: Also create a split version showing all 4 groups side by side
+p11 <- DimPlot(simple_obj, reduction = "umap", split.by = "tissue_regen", 
+               ncol = 2, cols = tissue_regen_colors) +
+  ggtitle("UMAP: Split by Tissue and Regeneration Status") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave(file.path(output_dir, "umap_harmony_tissue_regen_split.png"), 
+       p11, width = 16, height = 12, dpi = 300)
+
+print(p11)
+
+# Check the distribution
+message("Tissue + Regeneration Status Distribution:")
+print(table(simple_obj$tissue_regen))
+```
