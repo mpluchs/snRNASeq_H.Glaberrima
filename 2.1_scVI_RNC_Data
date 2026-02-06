@@ -1,0 +1,1034 @@
+
+# Single Nuclei RNA-Seq Analysis Pipeline
+# Using scVI for integration and proper normalization practices
+# Following Townes et al. 2019 recommendations
+
+# =============================================================================
+# PART 1: SETUP AND DATA LOADING
+# =============================================================================
+
+## Step 1: Install Required Packages
+```{r setup, message=FALSE, warning=FALSE}
+# Set seed for reproducibility
+set.seed(42)
+
+# CRAN packages
+required_cran <- c("tidyverse", "Seurat", "reticulate", "Matrix", 
+                   "patchwork", "ggplot2", "dplyr")
+
+for (pkg in required_cran) {
+  if (!require(pkg, quietly = TRUE, character.only = TRUE)) {
+    install.packages(pkg)
+  }
+}
+
+# Bioconductor packages
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+required_bioc <- c("SingleCellExperiment", "scater", "scran", 
+                   "biomaRt", "org.Hs.eg.db", "DropletUtils")
+
+for (pkg in required_bioc) {
+  if (!require(pkg, quietly = TRUE, character.only = TRUE)) {
+    BiocManager::install(pkg, update = FALSE)
+  }
+}
+
+# Install presto for fast DE
+if (!require("presto", quietly = TRUE)) {
+  remotes::install_github("immunogenomics/presto")
+}
+
+message("R version: ", R.version.string)
+message("BiocManager version: ", BiocManager::version())
+```
+
+
+
+```{r python_setup}
+library(reticulate)
+
+# IMPORTANT: Set up conda environment BEFORE any Python imports
+# This ensures all Python packages are loaded from the correct environment
+
+# Option 1: Create environment (run once, then comment out)
+ #Uncomment these lines if you need to create the environment:
+ #conda_create("scvi-env", python_version = "3.10")
+ #conda_install("scvi-env", c("scvi-tools", "scanpy", "numpy", "pandas"), 
+               #pip = TRUE)
+
+# Option 2: Use existing environment (THIS IS THE KEY LINE)
+use_condaenv("scvi-env", required = TRUE)
+
+# Verify configuration
+message("\n=== Python Configuration ===")
+py_config()
+message("============================\n")
+
+# Verify scvi-tools is available
+tryCatch({
+  scvi_test <- import("scvi")
+  message("SUCCESS: scvi-tools version ", scvi_test$`__version__`)
+}, error = function(e) {
+  stop("ERROR: Cannot import scvi-tools. Make sure it's installed in scvi-env. Error: ", e$message)
+})
+```
+
+## Step 3: Load Libraries and Import Python Modules
+```{r load_libraries, message=FALSE, warning=FALSE}
+library(Seurat)
+library(tidyverse)
+library(SingleCellExperiment)
+library(scater)
+library(scran)
+library(Matrix)
+library(patchwork)
+library(presto)
+library(reticulate)
+
+# Import Python libraries (after conda environment is configured)
+message("Importing Python libraries...")
+scvi <- import("scvi")
+scanpy <- import("scanpy")
+np <- import("numpy")
+pd <- import("pandas")
+
+# Confirm versions
+message("Python packages loaded successfully:")
+message("  - scvi-tools: ", scvi$`__version__`)
+message("  - scanpy: ", scanpy$`__version__`)
+message("  - numpy: ", np$`__version__`)
+message("  - pandas: ", pd$`__version__`)
+```
+
+
+# =============================================================================
+# PART 2: DATA LOADING AND QC
+# =============================================================================
+
+## Step 4: Load 10X Data
+```{r load_data}
+
+sample_info <- data.frame(
+  sample_id = c("C1a", "C2a", "R1a", "R2a", "R2", "R5", "R7", 
+                "R10", "R2X", "R7X", "R10X", "N"),
+  path = c(
+    "/data/pepino/Sn_FASTQ_240924/C1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/C2a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/R1a/outs/filtered_feature_bc_matrix/",
+    "/data/pepino/Sn_FASTQ_240924/R2a/outs/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R2/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R5/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R7/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R10/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R2X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R7X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/R10X/filtered_feature_bc_matrix/",
+    "/data/matthew/250911_new/N/filtered_feature_bc_matrix/"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Load and create Seurat objects
+seurat_list <- list()
+for (i in 1:nrow(sample_info)) {
+  sample_id <- sample_info$sample_id[i]
+  path <- sample_info$path[i]
+  
+  message("Loading sample: ", sample_id)
+  counts <- Read10X(path)
+  seurat_list[[sample_id]] <- CreateSeuratObject(
+    counts = counts,
+    project = sample_id,
+    min.cells = 3,
+    min.features = 200
+  )
+}
+
+# Merge all samples
+seurat_obj <- merge(
+  seurat_list[[1]],
+  y = seurat_list[2:length(seurat_list)],
+  add.cell.ids = names(seurat_list),
+  project = "snRNA_all"
+)
+
+# Add sample metadata by extracting from cell IDs (first part before underscore)
+seurat_obj$sample <- sapply(strsplit(colnames(seurat_obj), "_"), `[`, 1)
+
+message("Total cells before QC: ", ncol(seurat_obj))
+message("Total features: ", nrow(seurat_obj))
+message("Sample distribution:")
+print(table(seurat_obj$sample))
+```
+
+## Step 5: Calculate QC Metrics
+```{r qc_metrics}
+# Calculate mitochondrial percentage
+seurat_obj[["percent.mt"]] <- PercentageFeatureSet(seurat_obj, pattern = "^MT-")
+
+# Calculate ribosomal percentage
+seurat_obj[["percent.ribo"]] <- PercentageFeatureSet(seurat_obj, pattern = "^RP[SL]")
+
+# Calculate complexity (log10 genes per UMI)
+seurat_obj[["log10GenesPerUMI"]] <- log10(seurat_obj$nFeature_RNA) / 
+                                     log10(seurat_obj$nCount_RNA)
+
+# Visualize QC metrics
+p1 <- VlnPlot(seurat_obj, features = "nFeature_RNA", group.by = "sample", pt.size = 0)
+p2 <- VlnPlot(seurat_obj, features = "nCount_RNA", group.by = "sample", pt.size = 0)
+p3 <- VlnPlot(seurat_obj, features = "percent.mt", group.by = "sample", pt.size = 0)
+p4 <- VlnPlot(seurat_obj, features = "log10GenesPerUMI", group.by = "sample", pt.size = 0)
+
+print(p1)
+print(p2)
+print(p3)
+print(p4)
+```
+
+## Step 6: Apply QC Filters
+```{r qc_filter}
+# Define QC thresholds (adjust based on your data)
+seurat_obj <- subset(
+  seurat_obj,
+  subset = nFeature_RNA > 200 & 
+           nFeature_RNA < 7500 & 
+           nCount_RNA < 40000 &
+           percent.mt < 10 &
+           log10GenesPerUMI > 0.8
+)
+
+message("Total cells after QC: ", ncol(seurat_obj))
+
+# Sample distribution after filtering
+table(seurat_obj$sample)
+```
+
+## Step 7: Optional Downsampling 
+***SKIP FOR NOW***
+```{r downsample, eval=FALSE}
+# Downsample to balance samples (if needed)
+#target_cells <- 10000
+#set.seed(42)
+
+#cell_ids <- c()
+#for (samp in unique(seurat_obj$sample)) {
+#  cells <- WhichCells(seurat_obj, expression = sample == samp)
+#  if (length(cells) > target_cells) {
+#    cells <- sample(cells, target_cells)
+#  }
+#  cell_ids <- c(cell_ids, cells)
+#}
+
+#seurat_obj <- subset(seurat_obj, cells = cell_ids)
+#message("Total cells after downsampling: ", ncol(seurat_obj))
+```
+
+# =============================================================================
+# PART 3: NORMALIZATION (for DE analysis later)
+# =============================================================================
+
+## Step 8: Depth + Log Normalization
+```{r normalize}
+# Standard log-normalization (keep for DE analysis)
+# This will be stored in the "RNA" assay
+seurat_obj <- NormalizeData(
+  seurat_obj,
+  normalization.method = "LogNormalize",
+  scale.factor = 10000
+)
+
+message("Log-normalized counts stored in RNA assay")
+```
+
+# =============================================================================
+# PART 4: scVI INTEGRATION
+# =============================================================================
+
+## Step 9: Convert to AnnData for scVI
+```{r seurat_to_anndata}
+## Step 9: Convert to AnnData for scVI
+# Save Seurat object before conversion
+#saveRDS(seurat_obj, "/data/matthew/250911_new/seurat/seurat_qc_filtered2.rds")
+seurat_obj <- readRDS("/data/matthew/250911_new/seurat/seurat_qc_filtered2.rds")
+
+# Handle Seurat v5 layers
+if (packageVersion("Seurat") >= "5.0.0") {
+  seurat_obj <- JoinLayers(seurat_obj)
+}
+
+# Extract raw counts
+counts <- LayerData(seurat_obj, layer = "counts", assay = "RNA")
+metadata <- seurat_obj@meta.data
+
+# Create AnnData object in Python
+adata <- scanpy$AnnData(
+  X = t(as.matrix(counts)),
+  obs = metadata
+)
+
+# Store in anndata format
+adata$write_h5ad("/data/matthew/250911_new/seurat/adata_raw2.h5ad")
+message("AnnData object saved")
+```
+
+## Step 10: Run scVI Model
+```{python scvi_setup}
+
+import scvi
+import scanpy as sc
+import numpy as np
+
+# Load data
+adata = sc.read_h5ad("/data/matthew/250911_new/seurat/adata_raw2.h5ad")
+
+# Basic filtering
+sc.pp.filter_genes(adata, min_cells=10)
+
+# Setup scVI
+scvi.model.SCVI.setup_anndata(
+    adata,
+    layer=None,  # Use .X (raw counts)
+    batch_key="sample",
+    categorical_covariate_keys=None,
+    continuous_covariate_keys=None
+)
+
+# Train scVI model
+model = scvi.model.SCVI(
+    adata,
+    n_layers=2,
+    n_latent=30,
+    gene_likelihood="nb"  # negative binomial for count data
+)
+
+# Train
+model.train(
+    max_epochs=400,
+    early_stopping=True,
+    early_stopping_patience=15,
+    plan_kwargs={'lr': 1e-3}
+)
+
+# Save model
+model.save("/data/matthew/250911_new/seurat/scvi_model2", overwrite=True)
+
+# Get latent representation
+adata.obsm["X_scvi"] = model.get_latent_representation()
+
+# Save with latent space
+adata.write_h5ad("/data/matthew/250911_new/seurat/adata_scvi2.h5ad")
+```
+
+## Step 11: Transfer scVI Embeddings Back to Seurat
+```{r import_scvi}
+# Read AnnData with scVI embeddings
+adata_scvi <- scanpy$read_h5ad("/data/matthew/250911_new/seurat/adata_scvi2.h5ad")
+
+# Extract scVI latent representation
+scvi_embeddings <- py_to_r(adata_scvi$obsm["X_scvi"])
+rownames(scvi_embeddings) <- colnames(seurat_obj)
+colnames(scvi_embeddings) <- paste0("scVI_", 1:ncol(scvi_embeddings))
+
+# Add to Seurat as dimensional reduction
+seurat_obj[["scvi"]] <- CreateDimReducObject(
+  embeddings = scvi_embeddings,
+  key = "scVI_",
+  assay = "RNA"
+)
+
+message("scVI embeddings added to Seurat object")
+```
+
+# =============================================================================
+# PART 5: CLUSTERING AND VISUALIZATION
+# =============================================================================
+
+## Step 12: Clustering on scVI Latent Space
+```{r clustering}
+# Find neighbors using scVI embeddings
+seurat_obj <- FindNeighbors(
+  seurat_obj,
+  reduction = "scvi",
+  dims = 1:30,
+  k.param = 20
+)
+
+# Find clusters at multiple resolutions
+for (res in c(0.8)) {
+  seurat_obj <- FindClusters(
+    seurat_obj,
+    resolution = res,
+    algorithm = 1  # Louvain
+  )
+}
+
+# Set default resolution
+Idents(seurat_obj) <- "RNA_snn_res.0.8"
+```
+
+## Step 13: UMAP 
+```{r umap}
+# Run UMAP on scVI embeddings
+seurat_obj <- RunUMAP(
+  seurat_obj,
+  reduction = "scvi",
+  dims = 1:30,
+  n.neighbors = 30,
+  min.dist = 0.3,
+  metric = "cosine",
+  seed.use = 42
+)
+```
+```{r}
+#SAVE FINAL SEURAT OBJECT 
+
+saveRDS(seurat_obj, "/data/matthew/250911_new/seurat/seurat_scvi_processed_251124.rds")
+```
+
+***CLUSTER VALIDATION***
+```{r}
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(cluster)
+library(dplyr)
+
+# Set resolution to validate
+resolution_to_test <- 0.8
+
+# Extract clusters and data
+current_clusters <- seurat_obj[[paste0("RNA_snn_res.", resolution_to_test)]][,1]
+n_clusters <- length(unique(current_clusters))
+message(paste("Evaluating", n_clusters, "clusters at resolution", resolution_to_test))
+
+# ==============================================================================
+# METHOD 1: SILHOUETTE ANALYSIS (with downsampling)
+# ==============================================================================
+message("1. Running Silhouette Analysis...")
+
+# Downsample for silhouette calculation (too memory intensive otherwise)
+set.seed(42)
+max_cells_for_silhouette <- 10000
+if(length(current_clusters) > max_cells_for_silhouette) {
+  message(paste("Downsampling to", max_cells_for_silhouette, "cells for silhouette calculation"))
+  sampled_cells <- sample(1:length(current_clusters), max_cells_for_silhouette)
+} else {
+  sampled_cells <- 1:length(current_clusters)
+}
+
+# Use scVI embeddings for distance calculation
+scvi_coords <- Embeddings(seurat_obj, "scvi")
+scvi_coords_sample <- scvi_coords[sampled_cells, ]
+current_clusters_sample <- current_clusters[sampled_cells]
+
+dist_matrix <- dist(scvi_coords_sample)
+
+# Calculate silhouette scores
+sil_scores <- silhouette(as.numeric(as.factor(current_clusters_sample)), dist_matrix)
+avg_sil_width <- mean(sil_scores[, "sil_width"])
+
+message(paste("Average Silhouette Width:", round(avg_sil_width, 3)))
+
+# Interpretation
+if(avg_sil_width > 0.5) {
+  message("Interpretation: Strong structure")
+} else if(avg_sil_width > 0.25) {
+  message("Interpretation: Reasonable structure")
+} else {
+  message("Interpretation: Weak structure")
+}
+
+# Add silhouette scores to metadata (only for sampled cells)
+seurat_obj$silhouette_score <- NA
+seurat_obj$silhouette_score[sampled_cells] <- sil_scores[, "sil_width"]
+
+# ==============================================================================
+# METHOD 2: CLUSTER SEPARATION METRICS
+# ==============================================================================
+message("2. Calculating Cluster Separation Metrics...")
+
+# Calculate cluster centroids in scVI space (use all cells)
+cluster_centroids <- aggregate(scvi_coords, 
+                              by = list(cluster = current_clusters), 
+                              FUN = mean)
+rownames(cluster_centroids) <- cluster_centroids$cluster
+cluster_centroids$cluster <- NULL
+
+# Within-cluster sum of squares (WCSS)
+wcss_by_cluster <- sapply(unique(current_clusters), function(cl) {
+    cluster_cells <- which(current_clusters == cl)
+    cluster_data <- scvi_coords[cluster_cells, ]
+    centroid <- cluster_centroids[as.character(cl), ]
+    sum(apply(cluster_data, 1, function(x) sum((x - centroid)^2)))
+})
+
+# Between-cluster sum of squares (BCSS)
+overall_centroid <- colMeans(scvi_coords)
+bcss <- sum(apply(cluster_centroids, 1, function(x) {
+    cluster_name <- rownames(cluster_centroids)[which(apply(cluster_centroids, 1, function(y) all(y == x)))[1]]
+    n_cells_in_cluster <- sum(current_clusters == cluster_name)
+    n_cells_in_cluster * sum((x - overall_centroid)^2)
+}))
+
+total_ss <- sum(apply(scvi_coords, 1, function(x) sum((x - overall_centroid)^2)))
+wcss_total <- sum(wcss_by_cluster)
+
+# Calinski-Harabasz Index (higher is better)
+ch_index <- (bcss / (n_clusters - 1)) / (wcss_total / (nrow(scvi_coords) - n_clusters))
+
+message(paste("Calinski-Harabasz Index:", round(ch_index, 2)))
+message(paste("Within-cluster SS:", round(wcss_total, 2)))
+message(paste("Between-cluster SS:", round(bcss, 2)))
+message(paste("Proportion of variance explained:", round(bcss/total_ss, 3)))
+
+# ==============================================================================
+# METHOD 3: MARKER GENE QUALITY ASSESSMENT
+# ==============================================================================
+message("3. Assessing Marker Gene Quality...")
+
+# Set identity to the resolution being tested
+Idents(seurat_obj) <- paste0("RNA_snn_res.", resolution_to_test)
+DefaultAssay(seurat_obj) <- "RNA"
+
+# JOIN LAYERS (required for Seurat v5)
+message("Joining data layers...")
+seurat_obj <- JoinLayers(seurat_obj, assay = "RNA")
+
+# Find markers for each cluster
+message("Finding markers (this may take a while)...")
+cluster_markers <- FindAllMarkers(seurat_obj, 
+                                  only.pos = TRUE,
+                                  min.pct = 0.25,
+                                  logfc.threshold = 0.25,
+                                  test.use = "wilcox",
+                                  verbose = TRUE)
+
+# Check if markers were found
+if(nrow(cluster_markers) > 0) {
+  message(paste("Found", nrow(cluster_markers), "markers"))
+  
+  # Calculate marker quality metrics
+  marker_quality <- cluster_markers %>%
+      dplyr::group_by(cluster) %>%
+      dplyr::summarise(
+          n_markers = n(),
+          avg_logFC = mean(avg_log2FC),
+          avg_pct_diff = mean(pct.1 - pct.2),
+          strong_markers = sum(avg_log2FC > 1 & p_val_adj < 0.01),
+          .groups = "drop"
+      )
+  
+  print("Marker Quality by Cluster:")
+  print(marker_quality)
+  
+  n_total_markers <- nrow(cluster_markers)
+  avg_markers_per_cluster <- round(nrow(cluster_markers)/n_clusters, 1)
+} else {
+  message("WARNING: No markers found. Skipping marker quality assessment.")
+  marker_quality <- NULL
+  n_total_markers <- 0
+  avg_markers_per_cluster <- 0
+}
+
+# ==============================================================================
+# VISUALIZATION
+# ==============================================================================
+
+# Plot 1: Silhouette scores by cluster (only sampled cells)
+silhouette_df <- data.frame(
+  cluster = current_clusters_sample, 
+  silhouette = sil_scores[, "sil_width"]
+)
+
+p1 <- ggplot(silhouette_df, aes(x = factor(cluster), y = silhouette, fill = factor(cluster))) +
+    geom_boxplot() +
+    geom_hline(yintercept = 0, linetype = "dashed") +
+    labs(title = paste("Silhouette Scores by Cluster (res =", resolution_to_test, ")"),
+         subtitle = paste("Based on", length(sampled_cells), "sampled cells"),
+         x = "Cluster", y = "Silhouette Score") +
+    theme_minimal() +
+    theme(legend.position = "none",
+          axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Plot 2: UMAP with silhouette scores (only shows sampled cells)
+p2 <- FeaturePlot(seurat_obj, features = "silhouette_score") +
+    scale_color_gradient2(low = "red", mid = "white", high = "blue", midpoint = 0) +
+    labs(title = "Silhouette Scores on UMAP",
+         subtitle = paste("Based on", length(sampled_cells), "sampled cells"))
+
+# Plot 3: UMAP with clusters
+p3 <- DimPlot(seurat_obj, reduction = "umap", group.by = paste0("RNA_snn_res.", resolution_to_test), 
+              label = TRUE, label.size = 4) +
+    labs(title = paste("Clusters at Resolution", resolution_to_test))
+
+# Combine plots
+combined_validation <- (p1 | p2) / p3
+print(combined_validation)
+
+# ==============================================================================
+# SUMMARY
+# ==============================================================================
+message("\n", paste(rep("=", 60), collapse = ""))
+message("CLUSTER VALIDATION SUMMARY:")
+message(paste("Resolution:", resolution_to_test))
+message(paste("Number of clusters:", n_clusters))
+message(paste("Total cells:", length(current_clusters)))
+message(paste("Average silhouette score:", round(avg_sil_width, 3), 
+              "(based on", length(sampled_cells), "sampled cells)"))
+message(paste("Calinski-Harabasz index:", round(ch_index, 2)))
+message(paste("Variance explained:", round(bcss/total_ss, 3)))
+message(paste("Total markers found:", n_total_markers))
+message(paste("Average markers per cluster:", avg_markers_per_cluster))
+message(paste(rep("=", 60), collapse = ""))
+```
+
+
+# UMAP Visualization
+```{r umap}
+# Print all plots
+plots <- list()
+
+# 1. All clusters
+plots[[1]] <- DimPlot(seurat_obj, reduction = "umap", group.by = "RNA_snn_res.0.8", label = TRUE, label.size = 4) +
+  ggtitle("UMAP: All Clusters from All Samples") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Create subsets
+normal_subset <- subset(seurat_obj, subset = sample %in% c("N", "C1a", "C2a"))
+regen_subset <- subset(seurat_obj, subset = sample %in% c("R1a", "R2a", "R2", "R5", "R7", "R10", "R2X", "R7X", "R10X"))
+
+# Find smallest samples
+sample_counts <- table(seurat_obj$sample)
+normal_smallest <- names(which.min(sample_counts[c("N", "C1a", "C2a")]))
+regen_smallest <- names(which.min(sample_counts[c("R1a", "R2a", "R2", "R5", "R7", "R10", "R2X", "R7X", "R10X")]))
+
+# 2. Normal samples with cluster labels
+embeddings_normal <- Embeddings(normal_subset, reduction = "umap")
+clusters_normal <- normal_subset$RNA_snn_res.0.8
+centroids_normal <- do.call(rbind, lapply(split(as.data.frame(embeddings_normal), clusters_normal), function(x) apply(x, 2, mean)))
+
+plots[[2]] <- DimPlot(normal_subset, reduction = "umap", group.by = "sample", order = normal_smallest) +
+  ggtitle("UMAP: Normal Samples (N, C1a, C2a)") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  annotate("text", x = centroids_normal[,1], y = centroids_normal[,2], 
+           label = rownames(centroids_normal), size = 4, color = "black")
+
+# 3. Regenerating samples with cluster labels
+embeddings_regen <- Embeddings(regen_subset, reduction = "umap")
+clusters_regen <- regen_subset$RNA_snn_res.0.8
+centroids_regen <- do.call(rbind, lapply(split(as.data.frame(embeddings_regen), clusters_regen), function(x) apply(x, 2, mean)))
+
+plots[[3]] <- DimPlot(regen_subset, reduction = "umap", group.by = "sample", order = regen_smallest) +
+  ggtitle("UMAP: Regenerating Samples (All R samples)") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  annotate("text", x = centroids_regen[,1], y = centroids_regen[,2], 
+           label = rownames(centroids_regen), size = 4, color = "black")
+
+# 4. Normal vs Regenerating with cluster labels
+seurat_obj$treatment_group <- ifelse(seurat_obj$sample %in% c("N", "C1a", "C2a"), "Normal", "Regenerating")
+embeddings_all <- Embeddings(seurat_obj, reduction = "umap")
+clusters_all <- seurat_obj$RNA_snn_res.0.8
+centroids_all <- do.call(rbind, lapply(split(as.data.frame(embeddings_all), clusters_all), function(x) apply(x, 2, mean)))
+
+plots[[4]] <- DimPlot(seurat_obj, reduction = "umap", group.by = "treatment_group", 
+                      cols = c("Normal" = "#0173B2", "Regenerating" = "#DE8F05"), order = "Normal") +
+  ggtitle("UMAP: Normal vs Regenerating Groups") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(color = "Group") +
+  annotate("text", x = centroids_all[,1], y = centroids_all[,2], 
+           label = rownames(centroids_all), size = 4, color = "black")
+
+# 5 & 6. Cluster distribution plots
+table_data <- table(seurat_obj@meta.data$RNA_snn_res.0.8, seurat_obj@meta.data$sample)
+sample_colors <- c("N" = "#2E8B57", "C1a" = "#4169E1", "C2a" = "#20B2AA",
+                   "R1a" = "#DC143C", "R2a" = "#FF6347", "R2" = "#FFD700",
+                   "R5" = "#FFA500", "R7" = "#FF4500", "R10" = "#8B0000",
+                   "R2X" = "#FF8C00", "R7X" = "#FF1493", "R10X" = "#8B008B")
+
+prop_by_sample <- prop.table(table_data, margin = 2) * 100
+df_by_sample <- as.data.frame(as.table(prop_by_sample))
+colnames(df_by_sample) <- c("Cluster", "Sample", "Percentage")
+
+plots[[5]] <- ggplot(df_by_sample, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Percent of Each Sample in Each Cluster", x = "Cluster", y = "% of Sample's Total Cells", fill = "Sample",
+       subtitle = "Shows what proportion of each sample's cells are found in each cluster") +
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1), panel.grid.major.x = element_line(color = "gray90", size = 0.5),
+        panel.grid.minor = element_blank(), legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, max(df_by_sample$Percentage) * 1.1))
+
+prop_by_cluster <- prop.table(table_data, margin = 1) * 100
+df_stacked <- as.data.frame(as.table(prop_by_cluster))
+colnames(df_stacked) <- c("Cluster", "Sample", "Percentage")
+
+# Convert Cluster to numeric for proper ordering
+df_stacked$Cluster <- factor(df_stacked$Cluster, levels = sort(as.numeric(levels(df_stacked$Cluster))))
+
+plots[[6]] <- ggplot(df_stacked, aes(x = Cluster, y = Percentage, fill = Sample)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = sample_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition by Cluster", x = "Cluster", y = "Percentage of Cells in Cluster", fill = "Sample",
+       subtitle = "Shows what % of each cluster is made up of each sample") +
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+
+# Create time point groups
+seurat_obj$timepoint_group <- case_when(
+  seurat_obj$sample %in% c("C1a", "C2a", "N") ~ "C1a, C2a, N",
+  seurat_obj$sample %in% c("R1a", "R2", "R2X") ~ "R1a, R2, R2X",
+  seurat_obj$sample %in% c("R2a", "R5") ~ "R2a, R5",
+  seurat_obj$sample %in% c("R7", "R7X") ~ "R7, R7X",
+  seurat_obj$sample %in% c("R10", "R10X") ~ "R10, R10X",
+  TRUE ~ "Other"
+)
+
+# Define distinct colors
+timepoint_colors <- c(
+  "C1a, C2a, N" = "#2E8B57",      # Sea green
+  "R1a, R2, R2X" = "#FF4500",     # Orange red
+  "R2a, R5" = "#FFD700",          # Gold
+  "R7, R7X" = "#8B008B",          # Dark magenta
+  "R10, R10X" = "#1E90FF"         # Dodger blue
+)
+
+# Create UMAP with timepoint groups
+p <- DimPlot(seurat_obj, reduction = "umap", group.by = "timepoint_group", 
+             cols = timepoint_colors) +
+  ggtitle("Regeneration Time Points") +
+  theme(plot.title = element_text(hjust = 0.5, size = 10),
+        legend.text = element_text(size = 8),
+        legend.title = element_text(size = 9),
+        legend.key.size = unit(0.4, "cm")) +
+  guides(color = guide_legend(override.aes = list(size = 2)))
+
+# Save high quality plot
+ggsave("/data/matthew/250911_new/results/umap_timepoint_groups.png", 
+       p, width = 10, height = 8, dpi = 300)
+
+# Also save as PDF for publication quality
+ggsave("/data/matthew/250911_new/results/umap_timepoint_groups.pdf", 
+       p, width = 10, height = 8)
+
+# Display the plot
+print(p)
+
+# Print all plots
+for(i in 1:length(plots)) {
+  print(plots[[i]])
+}
+```
+
+# =============================================================================
+# PART 6: DIFFERENTIAL EXPRESSION (using log-normalized counts)
+# =============================================================================
+```{r}
+## Step 14: Find Cluster Markers and Annotate with BLAST Results
+
+# Load required libraries
+library(Seurat)
+library(openxlsx)
+library(dplyr)
+library(readr)
+library(stringr)
+
+# Set RNA assay and resolution 0.8 clusters
+DefaultAssay(seurat_obj) <- "RNA"
+Idents(seurat_obj) <- "RNA_snn_res.0.8"
+
+# Join layers for Seurat v5
+if (packageVersion("Seurat") >= "5.0.0") {
+  seurat_obj <- JoinLayers(seurat_obj)
+}
+
+# Find markers for all clusters
+message("Finding cluster markers...")
+cluster_markers <- FindAllMarkers(
+  object = seurat_obj,
+  only.pos = TRUE,
+  min.pct = 0.25,
+  logfc.threshold = 0.5,
+  test.use = "wilcox"
+)
+
+# Get top 50 markers per cluster
+top50_per_cluster <- cluster_markers %>%
+  group_by(cluster) %>%
+  slice_max(order_by = avg_log2FC, n = 50) %>%
+  ungroup()
+
+# Save all markers
+wb_all <- createWorkbook()
+for(clust in sort(unique(cluster_markers$cluster))) {
+  data_subset <- cluster_markers[cluster_markers$cluster == clust, ]
+  addWorksheet(wb_all, sheetName = paste0("Cluster_", clust))
+  writeData(wb_all, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_all, "/data/matthew/250911_new/results/cluster_markers_all.xlsx", overwrite = TRUE)
+
+# Save top 50 markers
+wb_50 <- createWorkbook()
+for(clust in sort(unique(top50_per_cluster$cluster))) {
+  data_subset <- top50_per_cluster[top50_per_cluster$cluster == clust, ]
+  addWorksheet(wb_50, sheetName = paste0("Cluster_", clust))
+  writeData(wb_50, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_50, "/data/matthew/250911_new/results/cluster_markers_top50.xlsx", overwrite = TRUE)
+
+# Load BLAST annotations
+message("Loading and processing annotations...")
+annot <- read.delim("/data/matthew/250911_new/filtered_mito_title_annotations.tsv", 
+                    header = FALSE, stringsAsFactors = FALSE)
+
+colnames(annot) <- c("qseqid", "sseqid", "pident", "length", "mismatch", 
+                     "gapopen", "qstart", "qend", "sstart", "send", 
+                     "evalue", "bitscore", "description")
+
+# Extract gene information
+annot$gene_id <- str_extract(annot$qseqid, "g\\d+")
+annot$gene_symbol <- str_extract(annot$sseqid, "(?<=\\|)[A-Z0-9]+(?=_)")
+annot$protein_name <- str_remove(annot$description, "^sp\\|[^\\s]+\\s+")
+
+# Keep best hit per gene
+annot_sorted <- annot[order(annot$gene_id, -annot$bitscore), ]
+annot_best <- annot_sorted[!duplicated(annot_sorted$gene_id), ]
+
+# Merge markers with annotations
+final <- merge(cluster_markers, annot_best, 
+               by.x = "gene", by.y = "gene_id", 
+               all.x = TRUE)
+
+# Reorder columns
+final <- final[, c("cluster", "gene", "p_val", "avg_log2FC", "pct.1", "pct.2", 
+                   "p_val_adj", "gene_symbol", "protein_name", "pident", 
+                   "evalue", "bitscore")]
+
+# Save annotated markers
+wb_annotated <- createWorkbook()
+for(clust in sort(unique(final$cluster))) {
+  data_subset <- final[final$cluster == clust, ]
+  addWorksheet(wb_annotated, sheetName = paste0("Cluster_", clust))
+  writeData(wb_annotated, sheet = paste0("Cluster_", clust), x = data_subset)
+}
+saveWorkbook(wb_annotated, "/data/matthew/250911_new/cluster_markers_annotated.xlsx", overwrite = TRUE)
+
+message("Complete. Files saved in /data/matthew/250911_new/results/")
+```
+
+
+# =============================================================================
+# PART 7: SAVE RESULTS
+# =============================================================================
+
+## Step 15: Save Final Object
+```{r save_final}
+# Save complete processed object
+saveRDS(seurat_obj, "/data/matthew/250911_new/seurat/seurat_scvi_processed.rds")
+
+# Save markers
+write.csv(all_markers, 
+          "/data/matthew/250911_new/seurat/cluster_markers.csv",
+          row.names = FALSE)
+
+# Export UMAP coordinates
+umap_coords <- as.data.frame(Embeddings(seurat_obj, "umap"))
+umap_coords$cluster <- Idents(seurat_obj)
+umap_coords$sample <- seurat_obj$sample
+write.csv(umap_coords, 
+          "/data/matthew/250911_new/seurat/umap_coordinates.csv")
+
+message("Analysis complete! All results saved.")
+```
+
+# =============================================================================
+# SESSION INFO (for reproducibility)
+# =============================================================================
+
+```{r session_info}
+sessionInfo()
+```
+
+```{r}
+# =============================================================================
+# PANEL B: Tissue-based UMAP plots
+# =============================================================================
+seurat_obj <- readRDS("/data/matthew/250911_new/seurat/seurat_scvi_processed_251124.rds")
+# Define tissue assignments based on cluster numbers
+tissue_mapping <- c(
+  # Nerve System (NS)
+  "27" = "Nerve System", "18" = "Nerve System", "23" = "Nerve System", 
+  "38" = "Nerve System", "2" = "Nerve System", "31" = "Nerve System", 
+  "32" = "Nerve System", "24" = "Nerve System", "36" = "Nerve System", 
+  "39" = "Nerve System", "29" = "Nerve System", "13" = "Nerve System", 
+  "35" = "Nerve System", "33" = "Nerve System", "28" = "Nerve System", 
+  "11" = "Nerve System", "3" = "Nerve System", "19" = "Nerve System",
+  
+  # Coelomocytes (CLC)
+  "5" = "Coelomocytes", "37" = "Coelomocytes", "25" = "Coelomocytes", 
+  "30" = "Coelomocytes",
+  
+  # Muscle (MS)
+  "16" = "Muscle", "7" = "Muscle", "21" = "Muscle",
+  
+  # Connective Tissue (CT)
+  "4" = "Connective Tissue", "8" = "Connective Tissue", 
+  "34" = "Connective Tissue", "22" = "Connective Tissue", 
+  "17" = "Connective Tissue", "14" = "Connective Tissue", 
+  "15" = "Connective Tissue",
+  
+  # Water Vascular System (WVS)
+  "0" = "Water Vascular System", "1" = "Water Vascular System", 
+  "6" = "Water Vascular System", "12" = "Water Vascular System",
+  
+  # Epithelium (EP)
+  "20" = "Epithelium", "26" = "Epithelium",
+  
+  # Unknown (UNK)
+  "9" = "Unknown", "10" = "Unknown"
+)
+
+# Create tissue assignment in the metadata
+seurat_obj@meta.data$tissue_type <- tissue_mapping[as.character(seurat_obj@meta.data$RNA_snn_res.0.8)]
+
+# Define colors for tissues
+tissue_colors <- c(
+  "Nerve System" = "#FF6B6B",
+  "Coelomocytes" = "purple3",
+  "Muscle" = "#45B7D1",
+  "Connective Tissue" = "#FFA07A",
+  "Water Vascular System" = "#98D8C8",
+  "Epithelium" = "#F7DC6F",
+  "Unknown" = "#95A5A6"
+)
+
+# Get UMAP embeddings and cluster centroids
+embeddings_all <- Embeddings(seurat_obj, reduction = "umap")
+clusters_all <- seurat_obj@meta.data$RNA_snn_res.0.8
+centroids_all <- do.call(rbind, lapply(split(as.data.frame(embeddings_all), 
+                                               clusters_all), 
+                                        function(x) apply(x, 2, mean)))
+
+# Panel B - UMAP with cluster numbers
+panel_b_with_numbers <- DimPlot(seurat_obj, reduction = "umap", 
+                                 group.by = "tissue_type",
+                                 label = FALSE) +
+  scale_color_manual(values = tissue_colors) +
+  ggtitle("UMAP: Tissue Types by Cluster") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(color = "Tissue Type") +
+  annotate("text", x = centroids_all[,1], y = centroids_all[,2], 
+           label = rownames(centroids_all), size = 3.5, color = "black",
+           fontface = "bold")
+
+# Panel B - UMAP without cluster numbers  
+panel_b_without_numbers <- DimPlot(seurat_obj, reduction = "umap", 
+                                    group.by = "tissue_type",
+                                    label = FALSE) +
+  scale_color_manual(values = tissue_colors) +
+  ggtitle("UMAP: Tissue Types") +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.text = element_text(size = 10)) +
+  labs(color = "Tissue Type")
+
+# Save Panel B plots
+ggsave("/data/matthew/250911_new/results/panel_b_with_cluster_numbers.png", 
+       panel_b_with_numbers, width = 12, height = 8, dpi = 300)
+
+ggsave("/data/matthew/250911_new/results/panel_b_with_cluster_numbers.pdf", 
+       panel_b_with_numbers, width = 12, height = 8)
+
+ggsave("/data/matthew/250911_new/results/panel_b_without_cluster_numbers.png", 
+       panel_b_without_numbers, width = 12, height = 8, dpi = 300)
+
+ggsave("/data/matthew/250911_new/results/panel_b_without_cluster_numbers.pdf", 
+       panel_b_without_numbers, width = 12, height = 8)
+
+# Display plots
+print(panel_b_with_numbers)
+print(panel_b_without_numbers)
+
+# Verify the tissue assignments
+print("=== Tissue type distribution ===")
+print(table(seurat_obj@meta.data$tissue_type))
+
+message("Panel B plots saved successfully!")
+
+# =============================================================================
+# PANEL C: Sample Composition by Cluster (grouped by timepoint)
+# =============================================================================
+
+# Define timepoint grouping with colors
+timepoint_group_colors <- c(
+  "Normal (N, C1a, C2a)" = "#2E8B57",      # Sea green                   
+  "R2 (R2, R2X)" = "#DC143C",         # Gold
+  "R5 (R1a, R2a, R5)" = "#FFA500",                         # Orange
+  "R7 (R7, R7X)" = "#8B008B",              # Dark magenta
+  "R10 (R10, R10X)" = "#1E90FF"            # Dodger blue
+)
+
+# Create sample to timepoint group mapping
+sample_to_timepoint <- c(
+  "N" = "Normal (N, C1a, C2a)",
+  "C1a" = "Normal (N, C1a, C2a)",
+  "C2a" = "Normal (N, C1a, C2a)",
+  "R1a" = "R5 (R1a, R2a, R5)",
+  "R2" = "R2 (R2, R2X)",
+  "R2a" = "R5 (R1a, R2a, R5)",
+  "R2X" = "R2 (R2, R2X)",
+  "R5" = "R5 (R1a, R2a, R5)",
+  "R7" = "R7 (R7, R7X)",
+  "R7X" = "R7 (R7, R7X)",
+  "R10" = "R10 (R10, R10X)",
+  "R10X" = "R10 (R10, R10X)"
+)
+
+# Get cluster and sample data
+table_data <- table(seurat_obj@meta.data$RNA_snn_res.0.8, 
+                    seurat_obj@meta.data$sample)
+
+# Calculate proportions by cluster
+prop_by_cluster <- prop.table(table_data, margin = 1) * 100
+df_panel_c <- as.data.frame(as.table(prop_by_cluster))
+colnames(df_panel_c) <- c("Cluster", "Sample", "Percentage")
+
+# Add timepoint group
+df_panel_c$Timepoint_Group <- sample_to_timepoint[as.character(df_panel_c$Sample)]
+
+# Convert Cluster to numeric for proper ordering
+df_panel_c$Cluster <- factor(df_panel_c$Cluster, 
+                              levels = sort(as.numeric(levels(df_panel_c$Cluster))))
+
+# Create Panel C plot
+panel_c <- ggplot(df_panel_c, aes(x = Cluster, y = Percentage, fill = Timepoint_Group)) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = timepoint_group_colors) +
+  theme_minimal(base_size = 12) +
+  labs(title = "Sample Composition by Cluster (Grouped by Timepoint)", 
+       x = "Cluster", 
+       y = "Percentage of Cells in Cluster", 
+       fill = "Timepoint Group",
+       subtitle = "Shows what % of each cluster is made up of each timepoint group") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
+        axis.text.x = element_text(angle = 45, hjust = 1), 
+        legend.position = "bottom") +
+  coord_cartesian(ylim = c(0, 100))
+
+# Save Panel C plot
+ggsave("/data/matthew/250911_new/results/panel_c_sample_composition_by_timepoint.png", 
+       panel_c, width = 14, height = 8, dpi = 300)
+
+ggsave("/data/matthew/250911_new/results/panel_c_sample_composition_by_timepoint.pdf", 
+       panel_c, width = 14, height = 8)
+
+# Display plot
+print(panel_c)
+
+message("Panel B and Panel C plots saved successfully!")
+```
